@@ -1,7 +1,7 @@
 #!/bin/bash
-# create all tables into data base
 
-output=$(psql -U postgres -d tpch-cloud -c "\timing on" -f ImportData.sql -c "\timing off" | grep "^Time: ")
+
+output=$(export PGPASSWORD='rpc1902';psql -U postgres -d tpch-cloud -c "\timing on" -f ImportData.sql -c "\timing off" | grep "^Time: ")
 
 # Extrair os tempos e somá-los
 total_time=0
