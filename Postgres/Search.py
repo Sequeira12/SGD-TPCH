@@ -33,7 +33,7 @@ def Execute(numero, lista):
             consulta = file.read()
             
     
-        try:
+        try: # MUDAR AQUI RUI
        # Configuring the connection to the database
             conn = psycopg2.connect(
             host="localhost",
