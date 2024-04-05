@@ -1,0 +1,8 @@
+Time create PK R_REGIONKEY into Table REGION 
+Time create PK N_NATIONKEY into Table NATION 
+Time create PK C_CUSTKEY into Table CUSTOMER 
+Time create PK S_SUPPKEY into Table SUPPLIER 
+Time create PK P_PARTKEY into Table PART 
+Time create PK PS_PARTKEY,PS_SUPPKEY into Table PARTSUPP 
+Time create PK O_ORDERKEY into Table ORDERS 
+Time create PK L_ORDERKEY, L_LINENUMBER into Table LINEITEM 

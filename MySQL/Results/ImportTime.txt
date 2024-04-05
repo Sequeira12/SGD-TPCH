@@ -1,0 +1,3 @@
+Import Time:  0.15893700
+Execution Time: 8.93802000 segundos
+Execution Time: 8.06432200 segundos
