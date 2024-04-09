@@ -1,1 +1,17 @@
 Tempo total de importação: 3187.900 ms
+Import Time Customer:  Time: 130.362 ms
+Import Time lineitem:  Time: 9.462 ms
+Import Time nation:  Time: 3.480 ms
+Import Time orders:  Time: 2.757 ms
+Import Time part:  Time: 17.730 ms
+Import Time partsupp:  Time: 2.664 ms
+Import Time region:  Time: 4.764 ms
+Import Time supplier:  Time: 6.819 ms
+Import Time Customer:  Time: 40.807 ms
+Import Time lineitem:  Time: 2586.955 ms (00:02.587)
+Import Time nation:  Time: 97.927 ms
+Import Time orders:  Time: 442.128 ms
+Import Time part:  Time: 84.472 ms
+Import Time partsupp:  Time: 179.545 ms
+Import Time region:  Time: 5.144 ms
+Import Time supplier:  Time: 23.369 ms
