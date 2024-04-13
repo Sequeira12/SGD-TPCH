@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Thread 1 -> Time to execute Query/2.sql : 44.06181073188782 seconds 
 Thread 2 -> Time to execute Query/3.sql : 72.82775855064392 seconds 
 Thread 1 -> Time to execute Query/6.sql : 65.31574869155884 seconds 
@@ -18,3 +19,25 @@ Thread 1 -> Time to execute Query/19.sql : 137.43588542938232 seconds
 Thread 3 -> Time to execute Query/18.sql : 314.093386888504 seconds 
 Thread 2 -> Time to execute Query/21.sql : 405.16612935066223 seconds 
 Thread 4 -> Time to execute Query/4.sql : 1346.3238775730133 seconds 
+=======
+Thread 4 -> Time to execute Query/5.sql : 0.12074422836303711 seconds 
+Thread 1 -> Time to execute Query/2.sql : 0.16996502876281738 seconds 
+Thread 2 -> Time to execute Query/3.sql : 0.41051292419433594 seconds 
+Thread 4 -> Time to execute Query/6.sql : 0.29630208015441895 seconds 
+Thread 1 -> Time to execute Query/7.sql : 0.3414599895477295 seconds 
+Thread 2 -> Time to execute Query/8.sql : 0.20895934104919434 seconds 
+Thread 2 -> Time to execute Query/11.sql : 0.08493399620056152 seconds 
+Thread 3 -> Time to execute Query/4.sql : 0.7293810844421387 seconds 
+Thread 1 -> Time to execute Query/10.sql : 0.42640113830566406 seconds 
+Thread 2 -> Time to execute Query/12.sql : 0.308596134185791 seconds 
+Thread 1 -> Time to execute Query/14.sql : 0.20331096649169922 seconds 
+Thread 4 -> Time to execute Query/9.sql : 0.7523021697998047 seconds 
+Thread 3 -> Time to execute Query/13.sql : 0.5836000442504883 seconds 
+Thread 1 -> Time to execute Query/16.sql : 0.16169309616088867 seconds 
+Thread 3 -> Time to execute Query/19.sql : 0.2794051170349121 seconds 
+Thread 2 -> Time to execute Query/15.sql : 0.5830912590026855 seconds 
+Thread 1 -> Time to execute Query/21.sql : 0.29648303985595703 seconds 
+Thread 0 -> Time to execute Query/1.sql : 1.7088019847869873 seconds 
+Thread 3 -> Time to execute Query/22.sql : 0.08211612701416016 seconds 
+Thread 4 -> Time to execute Query/18.sql : 0.5924746990203857 seconds 
+>>>>>>> 673ad258bfaea43a0097ca0c7c574e4ecb126395

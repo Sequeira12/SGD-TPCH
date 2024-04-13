@@ -1,0 +1,1 @@
+Thread 0 -> Time to execute Query/1.sql : 99.54669427871704 seconds 
