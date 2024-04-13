@@ -1,6 +1,6 @@
 #!/bin/bash
 # create all tables into data base
-output=$(export PGPASSWORD='rpc1902';psql -U postgres -d tpch-cloud  -f tables.sql)
+output=$(export PGPASSWORD='rpcs190202';psql -U postgres -d tpch-40  -f tables.sql)
 
 
 echo $output

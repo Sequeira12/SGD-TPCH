@@ -1,1 +1,1 @@
-Tempo total de importação: 3187.900 ms
+Tempo total de importação:  ms
