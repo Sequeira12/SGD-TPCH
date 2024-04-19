@@ -1,8 +1,2 @@
-Import time table [customer]  0.03848100   seconds
-Import time table [lineitem]  2.60409000   seconds
-Import time table [nation]  0.00045600   seconds
-Import time table [orders]  0.47308400   seconds
-Import time table [part]  0.06139500
-Import time table [partsupp]  0.25066000   seconds
-Import time table [region]  0.00033500   seconds
-Import time table [supplier]  0.00298700   seconds
+Import time table [customer]  1.52391700   seconds
+Import time table [customer]  1.41192000   seconds
