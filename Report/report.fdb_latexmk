@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1713546572.20742 "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" "report.pdf" "report" 1713546573.35966 0
-  "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" 1713546569.28386 6843 dee9819053e5782e0f0720b3f25c1f7b ""
+["pdflatex"] 1713547171.86699 "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" "report.pdf" "report" 1713547173.39184 0
+  "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" 1713547170.1412 6835 49361ddfd7aefd8b1d5cf3e76e4acefa ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1712933521.55103 21145 ff19c2f6d7d51939ef722e8350d811a1 ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1711627528.09958 11548 727e5e4882ecc0738c062b5aa0bf526b ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk" 1712933529.61266 11368 9110fc0e31b0fd1082dfb94cc0f9653a ""
@@ -34,8 +34,8 @@
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3kernel/expl3.sty" 1712933404.96033 6565 0b340a7e9bf9e07ae19f3e617f5e364a ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tabularray/tabularray.sty" 1711627448.80025 255677 5fa41b80e5de95b8eaa15ecb137e1cf0 ""
   "dei_thumb.png" 1713543410.44421 16892 718660ae15134f76c497df49f7c46672 ""
-  "report.aux" 1713546573.12428 886 e7c0ac29762c7edce1ad513e770dc1bc "pdflatex"
-  "report.tex" 1713546569.28386 6843 dee9819053e5782e0f0720b3f25c1f7b ""
+  "report.aux" 1713547173.14726 886 e7c0ac29762c7edce1ad513e770dc1bc "pdflatex"
+  "report.tex" 1713547170.1412 6835 49361ddfd7aefd8b1d5cf3e76e4acefa ""
   (generated)
   "report.aux"
   "report.log"
