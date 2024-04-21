@@ -1,6 +1,6 @@
 #!/bin/bash
 
-output=$(export PGPASSWORD='';psql -U postgres -d tpch-25  -f DropPKFK.sql)
+output=$(export PGPASSWORD='rpcs190202';psql -U postgres -d tpch-25  -f DropPKFK.sql)
 
 
 echo $output

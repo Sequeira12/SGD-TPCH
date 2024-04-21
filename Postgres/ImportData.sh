@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-output=$(export PGPASSWORD='';psql -U postgres -d tpch-25 -c "\timing on" -f ImportData.sql -c "\timing off" | grep "^Time: ")
+output=$(export PGPASSWORD='rpcs190202';psql -U postgres -d tpch-25 -c "\timing on" -f ImportData.sql -c "\timing off" | grep "^Time: ")
 
 echo "Import Time Customer: " $output >> Results/importTime.txt
 
