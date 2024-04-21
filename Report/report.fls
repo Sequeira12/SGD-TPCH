@@ -1,0 +1,80 @@
+PWD /Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
+INPUT /Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex
+OUTPUT report.log
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size10.clo
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/ifvtex.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/ifvtex.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/float.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/float/float.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tabularray/tabularray.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tabularray/tabularray.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3kernel/expl3.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3kernel/expl3.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+INPUT ./report.aux
+INPUT ./report.aux
+INPUT report.aux
+OUTPUT report.aux
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+INPUT ./dei_thumb.png
+INPUT ./dei_thumb.png
+INPUT ./dei_thumb.png
+INPUT ./dei_thumb.png
+OUTPUT report.pdf
+INPUT ./dei_thumb.png
+INPUT ./dei_thumb.png
+INPUT ./dei_thumb.png
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT report.aux
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi720/cmbx12.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi720/cmbx12.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi720/cmr12.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi720/cmr12.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi864/cmbx12.pk
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/cm/dpi864/cmbx12.pk
