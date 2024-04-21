@@ -1,8 +1,8 @@
-Time create PK R_REGIONKEY into Table REGION 
-Time create PK N_NATIONKEY into Table NATION 
-Time create PK C_CUSTKEY into Table CUSTOMER 
-Time create PK S_SUPPKEY into Table SUPPLIER 
-Time create PK P_PARTKEY into Table PART 
-Time create PK PS_PARTKEY,PS_SUPPKEY into Table PARTSUPP 
-Time create PK O_ORDERKEY into Table ORDERS 
-Time create PK L_ORDERKEY, L_LINENUMBER into Table LINEITEM 
+Time create PK R_REGIONKEY into Table REGION  0.07472675
+Time create PK N_NATIONKEY into Table NATION  0.06011025
+Time create PK C_CUSTKEY into Table CUSTOMER  20.09895150
+Time create PK S_SUPPKEY into Table SUPPLIER  2.43648875
+Time create PK P_PARTKEY into Table PART  29.07967075
+Time create PK PS_PARTKEY,PS_SUPPKEY into Table PARTSUPP  145.13002600
+Time create PK O_ORDERKEY into Table ORDERS  225.77786475
+Time create PK L_ORDERKEY, L_LINENUMBER into Table LINEITEM  1135.13439025

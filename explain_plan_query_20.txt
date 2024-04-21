@@ -1,0 +1,265 @@
+Explicação do google GEMINI:
+
+Based on the provided explain plans, the MySQL query seems to be faster than the PostgreSQL query. Here's a breakdown of the reasons why:
+
+PostgreSQL:
+
+The explain plan shows a nested loop semi join as the main operation. Nested loop joins can be slow, especially for large datasets, because they iterate through the outer table for each row in the inner table.
+The subquery to calculate the average quantity also uses a nested loop join and a full table scan on the lineitem table, which can be expensive.
+There's a sort operation involved in processing data from the supplier table. Sorting can be resource-intensive.
+MySQL:
+
+The explain plan uses a nested loop join as well, but it seems to be accessing the tables using indexes more efficiently.
+The subquery also uses a nested loop join, but it seems to be using a ref access on the lineitem table based on a foreign key relationship, which can be faster than a full table scan.
+There's no mention of sorting operations in the MySQL explain plan.
+Important Caveats:
+
+It's important to note that the actual performance can vary depending on several factors like the size of the tables, available memory, and specific hardware configurations.
+The provided explain plans are just estimations, and the actual execution might differ slightly.
+Recommendations:
+
+Consider analyzing if there are suitable indexes that can be created on the tables involved in the PostgreSQL query, especially for the subquery.
+You can also try rewriting the query to avoid nested loop joins if possible. Depending on the schema and desired outcome, there might be alternative ways to achieve the same result with different join types.
+Remember, the best approach is to run the queries on your specific database system and measure the actual execution time to determine the most efficient option for your case.
+
+-------------------------------------------------------------------------------------------------------------------
+Eplicação chatGPT:
+
+Vamos comparar os principais aspectos dos planos de execução do PostgreSQL e do MySQL:
+
+Custo Total:
+PostgreSQL: 3072540576687.95
+MySQL: 1264762.47
+Acesso aos Dados:
+PostgreSQL utiliza um Nested Loop Semi Join combinado com um Gather Merge e um Nested Loop.
+MySQL usa uma operação de ordenação, seguida de loops aninhados.
+Filtros:
+Ambos os bancos de dados aplicam filtros, mas o PostgreSQL utiliza uma subconsulta dentro de uma filtragem, enquanto o MySQL usa uma subconsulta na cláusula WHERE com uma soma.
+Com base nesses pontos, o plano de execução do MySQL parece ser mais eficiente em termos de custo total, novamente apresentando um valor muito menor do que o do PostgreSQL. No entanto, a eficiência real dependerá do ambiente de execução específico, incluindo o tamanho das tabelas, a distribuição dos dados e outros fatores.
+
+Recomendaria testar ambos os planos em um ambiente de teste para determinar qual oferece o melhor desempenho na prática, especialmente considerando a complexidade dos filtros e operações envolvidas.
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+POSTGRES:
+"Nested Loop Semi Join  (cost=6769.40..3072540576687.95 rows=2155 width=51)"
+"  ->  Gather Merge  (cost=6768.53..7700.27 rows=8000 width=55)"
+"        Workers Planned: 2"
+"        ->  Sort  (cost=5768.51..5776.84 rows=3333 width=55)"
+"              Sort Key: supplier.s_name"
+"              ->  Hash Join  (cost=1.32..5573.49 rows=3333 width=55)"
+"                    Hash Cond: (supplier.s_nationkey = nation.n_nationkey)"
+"                    ->  Parallel Seq Scan on supplier  (cost=0.00..5316.33 rows=83333 width=59)"
+"                    ->  Hash  (cost=1.31..1.31 rows=1 width=4)"
+"                          ->  Seq Scan on nation  (cost=0.00..1.31 rows=1 width=4)"
+"                                Filter: (n_name = 'ALGERIA'::bpchar)"
+"  ->  Nested Loop  (cost=0.86..384067571.11 rows=1 width=4)"
+"        ->  Index Scan using partsupp_pkey on partsupp  (cost=0.43..384067557.06 rows=27 width=8)"
+"              Index Cond: (ps_suppkey = supplier.s_suppkey)"
+"              Filter: ((ps_availqty)::numeric > (SubPlan 1))"
+"              SubPlan 1"
+"                ->  Aggregate  (cost=4682287.17..4682287.18 rows=1 width=32)"
+"                      ->  Seq Scan on lineitem  (cost=0.00..4682287.16 rows=1 width=5)"
+"                            Filter: ((l_shipdate >= '1993-01-01'::date) AND (l_shipdate < '1994-01-01 00:00:00'::timestamp without time zone) AND (l_partkey = partsupp.ps_partkey) AND (l_suppkey = partsupp.ps_suppkey))"
+"        ->  Index Scan using part_pkey on part  (cost=0.43..0.52 rows=1 width=4)"
+"              Index Cond: (p_partkey = partsupp.ps_partkey)"
+"              Filter: ((p_name)::text ~~ 'green%'::text)"
+
+
+---------------------------------------------------------------------------------------------------------------
+MYSQL:
+| {
+  "query_block": {
+    "select_id": 1,
+    "cost_info": {
+      "query_cost": "1264762.47"
+    },
+    "ordering_operation": {
+      "using_temporary_table": true,
+      "using_filesort": true,
+      "cost_info": {
+        "sort_cost": "20514.17"
+      },
+      "nested_loop": [
+        {
+          "table": {
+            "table_name": "NATION",
+            "access_type": "ALL",
+            "possible_keys": [
+              "PRIMARY"
+            ],
+            "rows_examined_per_scan": 25,
+            "rows_produced_per_join": 2,
+            "filtered": "10.00",
+            "cost_info": {
+              "read_cost": "2.50",
+              "eval_cost": "0.25",
+              "prefix_cost": "2.75",
+              "data_read_per_join": "1K"
+            },
+            "used_columns": [
+              "N_NATIONKEY",
+              "N_NAME"
+            ],
+            "attached_condition": "(`tpchassignment`.`nation`.`N_NAME` = 'ALGERIA')"
+          }
+        },
+        {
+          "table": {
+            "table_name": "SUPPLIER",
+            "access_type": "ref",
+            "possible_keys": [
+              "PRIMARY",
+              "S_NATIONKEY"
+            ],
+            "key": "S_NATIONKEY",
+            "used_key_parts": [
+              "S_NATIONKEY"
+            ],
+            "key_length": "4",
+            "ref": [
+              "tpchassignment.NATION.N_NATIONKEY"
+            ],
+            "rows_examined_per_scan": 8205,
+            "rows_produced_per_join": 20514,
+            "filtered": "100.00",
+            "cost_info": {
+              "read_cost": "16562.29",
+              "eval_cost": "2051.42",
+              "prefix_cost": "18616.45",
+              "data_read_per_join": "14M"
+            },
+            "used_columns": [
+              "S_SUPPKEY",
+              "S_NAME",
+              "S_ADDRESS",
+              "S_NATIONKEY"
+            ]
+          }
+        },
+        {
+          "table": {
+            "table_name": "<subquery2>",
+            "access_type": "eq_ref",
+            "key": "<auto_distinct_key>",
+            "key_length": "4",
+            "ref": [
+              "tpchassignment.SUPPLIER.S_SUPPKEY"
+            ],
+            "rows_examined_per_scan": 1,
+            "materialized_from_subquery": {
+              "using_temporary_table": true,
+              "query_block": {
+                "nested_loop": [
+                  {
+                    "table": {
+                      "table_name": "PART",
+                      "access_type": "ALL",
+                      "possible_keys": [
+                        "PRIMARY"
+                      ],
+                      "rows_examined_per_scan": 3960407,
+                      "rows_produced_per_join": 440001,
+                      "filtered": "11.11",
+                      "cost_info": {
+                        "read_cost": "393420.05",
+                        "eval_cost": "44000.12",
+                        "prefix_cost": "437420.18",
+                        "data_read_per_join": "258M"
+                      },
+                      "used_columns": [
+                        "P_PARTKEY",
+                        "P_NAME"
+                      ],
+                      "attached_condition": "(`tpchassignment`.`part`.`P_NAME` like 'green%')"
+                    }
+                  },
+                  {
+                    "table": {
+                      "table_name": "PARTSUPP",
+                      "access_type": "ref",
+                      "possible_keys": [
+                        "PRIMARY",
+                        "PS_SUPPKEY"
+                      ],
+                      "key": "PRIMARY",
+                      "used_key_parts": [
+                        "PS_PARTKEY"
+                      ],
+                      "key_length": "4",
+                      "ref": [
+                        "tpchassignment.PART.P_PARTKEY"
+                      ],
+                      "rows_examined_per_scan": 3,
+                      "rows_produced_per_join": 1759040,
+                      "filtered": "100.00",
+                      "cost_info": {
+                        "read_cost": "434351.26",
+                        "eval_cost": "175904.00",
+                        "prefix_cost": "1047675.44",
+                        "data_read_per_join": "1G"
+                      },
+                      "used_columns": [
+                        "PS_PARTKEY",
+                        "PS_SUPPKEY",
+                        "PS_AVAILQTY"
+                      ],
+                      "attached_condition": "(`tpchassignment`.`partsupp`.`PS_AVAILQTY` > (/* select#4 */ select (0.5 * sum(`tpchassignment`.`lineitem`.`L_QUANTITY`)) from `tpchassignment`.`lineitem` where ((`tpchassignment`.`lineitem`.`L_PARTKEY` = `tpchassignment`.`partsupp`.`PS_PARTKEY`) and (`tpchassignment`.`lineitem`.`L_SUPPKEY` = `tpchassignment`.`partsupp`.`PS_SUPPKEY`) and (`tpchassignment`.`lineitem`.`L_SHIPDATE` >= DATE'1993-01-01') and (`tpchassignment`.`lineitem`.`L_SHIPDATE` < <cache>((DATE'1993-01-01' + interval '1' year))))))",
+                      "attached_subqueries": [
+                        {
+                          "dependent": true,
+                          "cacheable": false,
+                          "query_block": {
+                            "select_id": 4,
+                            "cost_info": {
+                              "query_cost": "7.35"
+                            },
+                            "table": {
+                              "table_name": "LINEITEM",
+                              "access_type": "ref",
+                              "possible_keys": [
+                                "L_PARTKEY"
+                              ],
+                              "key": "L_PARTKEY",
+                              "used_key_parts": [
+                                "L_PARTKEY",
+                                "L_SUPPKEY"
+                              ],
+                              "key_length": "8",
+                              "ref": [
+                                "tpchassignment.PARTSUPP.PS_PARTKEY",
+                                "tpchassignment.PARTSUPP.PS_SUPPKEY"
+                              ],
+                              "rows_examined_per_scan": 7,
+                              "rows_produced_per_join": 0,
+                              "filtered": "11.11",
+                              "cost_info": {
+                                "read_cost": "6.59",
+                                "eval_cost": "0.08",
+                                "prefix_cost": "7.35",
+                                "data_read_per_join": "325"
+                              },
+                              "used_columns": [
+                                "L_PARTKEY",
+                                "L_SUPPKEY",
+                                "L_QUANTITY",
+                                "L_SHIPDATE"
+                              ],
+                              "attached_condition": "((`tpchassignment`.`lineitem`.`L_SHIPDATE` >= DATE'1993-01-01') and (`tpchassignment`.`lineitem`.`L_SHIPDATE` < <cache>((DATE'1993-01-01' + interval '1' year))))"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

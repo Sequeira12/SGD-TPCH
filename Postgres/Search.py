@@ -4,6 +4,11 @@ import time
 # List shared between threads
 lista_compartilhada = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,19,21,22]
 lista_boa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,19,21,22]
+
+#lista_compartilhada = [17,20]
+#lista_boa = [17,20]
+
+
 # Mutex to control access to the shared list
 lock = threading.Lock()
 
@@ -11,7 +16,7 @@ lock = threading.Lock()
 threads = []
 
 # Set the desired number of threads
-num_threads = 1
+num_threads = 5
 
 def Execute(numero, lista,n):
     print(f"Thread {numero} Started")
@@ -37,9 +42,9 @@ def Execute(numero, lista,n):
        # Configuring the connection to the database
             conn = psycopg2.connect(
             host="localhost",
-            database="tpch-40",
+            database="tpch-25",
             user="postgres",
-            password="rpcs190202"
+            password=""
             )
            
             cursor = conn.cursor()

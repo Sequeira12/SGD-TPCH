@@ -1,1 +1,1 @@
-load data local infile "/Users/brunosequeira/Desktop/TPC-H V3.0.1/dbgen/part.tbl" into table part fields terminated by "|" lines terminated by "\n";
+load data local infile "C:\\Users\\conta\\OneDrive\\Ambiente de Trabalho\\Tcp-h_windows\\part.tbl" into table part fields terminated by "|" lines terminated by "\n";
