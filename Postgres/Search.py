@@ -44,7 +44,7 @@ def Execute(numero, lista,n):
             host="localhost",
             database="tpch-25",
             user="postgres",
-            password=""
+            password="rpcs190202"
             )
            
             cursor = conn.cursor()

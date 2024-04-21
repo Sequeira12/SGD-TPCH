@@ -1,0 +1,247 @@
+
+POSTGRESQL:
+
+"Limit  (cost=6115659.92..6115659.92 rows=1 width=34)"
+"  ->  Sort  (cost=6115659.92..6115659.92 rows=1 width=34)"
+"        Sort Key: (count(*)) DESC, supplier.s_name"
+"        ->  GroupAggregate  (cost=3123460.56..6115659.91 rows=1 width=34)"
+"              Group Key: supplier.s_name"
+"              ->  Nested Loop  (cost=3123460.56..6115659.89 rows=1 width=26)"
+"                    ->  Nested Loop Semi Join  (cost=3123459.99..6115652.43 rows=1 width=34)"
+"                          ->  Nested Loop  (cost=3123459.43..6115207.77 rows=1 width=34)"
+"                                Join Filter: (supplier.s_suppkey = l1.l_suppkey)"
+"                                ->  Gather Merge  (cost=6768.53..7700.27 rows=8000 width=30)"
+"                                      Workers Planned: 2"
+"                                      ->  Sort  (cost=5768.51..5776.84 rows=3333 width=30)"
+"                                            Sort Key: supplier.s_name"
+"                                            ->  Hash Join  (cost=1.32..5573.49 rows=3333 width=30)"
+"                                                  Hash Cond: (supplier.s_nationkey = nation.n_nationkey)"
+"                                                  ->  Parallel Seq Scan on supplier  (cost=0.00..5316.33 rows=83333 width=34)"
+"                                                  ->  Hash  (cost=1.31..1.31 rows=1 width=4)"
+"                                                        ->  Seq Scan on nation  (cost=0.00..1.31 rows=1 width=4)"
+"                                                              Filter: (n_name = 'EGYPT'::bpchar)"
+"                                ->  Materialize  (cost=3116690.89..6107387.50 rows=1 width=8)"
+"                                      ->  Gather  (cost=3116690.89..6107387.50 rows=1 width=8)"
+"                                            Workers Planned: 2"
+"                                            ->  Parallel Hash Anti Join  (cost=3115690.89..6106387.40 rows=1 width=8)"
+"                                                  Hash Cond: (l1.l_orderkey = l3.l_orderkey)"
+"                                                  Join Filter: (l3.l_suppkey <> l1.l_suppkey)"
+"                                                  ->  Parallel Seq Scan on lineitem l1  (cost=0.00..2907366.92 rows=16665918 width=8)"
+"                                                        Filter: (l_receiptdate > l_commitdate)"
+"                                                  ->  Parallel Hash  (cost=2907366.92..2907366.92 rows=16665918 width=8)"
+"                                                        ->  Parallel Seq Scan on lineitem l3  (cost=0.00..2907366.92 rows=16665918 width=8)"
+"                                                              Filter: (l_receiptdate > l_commitdate)"
+"                          ->  Index Scan using lineitem_pkey on lineitem l2  (cost=0.57..444.65 rows=280 width=8)"
+"                                Index Cond: (l_orderkey = l1.l_orderkey)"
+"                                Filter: (l_suppkey <> l1.l_suppkey)"
+"                    ->  Index Scan using orders_pkey on orders  (cost=0.56..7.46 rows=1 width=4)"
+"                          Index Cond: (o_orderkey = l1.l_orderkey)"
+"                          Filter: (o_orderstatus = 'F'::bpchar)"
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+MYSQL: 
+
+
+| {
+  "query_block": {
+    "select_id": 1,
+    "cost_info": {
+      "query_cost": "14513512.06"
+    },
+    "ordering_operation": {
+      "using_filesort": true,
+      "grouping_operation": {
+        "using_temporary_table": true,
+        "using_filesort": false,
+        "nested_loop": [
+          {
+            "table": {
+              "table_name": "ORDERS",
+              "access_type": "ALL",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "rows_examined_per_scan": 29714096,
+              "rows_produced_per_join": 2971409,
+              "filtered": "10.00",
+              "cost_info": {
+                "read_cost": "2925852.64",
+                "eval_cost": "297140.96",
+                "prefix_cost": "3222993.60",
+                "data_read_per_join": "1G"
+              },
+              "used_columns": [
+                "O_ORDERKEY",
+                "O_ORDERSTATUS"
+              ],
+              "attached_condition": "(`tpchassignment`.`orders`.`O_ORDERSTATUS` = 'F')"
+            }
+          },
+          {
+            "table": {
+              "table_name": "l1",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "L_ORDERKEY"
+              ],
+              "key_length": "4",
+              "ref": [
+                "tpchassignment.ORDERS.O_ORDERKEY"
+              ],
+              "rows_examined_per_scan": 3,
+              "rows_produced_per_join": 3909358,
+              "filtered": "33.33",
+              "cost_info": {
+                "read_cost": "2909626.98",
+                "eval_cost": "390935.87",
+                "prefix_cost": "7305545.50",
+                "data_read_per_join": "1G"
+              },
+              "used_columns": [
+                "L_ORDERKEY",
+                "L_SUPPKEY",
+                "L_LINENUMBER",
+                "L_COMMITDATE",
+                "L_RECEIPTDATE"
+              ],
+              "attached_condition": "(`tpchassignment`.`l1`.`L_RECEIPTDATE` > `tpchassignment`.`l1`.`L_COMMITDATE`)"
+            }
+          },
+          {
+            "table": {
+              "table_name": "NATION",
+              "access_type": "ALL",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "rows_examined_per_scan": 25,
+              "rows_produced_per_join": 9773396,
+              "filtered": "10.00",
+              "using_join_buffer": "hash join",
+              "cost_info": {
+                "read_cost": "1118.00",
+                "eval_cost": "977339.69",
+                "prefix_cost": "8284003.19",
+                "data_read_per_join": "6G"
+              },
+              "used_columns": [
+                "N_NATIONKEY",
+                "N_NAME"
+              ],
+              "attached_condition": "(`tpchassignment`.`nation`.`N_NAME` = 'EGYPT')"
+            }
+          },
+          {
+            "table": {
+              "table_name": "SUPPLIER",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY",
+                "S_NATIONKEY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "S_SUPPKEY"
+              ],
+              "key_length": "4",
+              "ref": [
+                "tpchassignment.l1.L_SUPPKEY"
+              ],
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 488669,
+              "filtered": "5.00",
+              "cost_info": {
+                "read_cost": "3909358.69",
+                "eval_cost": "48866.99",
+                "prefix_cost": "13170701.56",
+                "data_read_per_join": "350M"
+              },
+              "used_columns": [
+                "S_SUPPKEY",
+                "S_NAME",
+                "S_NATIONKEY"
+              ],
+              "attached_condition": "(`tpchassignment`.`supplier`.`S_NATIONKEY` = `tpchassignment`.`nation`.`N_NATIONKEY`)"
+            }
+          },
+          {
+            "table": {
+              "table_name": "l2",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "L_ORDERKEY"
+              ],
+              "key_length": "4",
+              "ref": [
+                "tpchassignment.ORDERS.O_ORDERKEY"
+              ],
+              "rows_examined_per_scan": 3,
+              "rows_produced_per_join": 488669,
+              "filtered": "90.00",
+              "first_match": "SUPPLIER",
+              "cost_info": {
+                "read_cost": "478509.24",
+                "eval_cost": "48866.99",
+                "prefix_cost": "13842106.81",
+                "data_read_per_join": "178M"
+              },
+              "used_columns": [
+                "L_ORDERKEY",
+                "L_SUPPKEY",
+                "L_LINENUMBER"
+              ],
+              "attached_condition": "(`tpchassignment`.`l2`.`L_SUPPKEY` <> `tpchassignment`.`l1`.`L_SUPPKEY`)"
+            }
+          },
+          {
+            "table": {
+              "table_name": "l3",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "L_ORDERKEY"
+              ],
+              "key_length": "4",
+              "ref": [
+                "tpchassignment.ORDERS.O_ORDERKEY"
+              ],
+              "rows_examined_per_scan": 3,
+              "rows_produced_per_join": 488669,
+              "filtered": "100.00",
+              "not_exists": true,
+              "cost_info": {
+                "read_cost": "478509.24",
+                "eval_cost": "48866.99",
+                "prefix_cost": "14513512.06",
+                "data_read_per_join": "178M"
+              },
+              "used_columns": [
+                "L_ORDERKEY",
+                "L_SUPPKEY",
+                "L_LINENUMBER",
+                "L_COMMITDATE",
+                "L_RECEIPTDATE"
+              ],
+              "attached_condition": "(<if>(is_not_null_compl(l3), ((`tpchassignment`.`l3`.`L_SUPPKEY` <> `tpchassignment`.`l1`.`L_SUPPKEY`) and (`tpchassignment`.`l3`.`L_RECEIPTDATE` > `tpchassignment`.`l3`.`L_COMMITDATE`)), true) and <if>(is_not_null_compl(l3), <if>(found_match(l3), false, true), true))"
+            }
+          }
+        ]
+      }
+    }
+  }
+} |
+
+
+
