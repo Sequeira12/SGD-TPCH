@@ -1,2 +1,0 @@
-Thread 0 -> Time to execute Query/17.sql : 52.253018617630005 segundos 
-Thread 1 -> Time to execute Query/20.sql : 288.56689977645874 segundos 
