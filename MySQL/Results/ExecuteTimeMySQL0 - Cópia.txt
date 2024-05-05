@@ -1,0 +1,6 @@
+Thread 0 -> Time to execute Query/1.sql : 455.0879137516022 segundos 
+Thread 0 -> Time to execute Query/3.sql : 282.5608422756195 segundos 
+Thread 0 -> Time to execute Query/4.sql : 362.6291024684906 segundos 
+Thread 0 -> Time to execute Query/5.sql : 794.6251680850983 segundos 
+Thread 0 -> Time to execute Query/6.sql : 171.1743700504303 segundos 
+Thread 0 -> Time to execute Query/7.sql : 1100.638173341751 segundos 

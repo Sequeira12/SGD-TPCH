@@ -2,8 +2,8 @@ import threading
 import psycopg2
 import time
 # List shared between threads
-lista_compartilhada = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,19,21,22]
-lista_boa =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,19,21,22]
+lista_compartilhada = [1, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,19,22]
+lista_boa =  [1, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,19,22]
 
 #lista_compartilhada = [21]
 #lista_boa = [21]
@@ -42,7 +42,7 @@ def Execute(numero, lista,n):
        # Configuring the connection to the database
             conn = psycopg2.connect(
             host="localhost",
-            database="tpch-25",
+            database="tpch-sgd",
             user="postgres",
             password="rpcs190202"
             )
@@ -69,7 +69,7 @@ def SendToFile(Message,number):
 
 
 def SendToFileExplain(Message,number):
-    FileName = "Explain/ExplainPlan"+str(number)+".txt"
+    FileName = "Explain/ExplainPlanPOSTGRES25GBNOKEYS.txt"
   
     with open(FileName, 'a') as f:
             f.write(Message)
@@ -96,7 +96,7 @@ def ExecuteExplainPlan(numero, lista, n):
             # Configuring the connection to the database
             conn = psycopg2.connect(
                 host="localhost",
-                database="tpch-40",
+                database="tpch-sgd",
                 user="postgres",
                 password="rpcs190202"
             )
@@ -120,7 +120,7 @@ def ExecuteExplainPlan(numero, lista, n):
 
 
 if __name__ == "__main__":
-    for j in range(2):
+    for j in range(4):
         lista_compartilhada = lista_boa.copy()
         with open("Results/ExecuteTime" + str(j)+".txt", "r+") as f:
         #with open("Results/ExecuteTime.txt", "r+") as f:

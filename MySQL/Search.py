@@ -2,11 +2,11 @@ import threading
 import mysql.connector
 import time
 # List shared between threads
-lista_compartilhada = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,20,18,19,21,22]
-lista_boa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20,21,22]
+lista_compartilhada = [1, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,22]
+lista_boa = [1, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,18,22]
 
-#lista_compartilhada = [17,20]
-#lista_boa = [17,20]
+lista_compartilhada = [19,17]
+lista_boa = [19,17]
 
 
 # Mutex to control access to the shared list
@@ -16,7 +16,7 @@ lock = threading.Lock()
 threads = []
 
 # Set the desired number of threads
-num_threads = 1
+num_threads = 5
 
 def Execute(numero, lista,n):
     print(f"Thread {numero} Started")
@@ -44,7 +44,7 @@ def Execute(numero, lista,n):
                 host="localhost",  # host do servidor MySQL
                 user="root",  # nome de usuário do banco de dados
                 password="",  # senha do banco de dados
-                database="tpchassignment"  # nome do banco de dados
+                database="tpchsgd"  # nome do banco de dados
             )
            
             cursor = conn.cursor()
@@ -105,7 +105,7 @@ def ExecuteExplainPlan(numero, lista, n):
                 host="localhost",  # host do servidor MySQL
                 user="root",  # nome de usuário do banco de dados
                 password="",  # senha do banco de dados
-                database="tpchassignment"  # nome do banco de dados
+                database="tpchsgd"  # nome do banco de dados
             )
 
             cursor = conn.cursor()
@@ -123,7 +123,7 @@ def ExecuteExplainPlan(numero, lista, n):
 
 
 if __name__ == "__main__":
-    for j in range(3):
+    for j in range(2):
         lista_compartilhada = lista_boa.copy()
         with open("Results/ExecuteTimeMySQL" + str(j)+".txt", "r+") as f:
         #with open("Results/ExecuteTimeMySQL.txt", "r+") as f:

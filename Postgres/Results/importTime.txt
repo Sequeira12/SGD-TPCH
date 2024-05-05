@@ -1,0 +1,3 @@
+Import Time Customer:  Time: 10,857 ms Time: 2,725 ms Time: 2,349 ms Time: 3,312 ms Time: 2,609 ms Time: 2,920 ms Time: 2,552 ms Time: 2,422 ms
+Import Time Customer:  Time: 12,368 ms Time: 1322,670 ms (00:01,323) Time: 12,129 ms Time: 11,920 ms Time: 11,189 ms Time: 10,495 ms Time: 11,402 ms Time: 11,691 ms
+Import Time Customer:  Time: 14487,371 ms (00:14,487) Time: 781973,677 ms (13:01,974) Time: 2,570 ms Time: 121582,526 ms (02:01,583) Time: 15197,847 ms (00:15,198) Time: 57496,733 ms (00:57,497) Time: 4,182 ms Time: 1145,531 ms (00:01,146)
