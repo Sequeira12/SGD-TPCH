@@ -1,0 +1,18 @@
+\contentsline {table}{\numberline {1}{\ignorespaces Tempo de importa^^c3^^a7^^c3^^a3o com 25GB de base de dados. Informa^^c3^^a7^^c3^^b5es acerca de cada tabela.}}{6}{}%
+\contentsline {table}{\numberline {2}{\ignorespaces Tempo de cria^^c3^^a7^^c3^^a3o das chaves prim^^c3^^a1rias em segundos para cada motor de pesquisa.(PK)}}{7}{}%
+\contentsline {table}{\numberline {3}{\ignorespaces Tempo de cria^^c3^^a7^^c3^^a3o das chaves estrangeiras em segundos para cada motor de pesquisa.(FK)}}{7}{}%
+\contentsline {table}{\numberline {4}{\ignorespaces Tempo de pesquisa de cada query no PostgresSQL.(1 Thread)}}{8}{}%
+\contentsline {table}{\numberline {5}{\ignorespaces Tempo de pesquisa de cada query no MySQL.(1 Thread, sem chaves)}}{9}{}%
+\contentsline {table}{\numberline {6}{\ignorespaces Tempo de pesquisa de cada query no PostgresSQL.(5 Thread's, sem chaves)}}{10}{}%
+\contentsline {table}{\numberline {7}{\ignorespaces Tempo de pesquisa de cada query no MySQL.(5 Thread's, sem chaves)}}{11}{}%
+\contentsline {table}{\numberline {8}{\ignorespaces M^^c3^^a9dia e desvio padr^^c3^^a3o do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(1 thread e sem chaves)}}{12}{}%
+\contentsline {table}{\numberline {9}{\ignorespaces M^^c3^^a9dia e desvio padr^^c3^^a3o do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(5 threads sem chaves)}}{13}{}%
+\contentsline {table}{\numberline {10}{\ignorespaces Tempo de pesquisa de cada query no PostgresSQL.(1 Thread)}}{14}{}%
+\contentsline {table}{\numberline {11}{\ignorespaces Tempo de pesquisa de cada query no MySQL.(1 Thread)}}{15}{}%
+\contentsline {table}{\numberline {12}{\ignorespaces Tempo de pesquisa de cada query no PostgresSQL.(5 Thread's)}}{16}{}%
+\contentsline {table}{\numberline {13}{\ignorespaces Tempo de pesquisa de cada query no MySQL.(5 Thread's)}}{17}{}%
+\contentsline {table}{\numberline {14}{\ignorespaces M^^c3^^a9dia e desvio padr^^c3^^a3o do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(1 Thread)}}{18}{}%
+\contentsline {table}{\numberline {15}{\ignorespaces M^^c3^^a9dia e desvio padr^^c3^^a3o do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(5 Thread's)}}{19}{}%
+\contentsline {table}{\numberline {16}{\ignorespaces Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 40GB.(PostgreSQL)}}{20}{}%
+\contentsline {table}{\numberline {17}{\ignorespaces Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread's numa base de dados de 40GB.(PostgreSQL)}}{21}{}%
+\contentsline {table}{\numberline {18}{\ignorespaces M^^c3^^a9dia e desvio padr^^c3^^a3o do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(5 Thread's)}}{22}{}%
