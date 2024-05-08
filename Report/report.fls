@@ -134,34 +134,90 @@ INPUT ./Graphs/FKCreation.png
 INPUT ./Graphs/FKCreation.png
 INPUT ./Graphs/FKCreation.png
 INPUT ./Graphs/FKCreation.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres_onethread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/mysqlvspostgres5thread.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/comparationThreadsMySQL.png
-INPUT ./Graphs/ComparationPostgres.png
-INPUT ./Graphs/ComparationPostgres.png
-INPUT ./Graphs/ComparationPostgres.png
-INPUT ./Graphs/ComparationPostgres.png
-INPUT ./Graphs/ComparationPostgres.png
-INPUT ./Graphs/ComparationPostgres.png
-INPUT ./Graphs/ComparationPostgres.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withoutkeys_1vs5threads.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/postgres_withoutkeys_1vs5.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgresql_withkeys_onethread.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysqlvspostgres_withkeys_fivethreads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/mysql_withkeys_1vs5threads.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres_withkeys_1vs5.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres1thread_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/postgres5threads_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysqlonethread_withkeysvswithoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
+INPUT ./Graphs/mysql5threads_withkeys_withoutkeys.png
 INPUT ./Graphs/postgresql40gb.png
 INPUT ./Graphs/postgresql40gb.png
 INPUT ./Graphs/postgresql40gb.png
@@ -169,6 +225,15 @@ INPUT ./Graphs/postgresql40gb.png
 INPUT ./Graphs/postgresql40gb.png
 INPUT ./Graphs/postgresql40gb.png
 INPUT ./Graphs/postgresql40gb.png
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd
 INPUT report.aux
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
@@ -178,9 +243,13 @@ INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fon
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb

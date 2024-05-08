@@ -1,11 +1,19 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de Importa^^c3^^a7^^c3^^a3o MySQL vs PostgreSQL.}}{23}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de Importa^^c3^^a7^^c3^^a3o MySQL vs PostgreSQL em rela^^c3^^a7^^c3^^a3o ao tamanho.}}{24}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de Importa^^c3^^a7^^c3^^a3o MySQL vs PostgreSQL em rela^^c3^^a7^^c3^^a3o ao n^^c3^^bamero de linhas.}}{25}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de cria^^c3^^a7^^c3^^a3o de PK MySQL vs PostgreSQL.}}{26}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de cria^^c3^^a7^^c3^^a3o PK MySQL vs PostgreSQL em rela^^c3^^a7^^c3^^a3o ao n^^c3^^bamero de linhas.}}{27}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de cria^^c3^^a7^^c3^^a3o FK MySQL vs PostgreSQL.}}{28}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL vs PostgreSQL - 1 thread com chaves.}}{29}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL vs PostgreSQL - 5 thread com chaves.}}{30}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL - 1 vs 5 thread com chaves.}}{31}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - 1 vs 5 thread com chaves.}}{32}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - 1 vs 5 thread com chaves (40GB).}}{33}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de Importa^^c3^^a7^^c3^^a3o MySQL vs PostgreSQL.}}{25}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de Importa^^c3^^a7^^c3^^a3o MySQL vs PostgreSQL em rela^^c3^^a7^^c3^^a3o ao tamanho.}}{26}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de Importa^^c3^^a7^^c3^^a3o MySQL vs PostgreSQL em rela^^c3^^a7^^c3^^a3o ao n^^c3^^bamero de linhas.}}{27}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de cria^^c3^^a7^^c3^^a3o de PK MySQL vs PostgreSQL.}}{28}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de cria^^c3^^a7^^c3^^a3o PK MySQL vs PostgreSQL em rela^^c3^^a7^^c3^^a3o ao n^^c3^^bamero de linhas.}}{29}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Gr^^c3^^a1fico de barras - Tempo de cria^^c3^^a7^^c3^^a3o FK MySQL vs PostgreSQL.}}{30}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL vs PostgreSQL - 1 thread sem chaves.}}{31}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL vs PostgreSQL - 5 thread's sem chaves.}}{32}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL - 1 vs 5 thread sem chaves.}}{33}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - 1 vs 5 thread sem chaves.}}{34}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL vs PostgreSQL - 1 thread com chaves.}}{35}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL vs PostgreSQL - 5 thread com chaves.}}{37}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL - 1 vs 5 thread com chaves.}}{38}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - 1 vs 5 thread com chaves.}}{39}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - with keys vs without keys utilizando 1 thread.}}{40}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - with keys vs without keys utilizando 5 thread.}}{41}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL - with keys vs without keys utilizando 1 thread.}}{42}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Gr^^c3^^a1fico de barras - MySQL - with keys vs without keys utilizando 5 thread.}}{43}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Gr^^c3^^a1fico de barras - PostgreSQL - 1 vs 5 thread com chaves (40GB).}}{44}{}%
