@@ -87,6 +87,13 @@ INPUT ./report.lot
 INPUT ./report.lot
 INPUT report.lot
 OUTPUT report.lot
+INPUT ./Graphs/tpchassignment.png
+INPUT ./Graphs/tpchassignment.png
+INPUT ./Graphs/tpchassignment.png
+INPUT ./Graphs/tpchassignment.png
+INPUT ./Graphs/tpchassignment.png
+INPUT ./Graphs/tpchassignment.png
+INPUT ./Graphs/tpchassignment.png
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
@@ -141,6 +148,9 @@ INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
 INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
 INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
 INPUT ./Graphs/mysqlvspostgres_withoutkeys_onethread.png
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
 INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
 INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
 INPUT ./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png
@@ -228,9 +238,6 @@ INPUT ./Graphs/postgresql40gb.png
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
-INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
-INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
-INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd

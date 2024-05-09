@@ -1,33 +1,44 @@
 \contentsline {section}{\numberline {1}Introdu^^c3^^a7^^c3^^a3o}{5}{}%
-\contentsline {section}{\numberline {2}Especifica^^c3^^a7^^c3^^b5es e Configura^^c3^^a7^^c3^^b5es do Computador}{6}{}%
-\contentsline {section}{\numberline {3}Cria^^c3^^a7^^c3^^a3o de Dados}{6}{}%
-\contentsline {section}{\numberline {4}Plano de Execu^^c3^^a7^^c3^^a3o}{6}{}%
-\contentsline {section}{\numberline {5}Scripts e c^^c3^^b3digo utilizado}{7}{}%
-\contentsline {section}{\numberline {6}Resultados - Tabelas}{8}{}%
-\contentsline {subsection}{\numberline {6.1}Importa^^c3^^a7^^c3^^a3o dos Dados}{8}{}%
-\contentsline {subsection}{\numberline {6.2}Cria^^c3^^a7^^c3^^a3o das chaves prim^^c3^^a1rias e estrangeiras(PK e FK)}{9}{}%
-\contentsline {subsection}{\numberline {6.3}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 1 thread numa base de dados de 25GB.}{10}{}%
-\contentsline {subsection}{\numberline {6.4}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 5 thread numa base de dados de 25GB.}{12}{}%
-\contentsline {subsection}{\numberline {6.5}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 1 thread's.}{14}{}%
-\contentsline {subsection}{\numberline {6.6}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 5 thread's.}{15}{}%
-\contentsline {subsection}{\numberline {6.7}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread numa base de dados de 25GB.}{16}{}%
-\contentsline {subsection}{\numberline {6.8}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 25GB.}{18}{}%
-\contentsline {subsection}{\numberline {6.9}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, com chaves utilizando 1 thread.}{20}{}%
-\contentsline {subsection}{\numberline {6.10}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, com chaves utilizando 5 thread's.}{21}{}%
-\contentsline {subsection}{\numberline {6.11}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 40GB.(PostgreSQL)}{22}{}%
-\contentsline {subsection}{\numberline {6.12}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread numa base de dados de 40GB.(PostgreSQL)}{23}{}%
-\contentsline {subsection}{\numberline {6.13}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 vs 5 thread numa base de dados de 40GB.(PostgreSQL)}{24}{}%
-\contentsline {section}{\numberline {7}An^^c3^^a1lise de Resultados}{25}{}%
-\contentsline {subsection}{\numberline {7.1}Importa^^c3^^a7^^c3^^a3o de Dados}{25}{}%
-\contentsline {subsection}{\numberline {7.2}Cria^^c3^^a7^^c3^^a3o das chaves prim^^c3^^a1rias e estrangeiras(PK e FK)}{28}{}%
-\contentsline {subsection}{\numberline {7.3}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 1 thread numa base de dados de 25GB}{31}{}%
-\contentsline {subsection}{\numberline {7.4}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 5 thread's numa base de dados de 25GB}{32}{}%
-\contentsline {subsection}{\numberline {7.5}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}{33}{}%
-\contentsline {subsection}{\numberline {7.6}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread numa base de dados de 25GB}{35}{}%
-\contentsline {subsection}{\numberline {7.7}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 25GB}{37}{}%
-\contentsline {subsection}{\numberline {7.8}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}{38}{}%
-\contentsline {subsection}{\numberline {7.9}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o entre com chaves vs sem chaves numa base de dados de 25GB PostgreSQL}{40}{}%
-\contentsline {subsection}{\numberline {7.10}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o entre com chaves vs sem chaves numa base de dados de 25GB MySQL}{42}{}%
-\contentsline {subsection}{\numberline {7.11}Compara^^c3^^a7^^c3^^a3o m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o 1 vs 5 threads com chaves base de dados 40GB(PostgreSQL)}{44}{}%
-\contentsline {subsection}{\numberline {7.12}An^^c3^^a1lise de Explain Plan Query Lenta}{45}{}%
-\contentsline {subsubsection}{\numberline {7.12.1}PostgreSQL}{45}{}%
+\contentsline {section}{\numberline {2}Estrutura da Base de Dados}{6}{}%
+\contentsline {section}{\numberline {3}Especifica^^c3^^a7^^c3^^b5es e Configura^^c3^^a7^^c3^^b5es do Computador}{7}{}%
+\contentsline {section}{\numberline {4}Cria^^c3^^a7^^c3^^a3o de Dados}{7}{}%
+\contentsline {section}{\numberline {5}Plano de Execu^^c3^^a7^^c3^^a3o}{7}{}%
+\contentsline {section}{\numberline {6}Scripts e c^^c3^^b3digo utilizado}{8}{}%
+\contentsline {section}{\numberline {7}Resultados - Tabelas}{9}{}%
+\contentsline {subsection}{\numberline {7.1}Importa^^c3^^a7^^c3^^a3o dos Dados}{9}{}%
+\contentsline {subsection}{\numberline {7.2}Cria^^c3^^a7^^c3^^a3o das chaves prim^^c3^^a1rias e estrangeiras(PK e FK)}{10}{}%
+\contentsline {subsection}{\numberline {7.3}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 1 thread numa base de dados de 25GB.}{11}{}%
+\contentsline {subsection}{\numberline {7.4}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 5 thread numa base de dados de 25GB.}{13}{}%
+\contentsline {subsection}{\numberline {7.5}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 1 thread's.}{15}{}%
+\contentsline {subsection}{\numberline {7.6}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 5 thread's.}{16}{}%
+\contentsline {subsection}{\numberline {7.7}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread numa base de dados de 25GB.}{17}{}%
+\contentsline {subsection}{\numberline {7.8}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 25GB.}{19}{}%
+\contentsline {subsection}{\numberline {7.9}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, com chaves utilizando 1 thread.}{21}{}%
+\contentsline {subsection}{\numberline {7.10}M^^c3^^a9dias e Desvio padr^^c3^^a3o de tempos entre MySQL vs PostgresSQL, com chaves utilizando 5 thread's.}{22}{}%
+\contentsline {subsection}{\numberline {7.11}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 40GB.(PostgreSQL)}{23}{}%
+\contentsline {subsection}{\numberline {7.12}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread numa base de dados de 40GB.(PostgreSQL)}{24}{}%
+\contentsline {subsection}{\numberline {7.13}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 vs 5 thread numa base de dados de 40GB.(PostgreSQL)}{25}{}%
+\contentsline {section}{\numberline {8}An^^c3^^a1lise de Resultados}{26}{}%
+\contentsline {subsection}{\numberline {8.1}Importa^^c3^^a7^^c3^^a3o de Dados}{26}{}%
+\contentsline {subsection}{\numberline {8.2}Cria^^c3^^a7^^c3^^a3o das chaves prim^^c3^^a1rias e estrangeiras(PK e FK)}{29}{}%
+\contentsline {subsection}{\numberline {8.3}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 1 thread numa base de dados de 25GB}{32}{}%
+\contentsline {subsection}{\numberline {8.4}Tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 5 thread's numa base de dados de 25GB}{34}{}%
+\contentsline {subsection}{\numberline {8.5}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o sem PK's e FK's utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}{36}{}%
+\contentsline {subsection}{\numberline {8.6}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 thread numa base de dados de 25GB}{38}{}%
+\contentsline {subsection}{\numberline {8.7}Tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 5 thread's numa base de dados de 25GB}{40}{}%
+\contentsline {subsection}{\numberline {8.8}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o com PK's e FK's utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}{41}{}%
+\contentsline {subsection}{\numberline {8.9}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o entre com chaves vs sem chaves numa base de dados de 25GB PostgreSQL}{43}{}%
+\contentsline {subsection}{\numberline {8.10}Compara^^c3^^a7^^c3^^a3o da m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o entre com chaves vs sem chaves numa base de dados de 25GB MySQL}{45}{}%
+\contentsline {subsection}{\numberline {8.11}Compara^^c3^^a7^^c3^^a3o m^^c3^^a9dia do tempo de execu^^c3^^a7^^c3^^a3o 1 vs 5 threads com chaves base de dados 40GB(PostgreSQL)}{47}{}%
+\contentsline {subsection}{\numberline {8.12}An^^c3^^a1lise de Explain Plan R^^c3^^a1pida vs Query Lenta}{48}{}%
+\contentsline {subsubsection}{\numberline {8.12.1}PostgreSQL - R^^c3^^a1pida}{48}{}%
+\contentsline {subsubsection}{\numberline {8.12.2}PostgreSQL - Lenta}{49}{}%
+\contentsline {subsubsection}{\numberline {8.12.3}PostgreSQL - Conclus^^c3^^a3o}{51}{}%
+\contentsline {subsubsection}{\numberline {8.12.4}MySQL - R^^c3^^a1pida}{52}{}%
+\contentsline {subsubsection}{\numberline {8.12.5}MySQL - Lenta}{56}{}%
+\contentsline {subsubsection}{\numberline {8.12.6}MySQL - Conclus^^c3^^a3o}{58}{}%
+\contentsline {subsection}{\numberline {8.13}An^^c3^^a1lise de Explain Plan Query Lenta}{60}{}%
+\contentsline {subsubsection}{\numberline {8.13.1}PostgreSQL}{60}{}%
+\contentsline {subsubsection}{\numberline {8.13.2}MySQL}{61}{}%
+\contentsline {subsubsection}{\numberline {8.13.3}MySQL vs PostgreSQL - Explain Plan}{66}{}%
+\contentsline {section}{\numberline {9}Conclus^^c3^^a3o}{67}{}%

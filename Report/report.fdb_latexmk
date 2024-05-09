@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1715194073.63981 "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" "report.pdf" "report" 1715194078.1422 0
-  "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" 1715194071.01952 87055 77de52a2596e7ccca2aee3befad0e8d9 ""
+["pdflatex"] 1715298732.80034 "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" "report.pdf" "report" 1715298737.11467 0
+  "/Users/brunosequeira/Desktop/SGD-Project/SGD-TPCH/Report/report.tex" 1715298730.77543 137172 45931f4601c2ef2306e31940c9df1ed9 ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1715019131.02054 74160 78b35abd362efd043d49e72b1d59ee69 ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1711627528.09958 11548 727e5e4882ecc0738c062b5aa0bf526b ""
   "/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1712933432.76934 21059650 be3e3ec3b1571232f12fb2d76ea97c9d ""
@@ -64,12 +64,13 @@
   "Graphs/postgres_withkeys_1vs5.png" 1715187640.98229 31848 4b347777bcc36e40ada67d47f84f7345 ""
   "Graphs/postgres_withoutkeys_1vs5.png" 1715187641.01686 31136 3f6d1c54651634290a21677d9de02318 ""
   "Graphs/postgresql40gb.png" 1713982997.41165 29832 4e72c2a1b826e58ed10ab93608e50520 ""
+  "Graphs/tpchassignment.png" 1715298514.7887 46283 a66b61dfae7ec0917edbdce76fed8287 ""
   "dei_thumb.png" 1713543410.44421 16892 718660ae15134f76c497df49f7c46672 ""
-  "report.aux" 1715194077.74634 14428 413356f856feb3185297a53f59a91783 "pdflatex"
-  "report.lof" 1715194077.76009 2770 d082592f0feeac270f4418725998bcf2 "pdflatex"
-  "report.lot" 1715194077.76016 2686 7ac339724894686044a56242b6208c85 "pdflatex"
-  "report.tex" 1715194071.01952 87055 77de52a2596e7ccca2aee3befad0e8d9 ""
-  "report.toc" 1715194077.75997 4520 92ae3a58436429cab38344307e82d743 "pdflatex"
+  "report.aux" 1715298736.54917 15962 00fc1c97ee462aae62ae83e9a158a6d5 "pdflatex"
+  "report.lof" 1715298736.55717 2869 094cc2b3ab62ef0ba8644efbc50763d5 "pdflatex"
+  "report.lot" 1715298736.55724 2688 ceecf8afeba837295db38b6dfd9b337a "pdflatex"
+  "report.tex" 1715298730.77543 137172 45931f4601c2ef2306e31940c9df1ed9 ""
+  "report.toc" 1715298736.55704 5413 62c065103d9cb80962a914ae4c07ccfd "pdflatex"
   (generated)
   "report.aux"
   "report.lof"

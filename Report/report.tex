@@ -50,13 +50,26 @@
 \section{Introdução}
 \quad No mundo contemporâneo, onde os dados se tornaram um ativo extremamente valioso e omnipresente em quase todos os setores da sociedade, a capacidade de gerir grandes quantidades de dados de forma eficiente tornou-se uma prioridade fundamental. Empresas, organizações governamentais, instituições académicas e até mesmo indivíduos enfrentam o desafio de lidar com volumes massivos de dados, muitas vezes provenientes de diversas fontes e em formatos diversos.\\
 
-\quad Nesse contexto, os sistemas de gestão de base de dados (SGBDs) desempenham um papel crucial. Essas ferramentas oferecem estruturas e mecanismos para armazenar, organizar, recuperar e manipular dados de maneira eficaz. No entanto, à medida que a quantidade e a complexidade dos dados aumentam, os desafios enfrentados pelos SGBDs também crescem exponencialmente.\\
+\quad Nesse contexto, os sistemas de gestão de dados (SGDs) desempenham um papel crucial. Essas ferramentas oferecem estruturas e mecanismos para armazenar, organizar, recuperar e manipular dados de maneira eficaz. No entanto, à medida que a quantidade e a complexidade dos dados aumentam, os desafios enfrentados pelos SGBDs também crescem exponencialmente.\\
 
 \quad O objetivo deste projeto é explorar e entender como os motores de base de dados tradicionais lidam com grandes volumes de dados e consultas complexas de forma eficiente. Para alcançar esse objetivo, iremos utilizar o TPC-H como benchmarking. O TPC-H é um conjunto padrão de consultas de benchmarking projetado para avaliar o desempenho de SGBDs em cenários de análise de dados complexos.\\
 
-\quad Este projeto se concentrará em dois dos SGBDs mais amplamente utilizados e estabelecidos no mercado: MySQL e PostgreSQL. Ambos são sistemas de código aberto com uma vasta base de utilizadores e uma longa história de desenvolvimento. Ao comparar o desempenho desses dois SGBDs em relação ao benchmark TPC-H, pretendemos obter insights valiosos sobre suas capacidades e limitações no processamento de grandes quantidades de dados e consultas complexas.\\
+\quad Este projeto se concentrará em dois dos SGDs mais amplamente utilizados e estabelecidos no mercado: MySQL e PostgreSQL. Ambos são sistemas de código aberto com uma vasta base de utilizadores e uma longa história de desenvolvimento. Ao comparar o desempenho desses dois SGBDs em relação ao benchmark TPC-H, pretendemos obter insights valiosos sobre suas capacidades e limitações no processamento de grandes quantidades de dados e consultas complexas.\\
 
 \quad Ao finalizar este projeto, esperamos não apenas aumentar nossa compreensão sobre como os motores de base de dados tradicionais lidam com grandes volumes de dados e consultas complexas, mas também fornecer insights práticos e acionáveis para otimizar o desempenho e a eficiência do gestão de dados em ambientes do mundo real.\\
+\clearpage
+
+\section{Estrutura da Base de Dados}
+Apresentamos agora a estrutura da nossa base de dados, terá cerca de 8 tabelas.\\
+
+As tabelas são: lineitem, partsupp, part, supplier, nation, region, orders e customer. Sendo que estas têm ligações umas às outras.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{Graphs/tpchassignment.png}\\
+  \caption{Imagem - Estrutura da base de dados.}
+  \label{fig:row_import_time}
+\end{figure}
+
 \clearpage
 
 
@@ -947,7 +960,7 @@ Nesta subsecção iremos comparar o desempenho do MySQL vs PostgreSQL ao executa
 
 Apresentamos agora os tempos de execução sem PK's e FK's utilizando 1 thread.
 
-NOTA: A query 2,17,19,20,21 não podemos tirar conclusões visto que não deixamos a pesquisa ir até ao fim, visto que passou uma hora e não tivemos nenhum resultado. Destas querys, podemos concluir que na Q19 foi mais rápido no PostgreSQL.
+NOTA: A query 2,17,20,21 não podemos tirar conclusões visto que não deixamos a pesquisa ir até ao fim, visto que passou uma hora e não tivemos nenhum resultado. Destas querys, podemos concluir que na Q19 foi mais rápido no PostgreSQL.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Graphs/mysqlvspostgres_withoutkeys_onethread.png}
@@ -959,7 +972,29 @@ Analisando a tabela correspondente ao tempo de execução sem chaves e com 1 thr
 
 Há exceção da query 15, o PostgreSQL teve um desempenho absurdamente melhor do que o MySQL.
 
+A partir da tabela, o tempo de execução total da querys MySQL foi \textbf{955,1810096\%} em relação ao PostgreSQL. A query \textbf{Q7} é a query que nos chama mais à atenção, visto que foi a query que demorou mais tanto no PostgreSQL como no MySQL. \\
 
+Esta query é bastante complexa e envolve várias operações que podem ser lentas em grandes volumes de dados.
+
+A subconsulta dentro da claúsula where \textit{'select l\underline{}orderkey from LINEITEM group by l\underline{}orderkey having sum(l\underline{}quantity) \textgreater 314'} é ineficiente visto que a tabela LINEITEM é a maior. Isso ocorre porque a base de dados precisa de calcular a soma para cada l\underline{}orderkey antes de poder filtrar os resultados.
+
+Esta consulta junta três tabelas (customer, orders e lineitem) usando clausulas JOIN. Visto que 2 delas são as maiores e visto que não existe indíces adequados, a junção irá ser demorada. 
+
+ A consulta utiliza a cláusula GROUP BY com funções de agregação (SUM), o que pode ser intensivo em termos de processamento, especialmente quando agrupado por várias colunas.
+
+A cláusula ORDER BY é usada com a função de agregação SUM, o que pode ser custoso em termos de desempenho, pois a base de dados precisa calcular a soma para cada grupo antes de ordenar os resultados.
+
+
+Em termos de maior diferença entre PostgreSQL com MySQL, a query 8. Neste caso, MySQL é \textbf{3549,631184} \%.  Para termos uma boa conclusão iremos analisar os explains dos dois motores.\\
+
+O MySQL tem um custo total extremamente alto e o PostgreSQL é muito inferior.
+No MySQL é utilizado uma operação de junção (nested loop join) entre todas as tabelas. Sendo bastante ineficiente especialmente para grandes volumes de dados, porque cada linha de uma tabela é combinada com todas as linhas das outras tabelas, resultando num grande número de combinações.
+No PostgreSQL são utilizadas junções hash paralelas, o que é mais eficiente, especialmente em sistemas com múltiplos núcleos de processamento. Isso ajuda a distribuir a carga de trabalho entre os núcleo de CPU, melhorando o desempenho geral da consulta.
+No MySQL, há um grande número de operações de leitura sequencial, o que significa que a base de dados está a percorrer todas as linhas para encontrar os dados necessários. Isso geralmente, é menos eficiente do que usar índices para buscar dados específicos (iremos analisar os indices nas próximas secções).
+No PostgreSQL, embora ainda haja operações de leitura sequencial, elas são paralelizadas, o que pode melhorar o desempenho em sistemas com vários núcleos de CPU.
+No MySQL é utilizado uma tabela temporária, e uma ordenação em ficheiro (filesort) o que pode indicar que a base de dados teve que usar recursos adicionais para manipular os resultados intermediários da consulta.
+
+De uma forma geral, o PostgreSQL apresenta melhores resultados e mais eficientes principalmente quando não existem chaves e só é utilizado uma thread.
 
 \clearpage
 \subsection{Tempo de execução sem PK's e FK's utilizando 5 thread's numa base
@@ -980,7 +1015,54 @@ Apresentamos agora os tempos de execução sem PK's e FK's utilizando 5 thread's
   \label{fig:PKCreation2}
 \end{figure}
 
+Tal como no gráfico anterior, o resultado global dá nos novamente o postgreSQL como o melhor motor de pesquisa para as pesquisas sem chaves e com 5 threads.
 
+Apesar disso, o tempo de execução total da querys MySQL foi \textbf{272,1583536\%} em relação ao PostgreSQL, o que diminuiu bastante em relação ao uso de apenas uma thread.
+
+Em comparação com o gráfico da subsecção anterior, os tempos de execução aumentaram,
+visto que são usadas 5 threads, em que têm de dividir os recursos tais como memória e etc. Portanto
+o tempo de pesquisa seria relativamente mais alto, tal como esperado.
+
+Visto que na secção anterior analisamos a query \textbf{Q7}, e mesmo assim é a que tem maior diferença entre mysql e postgres, iremos analisar a \textbf{Q8}, que é a segunda com maior diferença.
+
+O MySQL usa uma estratégia de hash join, o que significa que ele une tabelas repetidamente com base em colunas específicas.
+Ele executa uma varredura completa em muitas tabelas, incluindo tabelas grandes, como pedidos e itens de linha.
+Isto pode ser muito caro para processar grandes conjuntos de dados.
+A classificação é feita nos resultados intermediários antes do agrupamento, o que adiciona outra camada de custo.
+
+
+PostgreSQL usa uma abordagem de coleta para agregação.
+Primeiro ele filtra e une tabelas menores, como região e nação.
+Em seguida, ele usa processamento paralelo para digitalizar e unir tabelas maiores, como pedidos e itens de linha.
+Por fim, agrupa os dados por ano extraídos da colunaorders.o\underline{}orderdate.
+
+Para conjuntos de dados muito grandes, a abordagem de fusão e coleta do PostgreSQL com processamento paralelo é mais eficiente.
+
+
+Iremos abordar a \textbf{Q16}, para analisarmos a razão pela qual os tempos são parecidos.
+
+Após verificarmos o custo estimado notamos uma diferença enorme, mas os resultados são praticamente os mesmos, tornando o mysql como mais rápido.
+
+PostgreSQL usa uma estratégia de coleta e mesclagem para agregação.
+
+Filtra e junta tabelas menores primeiro (como na subconsulta2 para fornecedores com reclamações).
+Usa processamento paralelo para digitalizar e unir tabelas maiores (part e partsupp).
+Classifica os resultados por diversas colunas (p\underline{}brand, p\underline{}type e p\underline{}size) e depois os agrega usando count(DISTINCT partsupp.ps\underline{}suppkey).
+
+
+MySQL usa uma série de hash joins em todo o plano.
+Executa inicialmente uma varredura completa da tabela no partsupp.
+Usa uma subconsulta para filtrar peças com base em critérios específicos (p\underline{}brand, p\underline{}type e p\underline{}size).
+Classifica e agrupa os resultados finalmente.
+
+O PostgreSQL parece mais adequado para cenários com tabelas grandes como o partsupp. O processamento paralelo ajuda a distribuir a carga de trabalho entre vários threads, melhorando potencialmente o desempenho.
+O MySQL pode ser a escolha do otimizador para consultas de agregação mais simples, sem condições de filtragem complexas.
+
+Portanto, após analisarmos os resultados, notamos que o uso de threads piora o tempo de execução de querys.
+
+Iremos apresentar noutra secção a diferença com uso de 1 thread vs 5 threads entre motores de pesquisa.
+
+Concluindo, o PostgreSQL é superior ao MySQL quando são executadas 5 threads e não existem chaves.
 
 \clearpage
   \subsection{Comparação da média do tempo de execução sem PK's e FK's
@@ -997,8 +1079,17 @@ Apresentamos agora os tempos de execução sem PK's e FK's utilizando 5 thread's
     \includegraphics[width=\textwidth]{Graphs/mysql_withoutkeys_1vs5threads.png}
     \caption{Gráfico de barras - MySQL - 1 vs 5 thread sem chaves.} 
     \label{fig:PKCreation2}
-
   \end{figure}
+  
+  As querys 2,17,19,20,21 não irão ser analisadas visto que nem com 1 thread nem 5 threads estas foram executadas até ao fim.
+
+  Apartir da tabela e do gráfico apresentado, 9 das 17 que observamos são mais rápidas nas 5 threads.
+
+  Sendo que podemos analisar que essas 9 são nas querys mais simples e que de forma geral demoram menos tempo, sendo que nessas querys a diferença entre 1 thread e 5 thread é pequena. \\
+
+  Já quando analisamos as outro 8 queryes estas já são mais complexas que têm mais junções e combinações a fazer, tornando assim o uso de apenas uma thread um benefício.
+
+  Portanto neste gráfico é 50\%/50\%, depende bastante do objetivo do projeto, se as querys forem mais simples o uso de 5 threads é uma vantagem, torna a execução mais rápida e são executadas mais querys ao mesmo tempo.
 
 
 
@@ -1008,6 +1099,17 @@ Apresentamos agora os tempos de execução sem PK's e FK's utilizando 5 thread's
     \caption{Gráfico de barras - PostgreSQL - 1 vs 5 thread sem chaves.} 
     \label{fig:PKCreation2}
   \end{figure}
+
+  Com base nas tabelas acima referidas e no gráfico mostrado, podemos verificar que 100\% das querys são mais rápidas quando são usadas 
+  
+  Uma das teorias para tal, é as querys estarem a dividir recursos entre si, tendo assim menos desempenho quando começam a executar. Iremos abordar agora uma possível explicação entre as diferenças entre mysql que teve 50\% de sucesso 1 thread e o postgres que teve 100\% de sucesso com 1 thread.
+
+  O otimizador do MySQL pode escolher planos de execução menos eficientes para determinadas consultas, levando a um desempenho mais lento com vários threads. Isso pode ser devido a fatores como estratégia de junção, otimização de subconsulta ou padrões de acesso a dados. Em algumas consultas MySQL, uma única operação de junção pode ser o gargalo de desempenho. Mesmo com a paralelização, outros estágios podem ter que aguardar a conclusão dessa junção, limitando o benefício de vários threads, e adicionar mais threads pode não melhorar o desempenho. Isto pode ser especialmente verdadeiro para consultas que envolvem a leitura de grandes quantidades de dados do disco.
+
+  A implementação de threading do PostgreSQL pode ser mais eficiente em determinados cenários em comparação com o MySQL. Poderia ter melhor agendamento de threads, mecanismos de sincronização ou técnicas de gestão de memória.
+
+  O otimizador de consultas do PostgreSQL pode ser mais conservador em sua estimativa dos benefícios da paralelização. Poderia favorecer planos mais simples de thread único para evitar sobrecarga potencial ou degradação de desempenho.
+
 
 
 
@@ -1031,13 +1133,19 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 1 thread.
   \caption{Gráfico de barras - MySQL vs PostgreSQL - 1 thread com chaves.}
   \label{fig:PKCreation2}
 \end{figure}
-\quad Com base nesta comparação, pode-se observar que em muitos casos o postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL para as consultas do TPC-H. Isso pode ser atríbuido a várias razões incluindo, \textit{Otimizações do PostgreSQL} o postgreSQL é conhecido por ter um otimizador de consulta sofisticado que pode gerar planos de execução eficientes para consultas complexas. Isso pode resultar em tempos de execução mais rápidos para consutlas específicas em comparação com o MySQL, \textit{Arquitetura do PostgreSQL} o postgreSQL tem uma arquitetura robusta que suporta recursos avançados, como suporte a vários tipos de índices, sendo que esses recursos podem contribuir para um desempenho melhor em cenários de consulta intensiva, como o TPC-H.
+\quad Com base nesta comparação, pode-se observar que em muitos casos o postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL para as consultas do TPC-H.
+
+Isso pode ser atríbuido a várias razões incluindo, \textit{Otimizações do PostgreSQL} o postgreSQL é conhecido por ter um otimizador de consulta sofisticado que pode gerar planos de execução eficientes para consultas complexas. Isso pode resultar em tempos de execução mais rápidos para consutlas específicas em comparação com o MySQL, \textit{Arquitetura do PostgreSQL} o postgreSQL tem uma arquitetura robusta que suporta recursos avançados, como suporte a vários tipos de índices, sendo que esses recursos podem contribuir para um desempenho melhor em cenários de consulta intensiva, como o TPC-H.
+
+Tal como referido anteriorment, o otimizador do MySQL pode escolher planos de execução menos eficientes para determinadas consultas, levando a um desempenho mais lento com vários threads. Isso pode ser devido a fatores como estratégia de junção, otimização de subconsulta ou padrões de acesso a dados. 
+
 
 \quad Mas existem algumas exceções, tais como a query 17,18,20,21.
 
 Consultas como Q2, Q6, Q8, Q11 e Q15 são menos complexas, envolvem menos junções ou operações mais simples.
 Para essas consultas menos complexas, o PostgreSQL também tende a ter tempos de execução mais baixos em comparação com o MySQL na maioria dos casos.
 
+Podendo concluir, que o PostgreSQL quando utilizado 1 thread e chaves é muito mais eficiente, principalmente quando envolve pesquisas mais complexas e mais demoradas.
 
 \clearpage
 \subsection{Tempo de execução com PK's e FK's utilizando 5 thread's numa base
@@ -1061,9 +1169,12 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 5 thread.
 \end{figure}
 
 
-\quad Apartir deste gráfico podemos concluir o mesmo que na subsecção anterior. O postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL, menos nas query 17,18,20,21.\\
+\quad Apartir deste gráfico podemos concluir o mesmo que na subsecção anterior. O postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL, menos nas query 2,15,16,17,18,20,21.
+\quad Em comparação com o gráfico da subsecção anterior, os tempos de execução aumentaram, visto que são usadas 5 threads, em que têm de dividir os recursos tais como memória e pelas razões escritas na secção \textbf{7.5}, da figura 5. 
 
-\quad Em comparação com o gráfico da subsecção anterior, os tempos de execução aumentaram, visto que são usadas 5 threads, em que têm de dividir os recursos tais como memória e etc. Portanto o tempo de pesquisa será relativamente mais alto.
+\quad Em relação à secção \textbf{7.6}, os resultados do PostgreSQL são drásticamente piores, apesar disso o PostgreSQL tem uma grande vantagem, visto que o tempo de execução total do mysql é \textbf{576,2615614\%} superior em relação ao PostgreSQL.
+
+Concluindo, o PostgreSQL é superior em relação ao MySQL com uso de chaves e com 5 threads.
 \clearpage
   \subsection{Comparação da média do tempo de execução com PK's e FK's
   utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}
@@ -1071,7 +1182,7 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 5 thread.
   \quad Nesta subsecção iremos comparar o desempenho do MySQL ao executar a mesma consulta com diferentes números de threads, especificamente 1 e 5 threads. 
   
   O objetivo é avaliar o impacto do paralelismo na eficiência da consulta e determinar se o aumento do número de threads resulta numa melhoria significativa no tempo de resposta.\\
-  
+
   Também iremos fazer uma analise ao desempenho do postgreSQL ao executar a mesma consulta com diferentes números de threads.
 
   \begin{figure}[H]
@@ -1083,6 +1194,10 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 5 thread.
   \end{figure}
 
   \quad É possível analisar que a média dos tempos é sempre mais baixa quando estes são executados com apenas uma thread, o que já era algo de esperar. Iremos dar uma explicação após mostrarmos a comparação para o PostgreSQL, que na teoria também será menor para as execuções de 1 thread.
+    
+  Neste caso, 17 das 22 querys são mais rápidas quando usadas 1 threads, em comparação aos tempos de execução sem chaves existe uma boa diferença, visto que com chaves a utilização de 1 thread é mais benéfico do que com 5 threads. Já sem chaves é benéfico utilizar 1 thread quando as querys são mais complexas. Neste caso em que é utilizado chaves, é mais vantajoso utilizar 1 thread que 5.
+
+  Mesmo assim, os resultados são bastante parecidos, sendo que o MySQL de forma geral é bom tanto com 1 thread como com 5 threads(principalmente quando são mais simples).
 
   \begin{figure}[H]
     \centering
@@ -1091,16 +1206,18 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 5 thread.
     \label{fig:PKCreation2}
   \end{figure}
 
+  NOTA: Não iremos tirar conclusões acerca da query 2,17,20 e 21 (Não temos dados para analisar).
 
-  Tal como esperado, as execuções com 1 thread são as mais rápidas (mesmo não sendo com grande diferença), apesar de ter ocorrido uma exceção na query 21. Uma razão pela qual a query 21 ser mais rápida com 5 threads do que com 1, é que visto que ela demorou 5 vezes mais que a 2º, quando esta estava em execução, as outras 4 threads já tinham terminado, o que deu recursos para esta poder fazer a pesquisa de for mais rápida.
+Analisando o resultado, as execuções com 1 thread são as mais rápidas, o otimizador de consultas de PostgreSQL pode ser mais conservador na sua estimativa dos benefícios da paralelização. Sendo que pode favorecer planos mais simples de uma única thread para evitar sobrecarga potencial ou degradação de desempenho.
   
   
-  As razões pela qual as execuções com 1 thread são mais rápidas são as seguintes:\\
+  
 \quad As consultas simultâneas podem competir por recursos partilhados, especialmente se as consultas estiverem a tentar aceder aos mesmos recursos ao mesmo tempo.
 O uso de várias threads pode aumentar o overhead do sistema devido à criação e gestão de threads adicionais. Isso pode consumir recursos do sistema, como CPU e memória, reduzindo a eficiência geral. 
 Dependendo da natureza das consultas e da carga de trabalho, várias consultas simultâneas podem sobrecarregar o sistema de base de dados, levando a latências mais altas e tempos de resposta mais lentos. 
  
-\clearpage
+
+
 
 
 \clearpage
@@ -1120,7 +1237,23 @@ NOTA: A query 2 e 21, apesar de não termos deixado a pesquisa sem chaves ir at�
 \end{figure}
 
 
-\quad É possível analisar que a média dos tempos é sempre mais baixa quando estes são executados com apenas uma thread, o que já era algo de esperar. Iremos dar uma explicação após mostrarmos a comparação para o PostgreSQL, que na teoria também será menor para as execuções de 1 thread.
+Analisando o gráfico de barras disponibilizado, 17 das 18 querys possíveis de análise são mais rápidas quando ocorre o uso das chaves.
+
+A query 13 ficou notável que é mais eficiente sem o uso de chaves, iremos analizar os explain tirando conclusões acerca das razões para tal.
+
+Com Chaves usa uma "varredura apenas de índice paralelo usando customer\underline{}pkey no cliente". Isso indica acesso eficiente à tabela de clientes aproveitando o índice de chave primária (customer\underline{}pkey). Geralmente, isso é mais rápido do que verificar a tabela inteira.
+Sem chaves usa um "Parallel Seq Scan on customer". Isso sugere uma varredura completa da tabela do cliente, potencialmente acessando mais dados do que o necessário.
+
+Uma vantagem do plano com chaves: Acesso mais rápido aos dados do cliente usando o índice de chave primária.
+
+Ambos os planos: utilizam um "Parallel Hash Left Join" para combinar dados das tabelas de clientes e pedidos com base na coluna c\underline{}custkey. As estimativas de custos para a operação de junção são muito semelhantes em ambos os planos.
+
+Uma razão pela qual é mais rápido sem uso de chaves são as seguintes:\\
+Quando uma grande parte da tabela precisa ser acedida, um full scan pode ser mais rápido do que usar índices. Isso ocorre porque o custo de aceder os blocos de dados diretamente pode ser menor do que o custo de percorrer a estrutura do índice, e em seguida, aceder os dados correspondentes.
+Evitar o uso de chaves pode reduzir a sobrecarga à manutenção dessas estruturas. Em consultas que retornam a maioria dos registos da tabela, o benefício de usar um índice para localizar os registos pode ser superado pelo custo adicional de manter e usa esse índice.
+Se a consulta fosse mais seletiva, o uso de chaves seria mais benéfico e o resultado seria mais eficiente e rápido.
+
+Apresentamos um gráfico com a mesma ideia mas com a utilização de 5 threads.
 
 \begin{figure}[H]
   \centering
@@ -1128,6 +1261,8 @@ NOTA: A query 2 e 21, apesar de não termos deixado a pesquisa sem chaves ir at�
   \caption{Gráfico de barras - PostgreSQL - with keys vs without keys utilizando 5 thread.} 
   \label{fig:PKCreation2}
 \end{figure}
+As conclusões que tiramos acima são exatamente iguais. O único dado que podemos adicionar é que com o uso de 5 threads, todas as pesquisas ficaram mais lentas. E à exceção da query \textbf{Q13}, o uso de chaves é benéfico.
+
 \clearpage
 
 
@@ -1146,9 +1281,19 @@ NOTA: A query 2,17,19,20, apesar de não termos deixado a pesquisa sem chaves ir
   \caption{Gráfico de barras - MySQL - with keys vs without keys utilizando 1 thread.} 
   \label{fig:PKCreation2}
 \end{figure}
+Os dados são bastante semelhantes aos do postgres, à exceção da query \textbf{Q3},\textbf{Q9},\textbf{Q17} e \textbf{Q16}
+
+Iremos analisar mais detalhadamente a query \textbf{Q3}.
+
+\textbf{Com chaves} ,  a tabela ORDERS é acedida usando um índice (ref) na coluna O\underline{}CUSTKEY, enquanto no \textbf{sem chaves} é acessada através de uma varredura completa . Dependendo da distribuição dos dados e da eficiência do índice, a varredura completa pode ser mais rápida para aceder uma grande parte da tabela em comparação com a utilização de índices, especialmente se o índice não estiver bem ajustado ou se o custo de acesso ao índice for alto.
+
+Ambos os planos envolvem operações de junção, mas o custo dessas operações pode variar dependendo dos métodos de acesso às tabelas e das condições de junção. No \textbf{com chaves} , a junção entre as tabelas ORDERS e LINEITEM é realizada através de referências a chaves primárias, o que pode introduzir um custo adicional de acesso ao índice. Isso pode contribuir para o aumento do tempo de execução.
+
+Ambos os planos envolvem filtros de dados (attached\underline{}condition) aplicados às tabelas ORDERS e LINEITEM. No entanto, o custo dessas operações de filtragem pode variar dependendo do método de acesso às tabelas e do número de registros que atendem aos critérios de filtragem.
+
+Uma das razões pelas quais o \textbf{com chaves} é mais lento do que \textbf{sem chaves} é que as chaves utilizadas não são muito seletivos para os critérios de filtragem aplicados, o que significa que eles não reduzem eficientemente o número de linhas a serem acedidas. Tornando assim mais leituras de disco e operações de acesso à memória, tornando a consulta mais lenta.
 
 
-\quad É possível analisar que a média dos tempos é sempre mais baixa quando estes são executados com apenas uma thread, o que já era algo de esperar. Iremos dar uma explicação após mostrarmos a comparação para o PostgreSQL, que na teoria também será menor para as execuções de 1 thread.
 
 \begin{figure}[H]
   \centering
@@ -1157,6 +1302,9 @@ NOTA: A query 2,17,19,20, apesar de não termos deixado a pesquisa sem chaves ir
   \label{fig:PKCreation2}
 \end{figure}
 
+Analisando os resultados, estes são parecidos aos apresentados anteriormente, conseguimos visualizar, que o uso de threads tem um impacto mais negativo quando são usadas chaves do que quando não são usadas as chaves. Nota-se a diferença na query 11 que nem é muito complexa mas que com o uso de threads colocou o dobro mais lenta que anteriormente.
+
+Concluindo, o uso de chaves de forma geral, é mais benéfica isto quando os dados são mais seletivos. Quando os dados não são seletivos e as bases de dados são mais complexas e com um tamanho razoavelmente grande, é preferível não utilizar chaves, visto que o custo de full scan é inferior ao custo de manter um índice e de o utilizar.
 \clearpage
 \subsection{Comparação média do tempo de execução 1 vs 5 threads com chaves base de dados 40GB(PostgreSQL)}
 
@@ -1169,13 +1317,504 @@ A nossa primeira base de dados continha cerca de 40GB de dados, executamos as pe
   \label{fig:PKCreation2}
 \end{figure}
 
-Analisando o gráfico, podemos concluir que é mais rápido e eficiente quando é executada apenas uma thread, a razão pela qual isso acontece já referimos antes, com 5 threads estas têm de partilhar o mesmo recurso, ou seja, dividir tornando assim a performance global mais lenta.
+Analisando o gráfico, podemos concluir que é mais rápido e eficiente quando é executada apenas uma thread, a razão pela qual isso acontece já referimos antes, com 5 threads estas têm de partilhar o mesmo recurso, ou seja, dividir tornando assim a performance global mais lenta, e outras razões que já referimos desde o ínicio do relatório. 
 
+\clearpage
+\subsection{Análise de Explain Plan Rápida vs Query Lenta}
+\subsubsection{PostgreSQL - Rápida}
+Para a query rápida do PostgreSQL opatamos pela query 11, visto que dos resultados que obtemos foi sempre a mais rápida.\\
+
+Este explian plain é sem uso de chaves.
+
+\begin{lstlisting}[language=SQL]
+Sort  (cost=1033765.57..1034180.67 rows=166041 width=36)
+  Sort Key: (sum((partsupp.ps_supplycost * (partsupp.ps_availqty)::numeric))) DESC
+  InitPlan 1 (returns $1)
+    ->  Finalize Aggregate  (cost=454267.05..454267.06 rows=1 width=32)
+          ->  Gather  (cost=454266.82..454267.03 rows=2 width=32)
+                Workers Planned: 2
+                ->  Partial Aggregate  (cost=453266.82..453266.83 rows=1 width=32)
+                      ->  Parallel Hash Join  (cost=5705.15..451266.82 rows=266667 width=10)
+                            Hash Cond: (partsupp_1.ps_suppkey = supplier_1.s_suppkey)
+                            ->  Parallel Seq Scan on partsupp partsupp_1  
+                                    (cost=0.00..419450.67 rows=6666667 width=14)
+                            ->  Parallel Hash (cost=5663.49..5663.49 rows=3333 width=4)
+                                  ->  Hash Join  (cost=1.32..5663.49 rows=3333 width=4)
+                                        Hash Cond: (supplier_1.s_nationkey = 
+                                            nation_1.n_nationkey)
+                                        ->  Parallel Seq Scan on supplier supplier_1  (cost=0.00..5316.33 rows=83333 width=8)
+                                        ->  Hash  (cost=1.31..1.31 rows=1 width=4)
+                                              ->  Seq Scan on nation nation_1  (cost=0.00..1.31 rows=1 width=4)
+                                                Filter: (n_name = 'MOZAMBIQUE'::bpchar)
+  ->  Finalize GroupAggregate  (cost=480860.28..560558.78 rows=166041 width=36)
+        Group Key: partsupp.ps_partkey
+        Filter: (sum((partsupp.ps_supplycost * (partsupp.ps_availqty)::numeric)) > $1)
+        ->  Gather Merge  (cost=480860.28..549086.93 rows=533334 width=36)
+              Workers Planned: 2
+              ->  Partial GroupAggregate  (cost=479860.25..486526.93 rows=266667 
+                    width=36)
+                    Group Key: partsupp.ps_partkey
+                    ->  Sort  (cost=479860.25..480526.92 rows=266667 width=14)
+                          Sort Key: partsupp.ps_partkey
+                          ->  Parallel Hash Join  (cost=5705.15..451266.82 rows=266667 width=14)
+                                Hash Cond: (partsupp.ps_suppkey = supplier.s_suppkey)
+                                ->  Parallel Seq Scan on partsupp  
+                                    (cost=0.00..419450.67 rows=6666667 width=18)
+                                ->  Parallel Hash  (cost=5663.49..5663.49 rows=3333 width=4)
+                                      ->  Hash Join  (cost=1.32..5663.49 rows=3333 width=4)
+                                            Hash Cond: (supplier.s_nationkey = 
+                                            nation.n_nationkey)
+                                            ->  Parallel Seq Scan on supplier  (cost=0.00..5316.33 rows=83333 width=8)
+                                            ->  Hash  (cost=1.31..1.31 rows=1 width=4)
+                                                  ->  Seq Scan on nation  (cost=0.00..1.31 rows=1 width=4)
+                                                    Filter: (n_name ='MOZAMBIQUE'::bpchar)
+
+\end{lstlisting}
+
+\textbf{Explicação}\\
+Este plano de execução está relacionado a uma consulta que envolve operações de agregação, junção e filtragem.
+
+Inicialmente, ocorre o initplan e finalize aggregate, são etapas preliminares para calcular a soma ponderada dos custos de suplimentos multiplicados pela quantidade disponivel para os produtos. Estes estão relacionados à função de agregação sum usada na consulta.
+
+Posteriormente, uma junção entre tabelas é realizada usando o campo \textit{ps\underline{}suppkey}. Esta é uma junção do tipo hash, que é uma técnica eficiente para unir grandes conjuntos de dados. Ambas as tabelas vão ser acedidas em paralelo. 
+
+Depois, um escaneamento sequencial paralelo é realizado na tabela \textit{partsuup\underline{}1}. Isso é feito para realizar uma junção com a tabela \textit{s\underline{}1}.
+
+Um filtro é aplicado na tabela \textit{nation\underline{}1} para selecionar apenas as linhas onde o país é MOZAMBIQUE.
+
+Os resultados da junção e da agregação são finalizados e os resultados são agrupados pela chave ps\underline{}partkey.
+
+Um filtro é aplicado nos resultados agrupados para selecionar apenas os grupos onde a soma ponderada dos custos de suplimentos multiplicados pela quantidade disponivel é maior que um valor específico. Este valor é calculado na etapa InitPlan.
+
+No final, os resultados finais são classificados em ordem decrescente com base na soma ponderada calculada na etapa initplan.
+
+\subsubsection{PostgreSQL - Lenta}
+Uma das querys mais lentas é a query 18, tinhamos outras tais como o 17 e 20, mas visto que dessas 2 não as deixamos ir até ao fim, achamos que as conclusões acerca desta poderão ser mais positivas.
+
+Não está bem formatado, para visualizar melhor recomendamos ver os ficheiros que submetemos com os explain plan.
+
+\begin{lstlisting}[language=SQL]
+  
+Limit  (cost=13274145.32..13274148.32 rows=100 width=71)
+ ->  GroupAggregate  (cost=13274145.32..13291299.74 rows=571814 width=71)
+      Group Key: orders.o_totalprice, orders.o_orderdate,
+         customer.c_name, customer.c_custkey, orders.o_orderkey
+       ->  Sort  (cost=13274145.32..13275574.86 rows=571814 width=44)
+            Sort Key: orders.o_totalprice DESC, orders.o_orderdate, 
+                customer.c_name, customer.c_custkey, orders.o_orderkey
+              ->  Hash Join  (cost=8090754.07..13201874.07 rows=571814 
+                                                    width=44)
+                   Hash Cond: (lineitem.l_orderkey = orders.o_orderkey)
+                    ->  Seq Scan on lineitem  (cost=0.00..3482341.08 
+                            rows=119994608 width=9)
+                     ->  Hash  (cost=8087710.07..8087710.07 rows=142960 width=43)
+                        ->  Hash Join  (cost=6806016.96..8087710.07 
+                          rows=142960 width=43)
+                              Hash Cond: (orders.o_custkey = customer.c_custkey)
+                               ->  Hash Join  (cost=6648545.96..7908660.97 rows=142960
+                                           width=24)
+                                    Hash Cond: (orders.o_orderkey = lineitem_1.l_orderkey)
+                                      ->  Seq Scan on orders  (cost=0.00..829242.00 
+                                      rows=30000000 width=20)
+                                      ->  Hash  (cost=6646199.96..6646199.96 
+                                      rows=142960
+                                                         width=4)
+                                          ->  Finalize GroupAggregate  
+          (cost=6531824.71..6644770.36 rows=142960 width=4)
+                                                Group Key: lineitem_1.l_orderkey
+                                                 Filter: 
+(sum(lineitem_1.l_quantity) > '314'::numeric)
+                                                 ->  Gather Merge  
+(cost=6531824.71..6631903.93rows=857762 width=36)
+                                                       Workers Planned: 2
+                                                        ->  Sort  
+(cost=6530824.69..6531896.89 rows=428881 width=36)
+                                                         Sort Key: 
+lineitem_1.l_orderkey
+                                                            ->  Partial HashAggregate 
+(cost=5985353.58..6478973.90 rows=428881 width=36)
+                                                            Group Key: 
+                                                              lineitem_1.l_orderkey
+                                                               Planned Partitions: 64
+                                                                ->  Parallel Seq Scan 
+                                                                on lineitem lineitem_1
+(cost=0.00..2782372.53 rows=49997753 width=9)
+                            ->  Hash  (cost=102392.00..102392.00 rows=3000000 width=23)
+                                     ->  Seq Scan on customer  (cost=0.00..102392.00 
+                                     rows=3000000 width=23)
+  
+\end{lstlisting}
+
+\textbf{Explicação}\\
+Apresenta um Limit, que é a etapa final do plano de execução. Ela limita o número de linhas retornadas pela consulta para 100 linhas, indicado pelo parâmetro rows = 100.
+
+GroupAggregate esta é uma operação de agregação que agrupa os resultados com base nas chaves especificadas.
+
+De seguida, um sort que com os resultados da junção sçao classificados com base nas chaves especificadas. A ordenação é feita em ordem decrescente de order.o\underline{}totalprice, de seguida da order data, c name c custkey e por fim orderkey.
+
+Depois, realiza uma junção hash entre as tabelas lineitem e orders usando o campo l\underline{}orderkey como chave da junção.
+
+Após isso, faz uma varredura sequencial na tabela lineitem.
+
+realiza uma junção entre tabelas orders e customer usando o custkey como chave de junção.
+
+Realiza uma varredura sequencial na tabela orders.
+
+Finalize GroupAggregate, esta etapa finaliza a operação de agregação iniciada anteriormente, onde a quentidade total de itens encomendados em cada pedido é somada.
+
+Gather merge, consolida os resultados parcias de várias threads de execução num único conjunto de dados.
+
+Sort, ordena os resultados parciais com base na chave especificada.
+
+Realiza uma agregação parcial dos resultados agrupando-os por lineitem\underline{}1.l\underline{}orderkey e calculando a soma da quantidade total de itens encomendados.
+
+De seguida, realiza uma varredura paralela na tabela lineitem. Realiza uma operação de hash para agregar os resultados parciais e realiza uma varredura sequencial na tabela customer.
+
+Neste plano de execução podemos observar várias etapas de junção e agregação, juntamente com varreduras sequenciais e paralelas em grandes conjuntos de dados. A complexidade deste plano se deve à necessidade de realizar operações de junção e agregação em várias tabelas, lidando com grandes volumes de dados e por fim, ordenando os resultados finais antes de retorná-los.
+\subsubsection{PostgreSQL - Conclusão}
+
+
+\textbf{Rápida}\\
+\begin{itemize}
+  \item \textbf{Técnicas Utilizadas} - Este plano utiliza uma combinação de junção hash (Hash Join), agregação (Finalize Aggregate, Finalize GroupAggregate) e ordenação (Sort). A junção hash é usada para combinar os dados das tabelas, enquanto as operações de agregação calculam as somas ponderadas e as ordenações organizam os resultados finais.
+  \item \textbf{Complexidade} - O plano apresenta múltiplas etapas de junção e agregação, o que indica uma operação mais complexa. Além disso, as varreduras sequenciais e paralelas em grandes conjuntos de dados aumentam a complexidade da execução.
+  \item \textbf{Eficiência} - Embora complexo, esse plano pode ser eficiente para consultas que envolvem a combinação e sumarização de dados de várias tabelas. A utilização de técnicas de otimização, como junção hash e varreduras paralelas, pode ajudar a lidar com grandes volumes de dados de forma eficiente.
+\end{itemize}
+
+\textbf{Lenta}\\
+\begin{itemize}
+  \item \textbf{Técnicas Utilizadas} - Neste plano, também vemos a utilização de junção hash (Hash Join) e operações de agregação (Finalize GroupAggregate, Partial HashAggregate), juntamente com a limitação de resultados (Limit). Isso sugere uma estratégia semelhante de combinar e sumarizar dados, mas com uma restrição adicional de resultados.
+  \item \textbf{Complexidade} - Assim como o primeiro plano, este também envolve múltiplas etapas de junção e agregação, com a adição de uma etapa de limitação. Isso aumenta a complexidade da consulta, especialmente considerando o processamento de grandes volumes de dados.
+  \item \textbf{Eficiência} - A inclusão de uma etapa de limitação pode ajudar a reduzir o número de resultados retornados, o que pode ser útil em algumas situações. No entanto, a complexidade adicional pode afetar o desempenho geral da consulta, especialmente em cenários com grandes volumes de dados.
+
+\end{itemize}
+
+Ambos os planos de execução demonstram a utilização de técnicas comuns de otimização de consultas, como junção hash, agregação parcial e ordenação. No entanto, o primeiro plano parece ser mais direto em suas operações, enquanto o segundo plano adiciona complexidade com uma etapa adicional de limitação.\\
+
+Com essas conclusões, mesmo sem executar já podemos prever. Visto que a query 11 é muito mais simples que a query 18.
+
+
+
+\subsubsection{MySQL - Rápida}
+\begin{lstlisting}
+  {
+    "query_block": {
+      "select_id": 1,
+      "cost_info": {
+        "query_cost": "71181417994.52"
+      },
+      "ordering_operation": {
+        "using_filesort": true,
+        "grouping_operation": {
+          "using_temporary_table": true,
+          "using_filesort": false,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "NATION",
+                "access_type": "ALL",
+                "rows_examined_per_scan": 25,
+                "rows_produced_per_join": 2,
+                "filtered": "10.00",
+                "cost_info": {
+                  "read_cost": "2.50",
+                  "eval_cost": "0.25",
+                  "prefix_cost": "2.75",
+                  "data_read_per_join": "1K"
+                },
+                "used_columns": [
+                  "N_NATIONKEY",
+                  "N_NAME"
+                ],
+                "attached_condition": "(`tpchsgd`.`nation`.`N_NAME` =
+                 'MOZAMBIQUE')"
+              }
+            },
+            {
+              "table": {
+                "table_name": "SUPPLIER",
+                "access_type": "ALL",
+                "rows_examined_per_scan": 198254,
+                "rows_produced_per_join": 49563,
+                "filtered": "10.00",
+                "using_join_buffer": "hash join",
+                "cost_info": {
+                  "read_cost": "585.58",
+                  "eval_cost": "4956.35",
+                  "prefix_cost": "50151.83",
+                  "data_read_per_join": "35M"
+                },
+                "used_columns": [
+                  "S_SUPPKEY",
+                  "S_NATIONKEY"
+                ],
+                "attached_condition": "(`tpchsgd`.`supplier`
+                .`S_NATIONKEY` = `tpchsgd`.`nation`.`N_NATIONKEY`)"
+              }
+            },
+            {
+              "table": {
+                "table_name": "PARTSUPP",
+                "access_type": "ALL",
+                "rows_examined_per_scan": 14360913,
+                "rows_produced_per_join": 71177719632,
+                "filtered": "10.00",
+                "using_join_buffer": "hash join",
+                "cost_info": {
+                  "read_cost": "3654573.88",
+                  "eval_cost": "7117771963.26",
+                  "prefix_cost": "71181417994.53",
+                  "data_read_per_join": "53T"
+                },
+                "used_columns": [
+                  "PS_PARTKEY",
+                  "PS_SUPPKEY",
+                  "PS_AVAILQTY",
+                  "PS_SUPPLYCOST"
+                ],
+                "attached_condition": "(`tpchsgd`.`partsupp`.
+                `PS_SUPPKEY` = `tpchsgd`.`supplier`.`S_SUPPKEY`)"
+              }
+            }
+          ],
+          "having_subqueries": [
+            {
+              "dependent": false,
+              "cacheable": true,
+              "query_block": {
+                "select_id": 2,
+                "cost_info": {
+                  "query_cost": "71181417994.52"
+                },
+                "nested_loop": [
+                  {
+                    "table": {
+                      "table_name": "NATION",
+                      "access_type": "ALL",
+                      "rows_examined_per_scan": 25,
+                      "rows_produced_per_join": 2,
+                      "filtered": "10.00",
+                      "cost_info": {
+                        "read_cost": "2.50",
+                        "eval_cost": "0.25",
+                        "prefix_cost": "2.75",
+                        "data_read_per_join": "1K"
+                      },
+                      "used_columns": [
+                        "N_NATIONKEY",
+                        "N_NAME"
+                      ],
+                      "attached_condition": "(`tpchsgd`.`nation`.
+                      `N_NAME` = 'MOZAMBIQUE')"
+                    }
+                  },
+                  {
+                    "table": {
+                      "table_name": "SUPPLIER",
+                      "access_type": "ALL",
+                      "rows_examined_per_scan": 198254,
+                      "rows_produced_per_join": 49563,
+                      "filtered": "10.00",
+                      "using_join_buffer": "hash join",
+                      "cost_info": {
+                        "read_cost": "585.58",
+                        "eval_cost": "4956.35",
+                        "prefix_cost": "50151.83",
+                        "data_read_per_join": "35M"
+                      },
+                      "used_columns": [
+                        "S_SUPPKEY",
+                        "S_NATIONKEY"
+                      ],
+                      "attached_condition": "(`tpchsgd`.`supplier`.
+                      `S_NATIONKEY` = `tpchsgd`.`nation`.`N_NATIONKEY`)"
+                    }
+                  },
+                  {
+                    "table": {
+                      "table_name": "PARTSUPP",
+                      "access_type": "ALL",
+                      "rows_examined_per_scan": 14360913,
+                      "rows_produced_per_join": 71177719632,
+                      "filtered": "10.00",
+                      "using_join_buffer": "hash join",
+                      "cost_info": {
+                        "read_cost": "3654573.88",
+                        "eval_cost": "7117771963.26",
+                        "prefix_cost": "71181417994.53",
+                        "data_read_per_join": "53T"
+                      },
+                      "used_columns": [
+                        "PS_SUPPKEY",
+                        "PS_AVAILQTY",
+                        "PS_SUPPLYCOST"
+                      ],
+                      "attached_condition": "(`tpchsgd`.`partsupp`.
+                      `PS_SUPPKEY` = `tpchsgd`.`supplier`.`S_SUPPKEY`)"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+  
+\end{lstlisting}
+
+\textbf{Explicação}\\
+Inicialmente indicamos que irá ocorrer uma operação de ordenação de resultados.
+Após isso, os resultados são agrupados, indicando que uma tabela temporária está sendo usada.
+De seguida, ocorre um nested loop, entre e tabelas, primeiramente é a tabela nation que é acedida com a condição de filtro onde o país é MOZAMBIQUE. Isso é feito através de uma varredura completa. Depois, vem a supplier que é acedida e ocorre uma junção com a tabela nation utilizando a chave S\underline{}NATIONKEY. Finalizando com a tabela PARTSUPP, que é acedida e ocorre uma junção com a tabela SUPPLIER utilizando uma chave de junção PS\underline{}SUPPKEY. Não exisitndo nenhuma subconsulta na clausula HAVING nesta etapa.
+
+Finalizando com uma subconsulta na clásula HAVING que faz novamente uma junção de nested loop, entre as 3 tabelas referidas anteriormente. Nation ocorre a varreduta completa com a mesma condição de filtro que na consulta principal. Supplier acesso à tabela e junção com a tabela Nation, e a tabela partsupp, em que ocorre o acesso e junção com a tabela SUPPLIER usando a chave de junção.
+\subsubsection{MySQL - Lenta}
+\begin{lstlisting}[language=SQL]
+  {
+    "query_block": {
+      "select_id": 1,
+      "cost_info": {
+        "query_cost": "8.9796617106256e+19"
+      },
+      "ordering_operation": {
+        "using_filesort": true,
+        "grouping_operation": {
+          "using_temporary_table": true,
+          "using_filesort": false,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "CUSTOMER",
+                "access_type": "ALL",
+                "rows_examined_per_scan": 2778441,
+                "rows_produced_per_join": 2778441,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "36032.00",
+                  "eval_cost": "277844.10",
+                  "prefix_cost": "313876.10",
+                  "data_read_per_join": "2G"
+                },
+                "used_columns": [
+                  "C_CUSTKEY",
+                  "C_NAME"
+                ]
+              }
+            },
+            {
+              "table": {
+                "table_name": "ORDERS",
+                "access_type": "ALL",
+                "rows_examined_per_scan": 27846557,
+                "rows_produced_per_join": 7737001683054,
+                "filtered": "10.00",
+                "using_join_buffer": "hash join",
+                "cost_info": {
+                  "read_cost": "284940869.30",
+                  "eval_cost": "773700168305.40",
+                  "prefix_cost": "7737286822509.10",
+                  "data_read_per_join": "3P"
+                },
+                "used_columns": [
+                  "O_ORDERKEY",
+                  "O_CUSTKEY",
+                  "O_TOTALPRICE",
+                  "O_ORDERDATE"
+                ],
+                "attached_condition": "((`tpchsgd`.`orders`.`O_CUSTKEY` 
+= `tpchsgd`.`customer`.`C_CUSTKEY`) and <in_optimizer>
+(`tpchsgd`.`orders`.`O_ORDERKEY`,`tpchsgd`.`orders`.`O_ORDERKEY` 
+in ( <materialize> (/* select#2 */ select `tpchsgd`.`lineitem`.
+`L_ORDERKEY` from `tpchsgd`.`lineitem` group by `tpchsgd`.`
+lineitem`.`L_ORDERKEY` having (sum(`tpchsgd`.`lineitem`.
+`L_QUANTITY`) > 314) ), <primary_index_lookup>(`tpchsgd`.
+`orders`.`O_ORDERKEY` in <temporary table> on <auto_distinct_key>
+where ((`tpchsgd`.`orders`.`O_ORDERKEY` = 
+`<materialized_subquery>`.`l_orderkey`))))))"
+              }
+            },
+            {
+              "table": {
+                "table_name": "LINEITEM",
+                "access_type": "ALL",
+                "rows_examined_per_scan": 116055800,
+                "rows_produced_per_join": 18446744073709549568,
+                "filtered": "10.00",
+                "using_join_buffer": "hash join",
+                "cost_info": {
+                  "read_cost": "4.2173761510025e+15",
+                  "eval_cost": "8.9792393330829e+18",
+                  "prefix_cost": "8.9796617106256e+19",
+                  "data_read_per_join": "29Z"
+                },
+                "used_columns": [
+                  "L_ORDERKEY",
+                  "L_QUANTITY"
+                ],
+                "attached_condition": "(`tpchsgd`.`lineitem`.`L_ORDERKEY`
+ = `tpchsgd`.`orders`.`O_ORDERKEY`)"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+  
+
+
+\end{lstlisting}
+
+\textbf{Explicação}\\
+
+O custo da consulta é um número extremamente alto, indicando que esta consulta é muito complexa e pode exigir muitos recursos para ser executada.
+
+A operação de ordenação é ativada, o que sugere que os resultados finais podem ser ordenados de acordo com o critério.
+
+Os resultados da consulta estão a ser agrupados. Isso significa que as linhas da tabela resultantes serão agrupadas com base em determinadas colunas.
+
+Uma tabela temporária está a ser usada durante a execução da consulta o que pode ser necessário para armazenar resultados intermédios ou realizar operações complexas. 
+
+Sem filesort, não sendo necessário ordenar nesta etapa da consulta.
+
+Após isso, ocorre operações Nested loop, a consulta começa a aceder a tabela customer, examinando todas as linhas.
+
+Em seguida, a tabela orders é acedida. Existindo uma condição anexada que relaciona os orders com a tabela customer. 
+
+Existe uma subconsulta anexada à tabela orders. Esta subconsulta está relacionada com lineitem envolvendo uma lógica complexa como agrupamento e filtragem com base em quantidades de itens.
+
+Por fim a tabela lineitem é acedida. A condição anexada relaciona a tabela lineitem com a tabela orders, garantido que os itens associados aos pedidos recuperados sejam considerados.
+\subsubsection{MySQL - Conclusão}
+
+  \textbf{Rápida}\\
+  \begin{itemize}
+    \item \textbf{Operações de Junção} - Usa operações de junção aninhadas (nested loop) para acessar as tabelas NATION, SUPPLIER e PARTSUPP.
+    \item \textbf{Filtros} - Aplica filtros em cada etapa da junção, relacionando chaves estrangeiras entre as tabelas.
+    \item \textbf{Subconsultas} - Apresenta uma subconsulta anexada à tabela SUPPLIER, mas essa subconsulta parece ser redundante, já que as tabelas SUPPLIER e NATION estão sendo acessadas separadamente na operação de junção.
+    \item\textbf{Complexidade} A consulta é média, envolvendo múltiplas tabelas e operações de junção. O custo da consulta é muito alto, indicando uma complexidade significativa.
+  \end{itemize}
+  
+  \textbf{Lenta}\\
+  \begin{itemize}
+    \item \textbf{Operações de Junção} - Utiliza uma mistura de operações de junção e acessos de tabela para acessar as tabelas CUSTOMER, ORDERS e LINEITEM.
+    \item \textbf{Filtros} - Aplica um filtro complexo na tabela ORDERS, envolvendo uma subconsulta anexada que agrupa itens da tabela LINEITEM e aplica uma condição de filtro com base na soma das quantidades.
+    \item \textbf{Subconsultas} - Apresenta uma subconsulta anexada à tabela ORDERS, que executa uma lógica complexa envolvendo agrupamento e filtragem com base em quantidades de itens.
+    \item\textbf{Complexidade} A consulta também é complexa, com um custo de consulta extremamente alto. Ela envolve operações de junção e subconsultas complexas para realizar a análise de pedidos e itens associados.
+  \end{itemize}
+  Ambas as consultas envolvem múltiplas tabelas.
+  A segunda consulta parece ter uma lógica mais complexa de filtragem e análise, com a presença de uma subconsulta anexada que executa uma operação de agrupamento e filtragem com base em quantidades de itens.
+  Enquanto a primeira consulta parece envolver uma estrutura mais direta de junções entre as tabelas, a segunda consulta apresenta uma lógica mais complexa de filtragem e agrupamento.
+  Ambas as consultas poderiam se beneficiar de otimização para melhorar o desempenho, especialmente devido aos custos extremamente altos de consulta. Isso poderia envolver a revisão de índices, estrutura de consulta e possíveis formas de simplificar a lógica das subconsultas para reduzir o custo total da consulta.
 
 \clearpage
 \subsection{Análise de Explain Plan Query Lenta}
+
+
 A query mais lenta é a Query 20, sendo que iremos apresentar os explain plan dela para os dois motores de pesquisa para visualizarmos quais métodos o postgres e o mysql usam.
 \subsubsection{PostgreSQL}
+O explain plan da query 20 é:\\
 \begin{lstlisting}[language=SQL]
 Nested Loop Semi Join  (cost=6769.40..3072540576687.95 rows=2155 width=51)
   ->  Gather Merge  (cost=6768.53..7700.27 rows=8000 width=55)
@@ -1205,11 +1844,27 @@ Nested Loop Semi Join  (cost=6769.40..3072540576687.95 rows=2155 width=51)
               Filter: ((p_name)::text ~~ 'green%'::text)
   \end{lstlisting}
 
+  \textbf{Explicação}
 
-\clearpage
+  A operação principal é o nested loop semi join. Que parece estar à procura de correspondências entre dois conjunto de dados.
+
+  De seguida vem o gather merge, esta etapa indica que está a ocorrer uma junção dos resultados de múltiplos nós de execução paralela.
+
+  Os dados vão ser ordenados pelo nome do fornecedor. Após isso, é feita uma junção por hash entre duas tabelas supplier e nation, utilizando as chaves de relação. Ocorre uma varredura sequencial paralela na tabela supplier. É utilizado uma função de hash. É realizada uma varredura sequencial na tabela nation com um filtro na coluna n\underline{}name.
+
+  É realizado um loop aninhado entre 2 conjuntos de dados.
+
+  É realizada uma varredura de índice na tabela partsupp. De seguida, é feito um cálculo de agregação numa subconsulta SubPlan sobre a tabela lineitem. Finalizando uma varredura de índice na tabela part com um filtro na coluna p\underline{}name.
 
 
+O plano de explicação mostra uma semi-junção de loop aninhado como a operação principal. As junções de loop aninhadas podem ser lentas, especialmente para grandes conjuntos de dados, porque elas iteram pela tabela externa para cada linha da tabela interna.
 
+A subconsulta para calcular a quantidade média também usa uma junção de loop aninhada e uma varredura completa da tabela de itens de linha, o que pode ser caro.
+
+Há uma operação de classificação envolvida no processamento de dados da tabela de fornecedores. A classificação pode consumir muitos recursos.
+
+\subsubsection{MySQL}
+O explain plan da query 20 é:\\
 
 \begin{lstlisting}
   {
@@ -1423,5 +2078,62 @@ Nested Loop Semi Join  (cost=6769.40..3072540576687.95 rows=2155 width=51)
   }
   \end{lstlisting}
 
+\textbf{Explicação}\\
+A consulta começa a examinar a tabela nation usando uma verificação completa para encontrar as linhas cujo valor da coluna n\underline{}name é igual a ALGERIA.
+
+Então junta a tabela supplier com a tabela filtrada nation usando uma junção por referência. A junção usa o índice S\underline{}NATIONKEY na tabela supllier para encontrar linhas correspondentes com base no valor da coluna N\underline{}NATIONKEY nas tabelas nation e supplier.
+
+A próxima etapa envolve uma subconsulta representada por subquery2. Essa subconsulta é materializada numa tabela temporária porque ela é usada várias vezes na consulta principal. Dentro da subconsulta, a tabela part é examinada utilizando uma verificação completa.
+
+A subconsulta então junta a tabela com a tabela filtrada part usando uma junção por referência.
+
+A junção usa o índice PRIMARY na tabela PARTSUPP para encontrar linhas correspondentes com base no valor da coluna P\underline{}PARTKEY nas tabelas PART e PARTSUPP.
+
+Dentro da junção na subconsulta, há um filtro adicional na tabela PARTSUPP com base na coluna PS\underline{}AVAILQTY.
+
+A subconsulta select4 agrega a soma da quantidade (L\underline{}QUANTITY) de itens vendidos (LINEITEM).
+
+\subsubsection{MySQL vs PostgreSQL - Explain Plan}
+
+Para comparar o mysql e postgreSQL, iremos analisar as similaridades.
+
+Ambos os sitemas realizam junções entre as tabelas NATION, SUPPLIER, PART e PARTSUPP para recuperar os dados necessários.
+
+Tanto um como o outro aplicam filtros para restringir os resultados com base em condições específicas, como o nome da nação e o nome do produto.
+
+Para diferenças, o MySQL utiliza principalmente a estratégia de junção por referencia, enquanto o PostgreSQL opta por hash join, sendo esta mais eficiente em determinados cenários, especialmente quando há grandes volumes de dados.
+
+O uso de índices, o mysql faz mais uso de indices, por outro lado o postgres parece depender mais de varreduras sequenciais, o que pode resultar em custos mais elevados devido ao processamento de dados.
+
+O custo total da consulta apresentada é superior no postgres, isso sugere que o postgres é menos eficiente em relação ao mysql. Após executarmos a query, conseguimos concluir que o mysql é superior nesta ocasião.
+
+Concluindo, o mysql parece favores com índices e estratégias de junção mais diretas enquanto o postgres pode optar por estratégias mais complexas como junçao por hash.
+
+No entanto, a alta disparidade nos custos totais das consultas entre MySQL e PostgreSQL sugere que pode haver espaço para otimização adicional no PostgreSQL.
+\clearpage
+\section{Conclusão}
+
+Nesta secção iremos apresentar uma conclusão acerca dos resultados obtidos, em relação à importação dos dados, o PostgreSQL destacou-se como a opção mais rápida. Em todas as tabelas este teve um desempenho bastante superior, isso pode-se dar pela sua arquitetura otimizada para processamento em massa e operações de importação resulta em tempos de importação menores. \\
+
+Verificamos que o tempo de importação varia entre tabelas, com tabelas maiores a levarem mais tempo para serem importadas. Indicando-nos que o tamanho da tabela é um fator crucial que influencia o desempenho na importação de dados. Não sendo os únicos, até o número de linhas pode influenciar o tempo de importação.
+
+O PostgreSQL foi 5 vezes mais rápido do que o MySQL, um valor bastante grande, e se o tamanho das tabelas fossem maiores, essa diferença iria aumentar.
+
+Em relação à criação de PK e FK, o PostgreSQL novamente mais rápido, inicialmente com resultados bastante positivos, mas quando a criação das chaves são feitas nas tabelas grandes ocorre uma grande diferença entre o MySQL e o PostgreSQL. Uma das razões tais como referidas, é que o PostgreSQL utiliza algoritmos otimizados na criação de índices B-tree, como inserção em massa, balanceamento de B-tree e cache, que otimizam o processo e reduzem o tempo de criação, já o MySQL utiliza algoritmos mais simples para criação de índices, o que leva a um desempenho menos eficiente em grandes volumes de dados. O PostgreSQL oferece maior flexibilidade na criação de índice, permitindo a utilização de diversos tipos, como hash e parciais, para otimizar consultas específicas, já o MySQL possui menos flexibilidade, limitando as opções de otimização para consultas complexas.
+
+Em relação aos tempos de execução sem chaves, o PostgreSQL tem novamente uma vantagem alargada em relação ao MySQL, tanto com 1 thred como com 5 thread. O PostgreSQL fica bastante limitado quando é usado 5 threads, o tempo de execução duplica. O MySQL teve um resultado de 50\%/50\% em relaçao à diferença entre 1 thread vs 5 threads. A razão que se dá é que se as querys forem mais simples e menos complexas o uso de 5 threads é uma vantagem, mas se for uma complexa a utilização de 1 thread é mais benéfico. Visto que as 5 threads estão a partilhar o mesmo recurso entre elas.
+
+Com chaves, o PostgreSQL consegue ser mais rápido com uma diferença enorme, isto pois este tem mais algoritmos. A query 15 não conseguimos tirar conclusões, visto que é a criação de uma view e esta é logo apagada, e neste caso o MySQL foi surpreendentemente superior.
+
+Podemos concluir, que o MySQL a diferença entre usar 1 thread ou 5 não é muito grande, já o PostgreSQL a diferença é enorme. Sendo que  o otimizador de consultas
+de PostgreSQL pode ser mais conservador na sua estimativa dos benefícios da paralelização. Sendo
+que pode favorecer planos mais simples de uma única thread para evitar sobrecarga potencial ou
+degradação de desempenho
+
+A utilização de chaves tem grande impacto tirando uma única exceção, que é quando fazemos a utilização de chaves quando os dados não são muito seletivos, sendo que uma varredura sequencial tornaria a pesquisa mais eficiente.
+
+Fizemos uma comparação a uma base de dados com 40GB, apenas para o PostgreSQL, e a utilização de 5 threads tornou a pesquisa muito mais lenta, resultado esperado.
+
+Portanto, para ambientes que exigem alto desempenho, escalabilidade e capacidade de lidar com consultas complexas, como aqueles encontrados em benchmarks como o TPC-H, o PostgreSQL emerge como uma escolha superior ao MySQL. Sua arquitetura robusta, conjunto de recursos avançados e capacidade de otimizar consultas complexas o tornam uma opção preferencial para aplicativos que enfrentam desafios de gerenciamento de grandes volumes de dados e consultas intensivas.
 
 \end{document}
