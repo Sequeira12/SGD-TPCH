@@ -87,6 +87,7 @@ INPUT ./report.lot
 INPUT ./report.lot
 INPUT report.lot
 OUTPUT report.lot
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./Graphs/tpchassignment.png
 INPUT ./Graphs/tpchassignment.png
 INPUT ./Graphs/tpchassignment.png

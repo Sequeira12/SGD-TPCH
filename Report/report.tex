@@ -48,15 +48,15 @@
 
 \clearpage
 \section{Introdução}
-\quad No mundo contemporâneo, onde os dados se tornaram um ativo extremamente valioso e omnipresente em quase todos os setores da sociedade, a capacidade de gerir grandes quantidades de dados de forma eficiente tornou-se uma prioridade fundamental. Empresas, organizações governamentais, instituições académicas e até mesmo indivíduos enfrentam o desafio de lidar com volumes massivos de dados, muitas vezes provenientes de diversas fontes e em formatos diversos.\\
+\texttt{}\par No mundo contemporâneo, onde os dados se tornaram um ativo extremamente valioso e omnipresente em quase todos os setores da sociedade, a capacidade de gerir grandes quantidades de dados de forma eficiente tornou-se uma prioridade fundamental. Empresas, organizações governamentais, instituições académicas e até mesmo indivíduos enfrentam o desafio de lidar com volumes massivos de dados, muitas vezes provenientes de diversas fontes e em formatos diversos.\\
 
-\quad Nesse contexto, os sistemas de gestão de dados (SGDs) desempenham um papel crucial. Essas ferramentas oferecem estruturas e mecanismos para armazenar, organizar, recuperar e manipular dados de maneira eficaz. No entanto, à medida que a quantidade e a complexidade dos dados aumentam, os desafios enfrentados pelos SGBDs também crescem exponencialmente.\\
+\texttt{}\par Nesse contexto, os sistemas de gestão de dados (SGDs) desempenham um papel crucial. Essas ferramentas oferecem estruturas e mecanismos para armazenar, organizar, recuperar e manipular dados de maneira eficaz. No entanto, à medida que a quantidade e a complexidade dos dados aumentam, os desafios enfrentados pelos SGBDs também crescem exponencialmente.\\
 
-\quad O objetivo deste projeto é explorar e entender como os motores de base de dados tradicionais lidam com grandes volumes de dados e consultas complexas de forma eficiente. Para alcançar esse objetivo, iremos utilizar o TPC-H como benchmarking. O TPC-H é um conjunto padrão de consultas de benchmarking projetado para avaliar o desempenho de SGBDs em cenários de análise de dados complexos.\\
+\texttt{}\par O objetivo deste projeto é explorar e entender como os motores de base de dados tradicionais lidam com grandes volumes de dados e consultas complexas de forma eficiente. Para alcançar esse objetivo, iremos utilizar o TPC-H como benchmarking. O TPC-H é um conjunto padrão de consultas de benchmarking projetado para avaliar o desempenho de SGBDs em cenários de análise de dados complexos.\\
 
-\quad Este projeto se concentrará em dois dos SGDs mais amplamente utilizados e estabelecidos no mercado: MySQL e PostgreSQL. Ambos são sistemas de código aberto com uma vasta base de utilizadores e uma longa história de desenvolvimento. Ao comparar o desempenho desses dois SGBDs em relação ao benchmark TPC-H, pretendemos obter insights valiosos sobre suas capacidades e limitações no processamento de grandes quantidades de dados e consultas complexas.\\
+\texttt{}\par Este projeto se concentrará em dois dos SGDs mais amplamente utilizados e estabelecidos no mercado: MySQL e PostgreSQL. Ambos são sistemas de código aberto com uma vasta base de utilizadores e uma longa história de desenvolvimento. Ao comparar o desempenho desses dois SGBDs em relação ao benchmark TPC-H, pretendemos obter insights valiosos sobre suas capacidades e limitações no processamento de grandes quantidades de dados e consultas complexas.\\
 
-\quad Ao finalizar este projeto, esperamos não apenas aumentar nossa compreensão sobre como os motores de base de dados tradicionais lidam com grandes volumes de dados e consultas complexas, mas também fornecer insights práticos e acionáveis para otimizar o desempenho e a eficiência do gestão de dados em ambientes do mundo real.\\
+\texttt{}\par Ao finalizar este projeto, esperamos não apenas aumentar nossa compreensão sobre como os motores de base de dados tradicionais lidam com grandes volumes de dados e consultas complexas, mas também fornecer insights práticos e acionáveis para otimizar o desempenho e a eficiência do gestão de dados em ambientes do mundo real.\\
 \clearpage
 
 \section{Estrutura da Base de Dados}
@@ -75,21 +75,21 @@ As tabelas são: lineitem, partsupp, part, supplier, nation, region, orders e cu
 
 \section{Especificações e Configurações do Computador}
 
-\quad Nesta seção, vamos nos aprofundar nas especificações e configurações do hardware do computador que utilizamos para realizar nossos testes de desempenho e análises comparativas entre diferentes sistemas de gestão de base de dados (SGBDs). A escolha adequada do hardware é fundamental para garantir resultados precisos e significativos nas nossas experiências.\\
+\texttt{}\par Nesta seção, vamos nos aprofundar nas especificações e configurações do hardware do computador que utilizamos para realizar nossos testes de desempenho e análises comparativas entre diferentes sistemas de gestão de dados (SGDs). A escolha adequada do hardware é fundamental para garantir resultados precisos e significativos nas nossas experiências.\\
 
 (AGORA CONTIGO RUI) (FAZER Benchmarking com o ssd, configurações)
 
 
 \section{Criação de Dados}
 
-\quad Para realizar nossos testes de desempenho e análises comparativas entre diferentes SGBDs, como PostgreSQL e MySQL, decidimos gerar um conjunto de dados TPC-H usando o dbgen. Este conjunto de dados terá aproximadamente 25GB de tamanho, proporcionando uma carga de trabalho significativa para os sistemas em teste.\\
+\texttt{}\par Para realizar nossos testes de desempenho e análises comparativas entre diferentes SGDs, como PostgreSQL e MySQL, decidimos gerar um conjunto de dados TPC-H usando o dbgen. Este conjunto de dados terá aproximadamente 25GB de tamanho, proporcionando uma carga de trabalho significativa para os sistemas em teste.\\
 
-\quad O dbgen é uma ferramenta versátil que nos permite configurar diversos parâmetros, como o fator de escala, para ajustar o tamanho do conjunto de dados gerado de acordo com nossos requisitos específicos. Além disso, ele produz dados realistas e consistentes, conforme definido pelas especificações do TPC-H.
+\texttt{}\par O dbgen é uma ferramenta versátil que nos permite configurar diversos parâmetros, como o fator de escala, para ajustar o tamanho do conjunto de dados gerado de acordo com nossos requisitos específicos. Além disso, ele produz dados realistas e consistentes, conforme definido pelas especificações do TPC-H.
 
 
-\quad Após instalação dessa feramenta, utilizamos o seguinte comando \textbf{dbgen -s 25}.
+\texttt{}\par Após instalação dessa feramenta, utilizamos o seguinte comando \textbf{dbgen -s 25}.
 
-\quad O dbgen gerará 8 arquivos .tbl (dados de tabela).
+\texttt{}\par O dbgen gerará 8 arquivos .tbl (dados de tabela).
 
 
 
@@ -97,7 +97,7 @@ As tabelas são: lineitem, partsupp, part, supplier, nation, region, orders e cu
 \section{Plano de Execução}
 
 
-\quad Para cada motor (mysql e postgres) iremos seguir o seguinte plano:
+\texttt{}\par Para cada motor (mysql e postgres) iremos seguir o seguinte plano:
 
 \begin{enumerate}
     \item Tempos de Importação dos dados, sem as chaves(PK's e FK's).
@@ -108,12 +108,12 @@ As tabelas são: lineitem, partsupp, part, supplier, nation, region, orders e cu
     \item Explain plan mysql vs postgres para uma query lenta.
 \end{enumerate}
 
-\quad Os quatro primeiros passos esses tempos irão ser executados 5 vezes, sendo no final apresentado o valor de todos, a cold run finalizando com a média total.\\
+\texttt{}\par Os quatro primeiros passos esses tempos irão ser executados 5 vezes, sendo no final apresentado o valor de todos, a cold run finalizando com a média total (Excel).\\
 
 \section{Scripts e código utilizado}
-\quad Inicialmente criamos vários scripts, dos quais foram todos submetidos na entrega. Iremos agora explicar a função de cada script.\\
+\texttt{}\par Inicialmente criamos vários scripts, dos quais foram todos submetidos na entrega. Iremos agora explicar a função de cada script.\\
 
-\quad Estes scripts estão divididos por cada motor de pesquisa, mas contêm o mesmo nome.\\
+\texttt{}\par Estes scripts estão divididos por cada motor de pesquisa, mas contêm o mesmo nome.\\
 
 \begin{itemize}
     \item \textbf{CreateDB.sh} este script irá criar uma nova base de dados, com nome "tpch-cloud".
@@ -131,10 +131,10 @@ As tabelas são: lineitem, partsupp, part, supplier, nation, region, orders e cu
 \section{Resultados - Tabelas}
 
 \subsection{Importação dos Dados}
-\quad Após criação dos dados pelo dbgen referidos anteriormente, criando cerca de 25GB de dados, iremos prosseguir com a importação desses dados para a base de dados. \\
+\texttt{}\par Após criação dos dados pelo dbgen referidos anteriormente, criando cerca de 25GB de dados, iremos prosseguir com a importação desses dados para a base de dados. \\
 Para isso, foi utilizado o script \textbf{\textit{ImportData.sh}}, que irá guardar o tempo de importação de cada tabela num ficheiro. \\
-\quad Apresentamos agora uma tabela que contém a média dos tempos de importação para cada tabela, por cada motor de pesquisa MySQL e PostgreSQL, e outras informações que são importantes para análise, o tamanho do ficheiro de cada tabela, e o número de linhas que cada tabela apresenta.
-\quad Na próxima secção iremos fazer uma análise mais extensiva com estes dados.\\
+\texttt{}\par Apresentamos agora uma tabela que contém a média dos tempos de importação para cada tabela, por cada motor de pesquisa MySQL e PostgreSQL, e outras informações que são importantes para análise, o tamanho do ficheiro de cada tabela, e o número de linhas que cada tabela apresenta.
+\texttt{}\par Na próxima secção iremos fazer uma análise mais extensiva com estes dados.\\
 \begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.7}
@@ -159,8 +159,8 @@ Para isso, foi utilizado o script \textbf{\textit{ImportData.sh}}, que irá guar
 \clearpage
 \subsection{Criação das chaves primárias e estrangeiras(PK e FK)}
 
-\quad Após importação dos dados, iremos criar as chaves primárias e estrangeiras, utilizando os scripts \textbf{\textit{CreatePK.sh}},\textbf{\textit{CreateFK.sh}}, respetivamente.\\
-\quad As próximas tabelas apresentam as médias dos tempos de criação de cada chave por cada motor de pesquisa MySQL e PostgreSQL.\\
+\texttt{}\par Após importação dos dados, iremos criar as chaves primárias e estrangeiras, utilizando os scripts \textbf{\textit{CreatePK.sh}},\textbf{\textit{CreateFK.sh}}, respetivamente.\\
+\texttt{}\par As próximas tabelas apresentam as médias dos tempos de criação de cada chave por cada motor de pesquisa MySQL e PostgreSQL.\\
 
 \begin{table}[H]
     \centering
@@ -209,10 +209,10 @@ Para isso, foi utilizado o script \textbf{\textit{ImportData.sh}}, que irá guar
 
 
 \subsection{Tempo de execução sem PK's e FK's utilizando 1 thread numa base de dados de 25GB.}
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando uma thread e sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando uma thread e sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
-NOTA: A query 2, 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
+NOTA: A query 2, 17, 20 e 21 os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
   \begin{table}[H]
     \centering
@@ -250,10 +250,10 @@ NOTA: A query 2, 17 e 20, os resultados estão a 0, mas na realidade estes demor
   \end{table}
 \clearpage
 
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando uma thread sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando uma thread sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
-NOTA: A query 2,17,19,30 e 21 os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
+NOTA: A query 2,17,19,20 e 21 os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
 
   \begin{table}[H]
@@ -296,10 +296,10 @@ Q22	&187,2806194&	138,7884924&	179,4008842	&180,2004963	&188,1653592&	138,467501
 
 \clearpage
 \subsection{Tempo de execução sem PK's e FK's utilizando 5 thread numa base de dados de 25GB.}
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando 5 thread's e sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 5. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando 5 thread's e sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 5. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
-NOTA: A query 2, 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
+NOTA: A query 2, 17, 20 e 21 os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
   \begin{table}[H]
     \centering
@@ -336,10 +336,10 @@ NOTA: A query 2, 17 e 20, os resultados estão a 0, mas na realidade estes demor
   \end{table}
 \clearpage
 
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando 5 thread's e sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 5. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando 5 thread's e sem chaves, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 5. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
-NOTA: A query 2,17,19,30 e 21 os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
+NOTA: A query 2,17,19,20 e 21 os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
 
   \begin{table}[H]
@@ -380,7 +380,7 @@ NOTA: A query 2,17,19,30 e 21 os resultados estão a 0, mas na realidade estes d
 \clearpage
 \subsection{Médias e Desvio padrão de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 1 thread's.}
 
-  \quad Para uma melhor comparação entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, sem chaves utilizando 1 thread. \\
+  \texttt{}\par Para uma melhor comparação entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, sem chaves utilizando 1 thread. \\
 NOTA: Nas querys 2,17,20,21 não é possível ter uma análise, visto que não foi concluída nem no PostgreSQL nem o MySQL. A query 19 não foi concluída no MySQL, portanto podemos concluir que no PostgreSQL foi mais rápido. O valor de 0 significa que demorou imenso tempo perto de 1 hora.
 
   \begin{table}[H]
@@ -422,7 +422,7 @@ NOTA: Nas querys 2,17,20,21 não é possível ter uma análise, visto que não f
 
   \subsection{Médias e Desvio padrão de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 5 thread's.}
 
-  \quad Para uma melhor análise entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, sem chaves utilizando 5 threads. \\
+  \texttt{}\par Para uma melhor análise entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, sem chaves utilizando 5 threads. \\
 NOTA: Nas querys 2,17,20,21 não é possível ter uma análise, visto que não foi concluída nem no PostgreSQL nem o MySQL. A query 19 não foi concluída no MySQL, portanto podemos concluir que no PostgreSQL foi mais rápido. O valor de 0 significa que demorou imenso tempo perto de 1 hora.
 
   \begin{table}[H]
@@ -464,8 +464,8 @@ NOTA: Nas querys 2,17,20,21 não é possível ter uma análise, visto que não f
   \clearpage
 
 \subsection{Tempo de execução com PK's e FK's utilizando 1 thread numa base de dados de 25GB.}
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando uma thread, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando uma thread, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
 NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
@@ -505,8 +505,8 @@ NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demorara
   \end{table}
 \clearpage
 
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando uma thread, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando uma thread, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
 NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
@@ -555,8 +555,8 @@ Q22&	12,24408221&	12,04262781&	12,04262781&	11,63474941	&13,7020936	&12,29311299
 
 \clearpage
 \subsection{Tempo de execução com PK's e FK's utilizando 5 thread's numa base de dados de 25GB.}
-\quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando 5 thread's, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 5. 
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa PostgreSQL, utilizando 5 thread's, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 5. 
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
 NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
@@ -598,8 +598,8 @@ Q22&	62,16085005	&48,17952323&	30,51100016	&43,50267291&	49,80032802	&83,4232823
 
   \clearpage
 
-  \quad A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando uma thread, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
-  \quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+  \texttt{}\par A próxima tabela apresenta os tempos de pesquisa de cada query para o motor de pesquisa MySQL, utilizando uma thread, para isso foi utilizado o ficheiro Python \textbf{\textit{Search.py}}  com a variável \textit{num\_threads} a 1. 
+  \texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
   Foram executadas mais 5 vezes para que os dados finais fossem mais consistentes.\\
   NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
   
@@ -641,7 +641,7 @@ Q22&	62,16085005	&48,17952323&	30,51100016	&43,50267291&	49,80032802	&83,4232823
 
 \subsection{Médias e Desvio padrão de tempos entre MySQL vs PostgresSQL, com chaves utilizando 1 thread.}
 
-\quad Para uma melhor comparação entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, com chaves utilizando 1 thread. \\
+\texttt{}\par Para uma melhor comparação entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, com chaves utilizando 1 thread. \\
 NOTA: A query 17 e query 20 não é possível analisar com gráficos, visto que apresentamos com 0 no PostgreSQL, sendo a razão de ter demorado mais que uma hora, apesar disso podemos tirar uma conclusão que essas duas query são mais rápidas no MySQL.
 
 \begin{table}[H]
@@ -680,7 +680,7 @@ Q22	&10,80251355	&12,33323617&0,850158864&0,712532004\\ \hline
   \end{table}
   \subsection{Médias e Desvio padrão de tempos entre MySQL vs PostgresSQL, com chaves utilizando 5 thread's.}
 
-  \quad Para uma melhor comparação entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, com chaves utilizando 5 thread's. \\
+  \texttt{}\par Para uma melhor comparação entre os dois motores de pesquisa, iremos apresentar uma tabela com a médias e desvios padrão de cada query para o MySQL e PostgreSQL, com chaves utilizando 5 thread's. \\
 NOTA: A query 17 e query 20 não é possível analisar com gráficos, visto que apresentamos com 0 no PostgreSQL, sendo a razão de ter demorado mais que uma hora, apesar disso podemos tirar uma conclusão que essas duas query são mais rápidas no MySQL.
 
   \begin{table}[H]
@@ -717,16 +717,17 @@ NOTA: A query 17 e query 20 não é possível analisar com gráficos, visto que 
     \label{tab:BC_Table6}
   \end{table}
 
+  \clearpage
 
 
 
   \subsection{Tempo de execução com PK's e FK's utilizando 5 thread's numa base de dados de 40GB.(PostgreSQL)}
-\quad Nesta subsecção, iremos apresentar os tempos de execução com chaves utilizando 5 thread's numa base de dados de 40GB. Iremos utilizar apenas o motor de pesquisa PostgreSQL, visto que esta foi a nossa primeira base de dados, só que os tempos de execução eram realmente muito altos. Sendo que no MySQL ainda eram mais elevados. Mas para pudermos fazer uma análise mais clara, na próxima subsecção serão apresentados os resultados com uma thread.\\
-\quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+\texttt{}\par Nesta subsecção, iremos apresentar os tempos de execução com chaves utilizando 5 thread's numa base de dados de 40GB. Iremos utilizar apenas o motor de pesquisa PostgreSQL, visto que esta foi a nossa primeira base de dados, só que os tempos de execução eram realmente muito altos. Sendo que no MySQL ainda eram mais elevados. Mas para pudermos fazer uma análise mais clara, na próxima subsecção serão apresentados os resultados com uma thread.\\
+\texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
 NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 \begin{table}[H]
     \centering
-    \renewcommand{\arraystretch}{1.3}
+    \renewcommand{\arraystretch}{1.1}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|r|r|r|r|r|r|}
         \hline  
@@ -759,15 +760,15 @@ NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demorara
   \end{table}
 
 
-
+\clearpage
   \subsection{Tempo de execução com PK's e FK's utilizando 1 thread numa base de dados de 40GB.(PostgreSQL)}
-  \quad Nesta subsecção, iremos apresentar os tempos de execução com chaves utilizando 1 thread numa base de dados de 40GB. Iremos utilizar apenas o motor de pesquisa PostgreSQL, tal como referido na subsecção anterior.\\ 
-  \quad É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
+  \texttt{}\par Nesta subsecção, iremos apresentar os tempos de execução com chaves utilizando 1 thread numa base de dados de 40GB. Iremos utilizar apenas o motor de pesquisa PostgreSQL, tal como referido na subsecção anterior.\\ 
+  \texttt{}\par É apresentado a Cold Run que se refere à primeira execução de cada query quando o sistema está num estado onde os dados não estão em cache.\\
   NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
   
   \begin{table}[H]
     \centering
-    \renewcommand{\arraystretch}{1.4}
+    \renewcommand{\arraystretch}{1.1}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|r|r|r|r|r|r|}
         \hline  
@@ -799,9 +800,9 @@ Q22&	19,6332109&	18,95484924	&20,70358586	&20,53929782	&18,07801032&	20,35755587
     \label{tab:BC_Table6}
   \end{table}
 
-
+\clearpage
   \subsection{Comparação da média do tempo de execução com PK's e FK's utilizando 1 vs 5 thread numa base de dados de 40GB.(PostgreSQL)}
-\quad Nesta subsecção, apresentamos uma tabela que tem relação com as duas tabelas anteriores. São apresentados os tempos de execução para cada query com chaves utilizando 1 vs 5 threads numa base de dados com 40GB, no motor de pesquisa PostgreSQL.
+\texttt{}\par Nesta subsecção, apresentamos uma tabela que tem relação com as duas tabelas anteriores. São apresentados os tempos de execução para cada query com chaves utilizando 1 vs 5 threads numa base de dados com 40GB, no motor de pesquisa PostgreSQL.
 NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demoraram mais que 1h para executar, mas não deixamos a pesquisa ir até ao fim.
 
 
@@ -842,13 +843,12 @@ NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demorara
 
 \section{Análise de Resultados}
 
-\quad A análise de resultados desempenha um papel fundamental em qualquer estudo, fornecendo insights valioso e orientando decisões informadas. Nesta secção, examinaremos os resultados obtidos a partir dos dados coletados anteriormente apresentados. 
+\texttt{}\par A análise de resultados desempenha um papel fundamental em qualquer estudo, fornecendo insights valioso e orientando decisões informadas. Nesta secção, examinaremos os resultados obtidos a partir dos dados coletados anteriormente apresentados. 
 
-\quad Nosso objetivo é extrair significado dos dados, relações relevantes e interpretar essas descobertas à luz dos objetivos deste projeto.\\
+\texttt{}\par Nosso objetivo é extrair significado dos dados, relações relevantes e interpretar essas descobertas à luz dos objetivos deste projeto.\\
 \subsection{Importação de Dados}
-\quad A partir dos resultados obtidos anteriormente pela secção \textbf{6.1. Importação de Dados}, iremos analisar a tabela para tirarmos conclusões simples e concretas. Que nos ajudem a diferenciar os dois motores MySQL e PostgreSQL.\\
-
-\quad O seguinte gráfico mostra o tempo de importação de cada tabela para os motores de pesquisa MySQL e PostgreSQL. 
+\texttt{}\par A partir dos resultados obtidos anteriormente pela secção \textbf{6.1. Importação de Dados}, iremos analisar a tabela para tirarmos conclusões simples e concretas. Que nos ajudem a diferenciar os dois motores MySQL e PostgreSQL.\\
+O seguinte gráfico mostra o tempo de importação de cada tabela para os motores de pesquisa MySQL e PostgreSQL. 
 
 
 \begin{figure}[H]
@@ -859,11 +859,12 @@ NOTA: A query 17 e 20, os resultados estão a 0, mas na realidade estes demorara
 \end{figure}
 Analisando o gráfico, o tempo de importação varia significativamente entre as tabelas, principalmente nas últimas três tabelas. A tabela \textit{lineitem} levou o maior tempo para importar, enquanto a tabela \textit{nation} levou o menor tempo para importar.
 Isso provavelmente se deve ao fato de que a tabela lineitem.tbl é muito maior do que as outras, tanto em tamanho de ficheiro como em número de linhas.\\
-\quad O gráfico também mostra que o tempo de importação é geralmente menor para o PostgreSQL do que para o MySQL. Isso pode ser devido ao fato de que o PostgreSQL é um sistema de base de dados mais eficiente.
 
-\quad Para termos melhores conclusões iremos analisar a relação do tempo de importação de cada tabela nos dois motores de pesquisa com o tamanho do ficheiro.
+O gráfico também mostra que o tempo de importação é geralmente menor para o PostgreSQL do que para o MySQL. Isso pode ser devido ao fato de que o PostgreSQL é um sistema de base de dados mais eficiente.
 
-\quad O gráfico resultante dessa relação é o seguinte:
+Para termos melhores conclusões iremos analisar a relação do tempo de importação de cada tabela nos dois motores de pesquisa com o tamanho do ficheiro.
+
+O gráfico resultante dessa relação é o seguinte:
 
 \begin{figure}[H]
   \centering
@@ -873,13 +874,12 @@ Isso provavelmente se deve ao fato de que a tabela lineitem.tbl é muito maior d
 \end{figure}
 
 
-\quad Analisando o gráfico, este demonstra que o tempo de importação aumenta consideravelmente para tabelas maiores, como \textit{lineitem} e \textit{orders}, 15 434 957 KB e 3 464 345 KB, respetivamente. Essa tendência indica que o tamanho dos dados é um fator crucial que influencia o desempenho da importação.\\
+Analisando o gráfico, este demonstra que o tempo de importação aumenta consideravelmente para tabelas maiores, como \textit{lineitem} e \textit{orders}, 15 434 957 KB e 3 464 345 KB, respetivamente. Essa tendência indica que o tamanho dos dados é um fator crucial que influencia o desempenho da importação.\\
 
-\quad O gráfico apresentado revela uma discrepância interessante entre as tabelas \textit{part} e \textit{customer}. Apesar de \textit{customer} ter mais kilobytes (KB), o seu tempo de importação é menor em relação ao \textit{part} em ambos os motores. Essa observação exige uma investigação mais profunda para identificar os fatores que contribuem para essa diferença.\\
+O gráfico apresentado revela uma discrepância interessante entre as tabelas \textit{part} e \textit{customer}. Apesar de \textit{customer} ter mais kilobytes (KB), o seu tempo de importação é menor em relação ao \textit{part} em ambos os motores. Essa observação exige uma investigação mais profunda para identificar os fatores que contribuem para essa diferença.\\
+Portanto iremos analisar mais um gráfico para verificarmos se o número de linhas influencia.\\
 
-\quad Portanto iremos analisar mais um gráfico para verificarmos se o número de linhas influencia.\\
-
-\quad O próximo gráfico mostra a relação do tempo de importação de cada tabela para os motores de pesquisa MySQL e PostgreSQL com o número de linhas de cada tabela.\\
+O próximo gráfico mostra a relação do tempo de importação de cada tabela para os motores de pesquisa MySQL e PostgreSQL com o número de linhas de cada tabela.\\
 
 
 \begin{figure}[H]
@@ -889,7 +889,7 @@ Isso provavelmente se deve ao fato de que a tabela lineitem.tbl é muito maior d
   \label{fig:row_import_time3}
 \end{figure}
 
-\quad Tal como referido anteriormente, a tabela \textit{customer} apresesenta um tempo de importação menor do que \textit{part} em ambos os motores, mesmo com um tamanho de ficheiro ligeiramente maior. Com este gráfico podemos verificar que a causa para tal é o número de linhas ser menor no \textit{customer}. O ficheiro da tabela \textit{part} é maior visto que este apresenta mais uma coluna em relação ao customer, e os tipos de dados são mais compactos no \textit{customer} do que no \textit{part}.\\
+Tal como referido anteriormente, a tabela \textit{customer} apresesenta um tempo de importação menor do que \textit{part} em ambos os motores, mesmo com um tamanho de ficheiro ligeiramente maior. Com este gráfico podemos verificar que a causa para tal é o número de linhas ser menor no \textit{customer}. O ficheiro da tabela \textit{part} é maior visto que este apresenta mais uma coluna em relação ao customer, e os tipos de dados são mais compactos no \textit{customer} do que no \textit{part}.\\
 
 \textbf{Observações/Conclusões:}
 Os gráficos desta secção forneceram informações valiosas sobre o desempenho de importação de dados nos motores de pesquisa MySQL e PostgreSQL. A análise revela diversos pontos importantes:\\
@@ -900,10 +900,10 @@ Com base nas considerações acima, o PostgreSQL é geralmente a melhor escolha 
 
 \subsection{Criação das chaves primárias e estrangeiras(PK e FK)}
 
-\quad As chaves primárias e estrangeiras são ferramentas essenciais para garantir a qualidade e confiabilidade dos dados numa base de dados relacional. \\
+\texttt{}\par As chaves primárias e estrangeiras são ferramentas essenciais para garantir a qualidade e confiabilidade dos dados numa base de dados relacional. \\
 A chave primária define um identificador único para cada linha da tabela. Essa chave garante que nenhuma linha seja duplicada e facilita a busca e recuperação de dados específicos. A chave estrangeira estabelece uma relação entre duas tabelas, referenciando a chave primária de outra tabela, permitindo que os dados de uma tabela sejam vinculados a dados de outra tabela.\\
 
-\quad Iremos analisar os resultados obtidos na secção \textbf{6.2 Criação das chaves primárias e estrangeiras (PK e FK)}, e os resultados obtidos foram os seguintes:
+\texttt{}\par Iremos analisar os resultados obtidos na secção \textbf{6.2 Criação das chaves primárias e estrangeiras (PK e FK)}, e os resultados obtidos foram os seguintes:
 
 \begin{figure}[H]
   \centering
@@ -914,7 +914,7 @@ A chave primária define um identificador único para cada linha da tabela. Essa
 
 
 
-\quad Após análise do gráfico e da tabela da secção \textbf{6.2}, podemos tirar conclusões de que o PostgreSQL tem um desempenho muito superior em relação ao MySQL. \\
+\texttt{}\par Após análise do gráfico e da tabela da secção \textbf{6.2}, podemos tirar conclusões de que o PostgreSQL tem um desempenho muito superior em relação ao MySQL. \\
 
 A diferença fica mais notável, quando as primary keys são colocadas nas tabelas maiores. Ou seja, quanto maior for a tabela, mais é o tempo de criação das chaves primárias.
 
@@ -927,14 +927,14 @@ Para confirmar isso, iremos criar um novo gráfico para sustentar a nossa suposi
   \label{fig:PKCreation2}
 \end{figure}
 
-\quad Tal como imaginado, quanto mais linhas existirem maior é o tempo de criação de chaves primárias. \\
-\quad Podemos concluir que o PostgreSQL geralmente apresenta um desempenho bastante superior em comparação ao MySQL, especialmente me grandes volumes de dados. Essa diferença de performance pode ser atribuída a diversos fatores, como algoritmos otimizados, maior flexibilidade de índices, gestão de memória eficiente e otimização para grandes volumes de dados.\\
+\texttt{}\par Tal como imaginado, quanto mais linhas existirem maior é o tempo de criação de chaves primárias. \\
+\texttt{}\par Podemos concluir que o PostgreSQL geralmente apresenta um desempenho bastante superior em comparação ao MySQL, especialmente me grandes volumes de dados. Essa diferença de performance pode ser atribuída a diversos fatores, como algoritmos otimizados, maior flexibilidade de índices, gestão de memória eficiente e otimização para grandes volumes de dados.\\
 
-\quad O postgreSQL utiliza algoritmos otimizados para criação de indices B-tree, como inserção em massa, balanceamento de B-tree e cache, que otimizam o processo e reduzem o tempo de criação, já o MySQL utiliza algoritmos mais simples para criação de índices, o que pode levar a um desempenho menos eficiente em grandes volumes de dados.\\
+\texttt{}\par O postgreSQL utiliza algoritmos otimizados para criação de indices B-tree, como inserção em massa, balanceamento de B-tree e cache, que otimizam o processo e reduzem o tempo de criação, já o MySQL utiliza algoritmos mais simples para criação de índices, o que pode levar a um desempenho menos eficiente em grandes volumes de dados.\\
 
-\quad O postgreSQL oferece maior flexibilidade na criação de índices, permitindo a utilização de diversos tipos, como hash e parciais, para otimizar consultas específicas. O MySQL possui menos flexibilidade na criação de índices, limitando as opções de otimização para consultas complexas.\\
+\texttt{}\par O postgreSQL oferece maior flexibilidade na criação de índices, permitindo a utilização de diversos tipos, como hash e parciais, para otimizar consultas específicas. O MySQL possui menos flexibilidade na criação de índices, limitando as opções de otimização para consultas complexas.\\
 
-\quad Iremos abordar a criação de chaves estrangeiras, para avaliarmos qual dos dois motores de busca tem um melhor desempenho na criação destes.\\
+\texttt{}\par Iremos abordar a criação de chaves estrangeiras, para avaliarmos qual dos dois motores de busca tem um melhor desempenho na criação destes.\\
 
 
 \begin{figure}[H]
@@ -950,11 +950,11 @@ Inicialmente, o MySQL e PostgreSQL têm resultados parcialmente iguais, mas quan
 
 A combinação de algoritmos otimizados, maior flexibilidade de índices, gestão eficiente de referências, otimização para grandes volumes de dados, suporte para multiprocessamento e suporte complexo para cascatas  e restrições de referência torna o PostgreSQL a escolha ideal para aplicações que exigem a criação e gestão de chaves estrangeiras. O MySQL, por outro lado, pode ser uma opção adequada para aplicações com menor volume de dados ou que não exigem um desempenho tao alto na criação de chaves estrangeiras.\\
 
-\clearpage
+
 \subsection{Tempo de execução sem PK's e FK's utilizando 1 thread numa base
 de dados de 25GB}
 
-Um dos objetivos do projeto, é analisar o desempenho dos dois motores de pesquisa nas pesquisas sem chaves.
+\texttt{}\par Um dos objetivos do projeto, é analisar o desempenho dos dois motores de pesquisa nas pesquisas sem chaves.
 
 Nesta subsecção iremos comparar o desempenho do MySQL vs PostgreSQL ao executar a mesma pesquisa sem chaves utilizando uma única thread.
 
@@ -1001,7 +1001,7 @@ De uma forma geral, o PostgreSQL apresenta melhores resultados e mais eficientes
 de dados de 25GB}
 
 
-Nesta subsecção iremos comparar o desempenho do MySQL vs PostgreSQL ao executar a mesma pesquisa sem chaves utilizando 5 thread, para que possamos verificar se as thredas têm algum impacto quando não são usadas chaves.
+\texttt{}\par Nesta subsecção iremos comparar o desempenho do MySQL vs PostgreSQL ao executar a mesma pesquisa sem chaves utilizando 5 thread, para que possamos verificar se as thredas têm algum impacto quando não são usadas chaves.
 
 Apresentamos agora os tempos de execução sem PK's e FK's utilizando 5 thread.
 
@@ -1068,7 +1068,7 @@ Concluindo, o PostgreSQL é superior ao MySQL quando são executadas 5 threads e
   \subsection{Comparação da média do tempo de execução sem PK's e FK's
   utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}
   
-  \quad Nesta subsecção iremos comparar o desempenho do MySQL ao executar a mesma consulta com diferentes números de threads, especificamente 1 e 5 threads, sem chaves. 
+  \texttt{}\par Nesta subsecção iremos comparar o desempenho do MySQL ao executar a mesma consulta com diferentes números de threads, especificamente 1 e 5 threads, sem chaves. 
   
   O objetivo é avaliar o impacto do paralelismo na eficiência da consulta e determinar se o aumento de threads resulta numa melhoria significativa no tempo de resposta.\\
   
@@ -1118,7 +1118,7 @@ Concluindo, o PostgreSQL é superior ao MySQL quando são executadas 5 threads e
 \clearpage
 \subsection{Tempo de execução com PK's e FK's utilizando 1 thread numa base
 de dados de 25GB}
-Um dos objetivos do projeto, é analisar o desempenho dos dois motores de pesquisa nas pesquisas com chaves.
+\texttt{}\par Um dos objetivos do projeto, é analisar o desempenho dos dois motores de pesquisa nas pesquisas com chaves.
 
 Nesta subsecção iremos comparar o desempenho do MySQL vs PostgreSQL ao executar a mesma pesquisa com chaves utilizando uma única thread.
 
@@ -1133,14 +1133,14 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 1 thread.
   \caption{Gráfico de barras - MySQL vs PostgreSQL - 1 thread com chaves.}
   \label{fig:PKCreation2}
 \end{figure}
-\quad Com base nesta comparação, pode-se observar que em muitos casos o postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL para as consultas do TPC-H.
+\texttt{}\par Com base nesta comparação, pode-se observar que em muitos casos o postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL para as consultas do TPC-H.
 
 Isso pode ser atríbuido a várias razões incluindo, \textit{Otimizações do PostgreSQL} o postgreSQL é conhecido por ter um otimizador de consulta sofisticado que pode gerar planos de execução eficientes para consultas complexas. Isso pode resultar em tempos de execução mais rápidos para consutlas específicas em comparação com o MySQL, \textit{Arquitetura do PostgreSQL} o postgreSQL tem uma arquitetura robusta que suporta recursos avançados, como suporte a vários tipos de índices, sendo que esses recursos podem contribuir para um desempenho melhor em cenários de consulta intensiva, como o TPC-H.
 
 Tal como referido anteriorment, o otimizador do MySQL pode escolher planos de execução menos eficientes para determinadas consultas, levando a um desempenho mais lento com vários threads. Isso pode ser devido a fatores como estratégia de junção, otimização de subconsulta ou padrões de acesso a dados. 
 
 
-\quad Mas existem algumas exceções, tais como a query 17,18,20,21.
+\texttt{}\par Mas existem algumas exceções, tais como a query 17,18,20,21.
 
 Consultas como Q2, Q6, Q8, Q11 e Q15 são menos complexas, envolvem menos junções ou operações mais simples.
 Para essas consultas menos complexas, o PostgreSQL também tende a ter tempos de execução mais baixos em comparação com o MySQL na maioria dos casos.
@@ -1151,7 +1151,7 @@ Podendo concluir, que o PostgreSQL quando utilizado 1 thread e chaves é muito m
 \subsection{Tempo de execução com PK's e FK's utilizando 5 thread's numa base
 de dados de 25GB}
 
-Um dos objetivos do projeto, é analisar o desempenho dos dois motores de pesquisa nas pesquisas com chaves.
+\texttt{}\par Um dos objetivos do projeto, é analisar o desempenho dos dois motores de pesquisa nas pesquisas com chaves.
 
 Nesta subsecção iremos comparar o desempenho do MySQL vs PostgreSQL ao executar a mesma pesquisa com chaves utilizando uma 5 threads, com objetivo de analisar se o aumento do número de threads tem algum impacto no desempenho.
 
@@ -1169,17 +1169,17 @@ Apresentamos agora os tempos de execução com PK's e FK's utilizando 5 thread.
 \end{figure}
 
 
-\quad Apartir deste gráfico podemos concluir o mesmo que na subsecção anterior. O postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL, menos nas query 2,15,16,17,18,20,21.
-\quad Em comparação com o gráfico da subsecção anterior, os tempos de execução aumentaram, visto que são usadas 5 threads, em que têm de dividir os recursos tais como memória e pelas razões escritas na secção \textbf{7.5}, da figura 5. 
+Apartir deste gráfico podemos concluir o mesmo que na subsecção anterior. O postgreSQL apresenta tempos de execução significativamente mais baixos do que MySQL, menos nas query 2,15,16,17,18,20,21.
+Em comparação com o gráfico da subsecção anterior, os tempos de execução aumentaram, visto que são usadas 5 threads, em que têm de dividir os recursos tais como memória e pelas razões escritas na secção \textbf{7.5}, da figura 5. 
 
-\quad Em relação à secção \textbf{7.6}, os resultados do PostgreSQL são drásticamente piores, apesar disso o PostgreSQL tem uma grande vantagem, visto que o tempo de execução total do mysql é \textbf{576,2615614\%} superior em relação ao PostgreSQL.
+Em relação à secção \textbf{7.6}, os resultados do PostgreSQL são drásticamente piores, apesar disso o PostgreSQL tem uma grande vantagem, visto que o tempo de execução total do mysql é \textbf{576,2615614\%} superior em relação ao PostgreSQL.
 
 Concluindo, o PostgreSQL é superior em relação ao MySQL com uso de chaves e com 5 threads.
 \clearpage
   \subsection{Comparação da média do tempo de execução com PK's e FK's
   utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL)}
   
-  \quad Nesta subsecção iremos comparar o desempenho do MySQL ao executar a mesma consulta com diferentes números de threads, especificamente 1 e 5 threads. 
+  \texttt{}\par Nesta subsecção iremos comparar o desempenho do MySQL ao executar a mesma consulta com diferentes números de threads, especificamente 1 e 5 threads. 
   
   O objetivo é avaliar o impacto do paralelismo na eficiência da consulta e determinar se o aumento do número de threads resulta numa melhoria significativa no tempo de resposta.\\
 
@@ -1193,7 +1193,7 @@ Concluindo, o PostgreSQL é superior em relação ao MySQL com uso de chaves e c
 
   \end{figure}
 
-  \quad É possível analisar que a média dos tempos é sempre mais baixa quando estes são executados com apenas uma thread, o que já era algo de esperar. Iremos dar uma explicação após mostrarmos a comparação para o PostgreSQL, que na teoria também será menor para as execuções de 1 thread.
+  \texttt{}\par É possível analisar que a média dos tempos é sempre mais baixa quando estes são executados com apenas uma thread, o que já era algo de esperar. Iremos dar uma explicação após mostrarmos a comparação para o PostgreSQL, que na teoria também será menor para as execuções de 1 thread.
     
   Neste caso, 17 das 22 querys são mais rápidas quando usadas 1 threads, em comparação aos tempos de execução sem chaves existe uma boa diferença, visto que com chaves a utilização de 1 thread é mais benéfico do que com 5 threads. Já sem chaves é benéfico utilizar 1 thread quando as querys são mais complexas. Neste caso em que é utilizado chaves, é mais vantajoso utilizar 1 thread que 5.
 
@@ -1212,7 +1212,7 @@ Analisando o resultado, as execuções com 1 thread são as mais rápidas, o oti
   
   
   
-\quad As consultas simultâneas podem competir por recursos partilhados, especialmente se as consultas estiverem a tentar aceder aos mesmos recursos ao mesmo tempo.
+\texttt{}\par As consultas simultâneas podem competir por recursos partilhados, especialmente se as consultas estiverem a tentar aceder aos mesmos recursos ao mesmo tempo.
 O uso de várias threads pode aumentar o overhead do sistema devido à criação e gestão de threads adicionais. Isso pode consumir recursos do sistema, como CPU e memória, reduzindo a eficiência geral. 
 Dependendo da natureza das consultas e da carga de trabalho, várias consultas simultâneas podem sobrecarregar o sistema de base de dados, levando a latências mais altas e tempos de resposta mais lentos. 
  
@@ -1222,7 +1222,7 @@ Dependendo da natureza das consultas e da carga de trabalho, várias consultas s
 
 \clearpage
 \subsection{Comparação da média do tempo de execução entre com chaves vs sem chaves numa base de dados de 25GB PostgreSQL}
-Nesta secção, vamos analisar a comparação da média do tempo de execução entre consultas com e sem chaves numa base de dados PostgreSQL utilizando diferentes números de threads, a primeira é com 1 thread e depois analisamos com 5 threads.
+\texttt{}\par Nesta secção, vamos analisar a comparação da média do tempo de execução entre consultas com e sem chaves numa base de dados PostgreSQL utilizando diferentes números de threads, a primeira é com 1 thread e depois analisamos com 5 threads.
 
 O objetivo é avaliar o impacto da presença de chaves primárias no desempenho de consultas complexas.
 
@@ -1268,7 +1268,7 @@ As conclusões que tiramos acima são exatamente iguais. O único dado que podem
 
 \subsection{Comparação da média do tempo de execução entre com chaves vs sem chaves numa base de dados de 25GB MySQL}
 
-Nesta secção, vamos analisar a comparação da média do tempo de execução entre consultas com e sem chaves numa base de dados MySQL utilizando diferentes números de threads, a primeira é com 1 thread e depois analisamos com 5 threads.
+\texttt{}\par Nesta secção, vamos analisar a comparação da média do tempo de execução entre consultas com e sem chaves numa base de dados MySQL utilizando diferentes números de threads, a primeira é com 1 thread e depois analisamos com 5 threads.
 
 O objetivo é avaliar o impacto da presença de chaves primárias no desempenho de consultas complexas.
 
@@ -1308,7 +1308,7 @@ Concluindo, o uso de chaves de forma geral, é mais benéfica isto quando os dad
 \clearpage
 \subsection{Comparação média do tempo de execução 1 vs 5 threads com chaves base de dados 40GB(PostgreSQL)}
 
-A nossa primeira base de dados continha cerca de 40GB de dados, executamos as pesquisas para o PostgreSQL com sucesso, mas quando fomos executar no MySQL demoravam imenso tempo, o que nos fez parar. Mas iremos apresentar os resultados e fazer uma comparação no motor de pesquisa PostgreSQL com uma execução com 1 vs 5 threads, e visualizar qual é a mais rápida e mais eficiente.
+\texttt{}\par A nossa primeira base de dados continha cerca de 40GB de dados, executamos as pesquisas para o PostgreSQL com sucesso, mas quando fomos executar no MySQL demoravam imenso tempo, o que nos fez parar. Mas iremos apresentar os resultados e fazer uma comparação no motor de pesquisa PostgreSQL com uma execução com 1 vs 5 threads, e visualizar qual é a mais rápida e mais eficiente.
 
 \begin{figure}[H]
   \centering
@@ -1322,7 +1322,7 @@ Analisando o gráfico, podemos concluir que é mais rápido e eficiente quando �
 \clearpage
 \subsection{Análise de Explain Plan Rápida vs Query Lenta}
 \subsubsection{PostgreSQL - Rápida}
-Para a query rápida do PostgreSQL opatamos pela query 11, visto que dos resultados que obtemos foi sempre a mais rápida.\\
+\texttt{}\par Para a query rápida do PostgreSQL opatamos pela query 11, visto que dos resultados que obtemos foi sempre a mais rápida.\\
 
 Este explian plain é sem uso de chaves.
 
@@ -1372,7 +1372,7 @@ Sort  (cost=1033765.57..1034180.67 rows=166041 width=36)
 \end{lstlisting}
 
 \textbf{Explicação}\\
-Este plano de execução está relacionado a uma consulta que envolve operações de agregação, junção e filtragem.
+\texttt{}\par Este plano de execução está relacionado a uma consulta que envolve operações de agregação, junção e filtragem.
 
 Inicialmente, ocorre o initplan e finalize aggregate, são etapas preliminares para calcular a soma ponderada dos custos de suplimentos multiplicados pela quantidade disponivel para os produtos. Estes estão relacionados à função de agregação sum usada na consulta.
 
@@ -1389,7 +1389,7 @@ Um filtro é aplicado nos resultados agrupados para selecionar apenas os grupos 
 No final, os resultados finais são classificados em ordem decrescente com base na soma ponderada calculada na etapa initplan.
 
 \subsubsection{PostgreSQL - Lenta}
-Uma das querys mais lentas é a query 18, tinhamos outras tais como o 17 e 20, mas visto que dessas 2 não as deixamos ir até ao fim, achamos que as conclusões acerca desta poderão ser mais positivas.
+\texttt{}\par Uma das querys mais lentas é a query 18, tinhamos outras tais como o 17 e 20, mas visto que dessas 2 não as deixamos ir até ao fim, achamos que as conclusões acerca desta poderão ser mais positivas.
 
 Não está bem formatado, para visualizar melhor recomendamos ver os ficheiros que submetemos com os explain plan.
 
@@ -1446,7 +1446,7 @@ lineitem_1.l_orderkey
 \end{lstlisting}
 
 \textbf{Explicação}\\
-Apresenta um Limit, que é a etapa final do plano de execução. Ela limita o número de linhas retornadas pela consulta para 100 linhas, indicado pelo parâmetro rows = 100.
+\texttt{}\par Apresenta um Limit, que é a etapa final do plano de execução. Ela limita o número de linhas retornadas pela consulta para 100 linhas, indicado pelo parâmetro rows = 100.
 
 GroupAggregate esta é uma operação de agregação que agrupa os resultados com base nas chaves especificadas.
 
@@ -1496,6 +1496,7 @@ Com essas conclusões, mesmo sem executar já podemos prever. Visto que a query 
 
 
 \subsubsection{MySQL - Rápida}
+\texttt{}\par Para o MySQL iremos analisar as mesmas querys, neste caso a query 11.
 \begin{lstlisting}
   {
     "query_block": {
@@ -1665,12 +1666,13 @@ Com essas conclusões, mesmo sem executar já podemos prever. Visto que a query 
 \end{lstlisting}
 
 \textbf{Explicação}\\
-Inicialmente indicamos que irá ocorrer uma operação de ordenação de resultados.
+\texttt{}\par Inicialmente indicamos que irá ocorrer uma operação de ordenação de resultados.
 Após isso, os resultados são agrupados, indicando que uma tabela temporária está sendo usada.
 De seguida, ocorre um nested loop, entre e tabelas, primeiramente é a tabela nation que é acedida com a condição de filtro onde o país é MOZAMBIQUE. Isso é feito através de uma varredura completa. Depois, vem a supplier que é acedida e ocorre uma junção com a tabela nation utilizando a chave S\underline{}NATIONKEY. Finalizando com a tabela PARTSUPP, que é acedida e ocorre uma junção com a tabela SUPPLIER utilizando uma chave de junção PS\underline{}SUPPKEY. Não exisitndo nenhuma subconsulta na clausula HAVING nesta etapa.
 
 Finalizando com uma subconsulta na clásula HAVING que faz novamente uma junção de nested loop, entre as 3 tabelas referidas anteriormente. Nation ocorre a varreduta completa com a mesma condição de filtro que na consulta principal. Supplier acesso à tabela e junção com a tabela Nation, e a tabela partsupp, em que ocorre o acesso e junção com a tabela SUPPLIER usando a chave de junção.
 \subsubsection{MySQL - Lenta}
+\texttt{}\par Para a query lenta, é exatamente a mesma da do PostgreSQL. A query 18.
 \begin{lstlisting}[language=SQL]
   {
     "query_block": {
@@ -1803,7 +1805,7 @@ Por fim a tabela lineitem é acedida. A condição anexada relaciona a tabela li
     \item \textbf{Subconsultas} - Apresenta uma subconsulta anexada à tabela ORDERS, que executa uma lógica complexa envolvendo agrupamento e filtragem com base em quantidades de itens.
     \item\textbf{Complexidade} A consulta também é complexa, com um custo de consulta extremamente alto. Ela envolve operações de junção e subconsultas complexas para realizar a análise de pedidos e itens associados.
   \end{itemize}
-  Ambas as consultas envolvem múltiplas tabelas.
+  \texttt{}\par Ambas as consultas envolvem múltiplas tabelas.
   A segunda consulta parece ter uma lógica mais complexa de filtragem e análise, com a presença de uma subconsulta anexada que executa uma operação de agrupamento e filtragem com base em quantidades de itens.
   Enquanto a primeira consulta parece envolver uma estrutura mais direta de junções entre as tabelas, a segunda consulta apresenta uma lógica mais complexa de filtragem e agrupamento.
   Ambas as consultas poderiam se beneficiar de otimização para melhorar o desempenho, especialmente devido aos custos extremamente altos de consulta. Isso poderia envolver a revisão de índices, estrutura de consulta e possíveis formas de simplificar a lógica das subconsultas para reduzir o custo total da consulta.
@@ -1812,7 +1814,7 @@ Por fim a tabela lineitem é acedida. A condição anexada relaciona a tabela li
 \subsection{Análise de Explain Plan Query Lenta}
 
 
-A query mais lenta é a Query 20, sendo que iremos apresentar os explain plan dela para os dois motores de pesquisa para visualizarmos quais métodos o postgres e o mysql usam.
+\texttt{}\par A query mais lenta é a Query 20, sendo que iremos apresentar os explain plan dela para os dois motores de pesquisa para visualizarmos quais métodos o postgres e o mysql usam.
 \subsubsection{PostgreSQL}
 O explain plan da query 20 é:\\
 \begin{lstlisting}[language=SQL]
@@ -1846,7 +1848,7 @@ Nested Loop Semi Join  (cost=6769.40..3072540576687.95 rows=2155 width=51)
 
   \textbf{Explicação}
 
-  A operação principal é o nested loop semi join. Que parece estar à procura de correspondências entre dois conjunto de dados.
+  \texttt{}\par A operação principal é o nested loop semi join. Que parece estar à procura de correspondências entre dois conjunto de dados.
 
   De seguida vem o gather merge, esta etapa indica que está a ocorrer uma junção dos resultados de múltiplos nós de execução paralela.
 
@@ -2079,7 +2081,7 @@ O explain plan da query 20 é:\\
   \end{lstlisting}
 
 \textbf{Explicação}\\
-A consulta começa a examinar a tabela nation usando uma verificação completa para encontrar as linhas cujo valor da coluna n\underline{}name é igual a ALGERIA.
+\texttt{}\par A consulta começa a examinar a tabela nation usando uma verificação completa para encontrar as linhas cujo valor da coluna n\underline{}name é igual a ALGERIA.
 
 Então junta a tabela supplier com a tabela filtrada nation usando uma junção por referência. A junção usa o índice S\underline{}NATIONKEY na tabela supllier para encontrar linhas correspondentes com base no valor da coluna N\underline{}NATIONKEY nas tabelas nation e supplier.
 
@@ -2095,7 +2097,7 @@ A subconsulta select4 agrega a soma da quantidade (L\underline{}QUANTITY) de ite
 
 \subsubsection{MySQL vs PostgreSQL - Explain Plan}
 
-Para comparar o mysql e postgreSQL, iremos analisar as similaridades.
+\texttt{}\par Para comparar o mysql e postgreSQL, iremos analisar as similaridades.
 
 Ambos os sitemas realizam junções entre as tabelas NATION, SUPPLIER, PART e PARTSUPP para recuperar os dados necessários.
 
@@ -2113,7 +2115,7 @@ No entanto, a alta disparidade nos custos totais das consultas entre MySQL e Pos
 \clearpage
 \section{Conclusão}
 
-Nesta secção iremos apresentar uma conclusão acerca dos resultados obtidos, em relação à importação dos dados, o PostgreSQL destacou-se como a opção mais rápida. Em todas as tabelas este teve um desempenho bastante superior, isso pode-se dar pela sua arquitetura otimizada para processamento em massa e operações de importação resulta em tempos de importação menores. \\
+\texttt{}\par Nesta secção iremos apresentar uma conclusão acerca dos resultados obtidos, em relação à importação dos dados, o PostgreSQL destacou-se como a opção mais rápida. Em todas as tabelas este teve um desempenho bastante superior, isso pode-se dar pela sua arquitetura otimizada para processamento em massa e operações de importação resulta em tempos de importação menores. \\
 
 Verificamos que o tempo de importação varia entre tabelas, com tabelas maiores a levarem mais tempo para serem importadas. Indicando-nos que o tamanho da tabela é um fator crucial que influencia o desempenho na importação de dados. Não sendo os únicos, até o número de linhas pode influenciar o tempo de importação.
 
@@ -2124,6 +2126,8 @@ Em relação à criação de PK e FK, o PostgreSQL novamente mais rápido, inici
 Em relação aos tempos de execução sem chaves, o PostgreSQL tem novamente uma vantagem alargada em relação ao MySQL, tanto com 1 thred como com 5 thread. O PostgreSQL fica bastante limitado quando é usado 5 threads, o tempo de execução duplica. O MySQL teve um resultado de 50\%/50\% em relaçao à diferença entre 1 thread vs 5 threads. A razão que se dá é que se as querys forem mais simples e menos complexas o uso de 5 threads é uma vantagem, mas se for uma complexa a utilização de 1 thread é mais benéfico. Visto que as 5 threads estão a partilhar o mesmo recurso entre elas.
 
 Com chaves, o PostgreSQL consegue ser mais rápido com uma diferença enorme, isto pois este tem mais algoritmos. A query 15 não conseguimos tirar conclusões, visto que é a criação de uma view e esta é logo apagada, e neste caso o MySQL foi surpreendentemente superior.
+
+Adicionando o tempo de pesquisa total do PostgreSQL e compararmos com o tempo de pesquisa do MySQL, o MySQL foi mais lento cerca de \textbf{2729,3123138\%}, um número demasiado elevado, o que nos são resultados mais concretos que o PostgreSQL é muito mais avançado, principalmente quando as bases de dados têm grandes volumes de dados.
 
 Podemos concluir, que o MySQL a diferença entre usar 1 thread ou 5 não é muito grande, já o PostgreSQL a diferença é enorme. Sendo que  o otimizador de consultas
 de PostgreSQL pode ser mais conservador na sua estimativa dos benefícios da paralelização. Sendo
