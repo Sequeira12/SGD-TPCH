@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.4.12)  11 MAY 2024 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.4.12)  12 MAY 2024 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -188,7 +188,35 @@ File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
 File: listings.cfg 2024/03/11 1.10a listings configuration
 ))
 Package: listings 2024/03/11 1.10a (Carsten Heinz)
- (report.aux
+ (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2024/03/29 v24.3 The Babel package
+\babel@savecnt=\count298
+\U@D=\dimen197
+\l@unhyphenated=\language1
+ (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count299
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-portuges/portuguese.ldf
+Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Portuguese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 53.
+
+Package babel Info: Making " an active character on input line 143.
+)) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/pt/babel-portuguese.tex
+Package babel Info: Importing font and identification data for portuguese
+(babel)             from babel-pt.ini. Reported on input line 11.
+) (report.aux
 
 LaTeX Warning: Label `tab:BC_Table3' multiply defined.
 
@@ -292,20 +320,41 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
  (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen197
+\scratchcounter=\count300
+\scratchdimen=\dimen198
 \scratchbox=\box80
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count301
+\nofMParguments=\count302
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen198
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen199
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
 \everyMPtoPDFconversion=\toks23
 ) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -343,7 +392,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count304
+\c@lstlisting=\count306
 <dei_thumb.png, id=1, 240.9pt x 39.5076pt>
 File: dei_thumb.png Graphic file (type png)
 <use dei_thumb.png>
@@ -356,22 +405,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} <./dei_thumb.png>] (report.toc
-Overfull \hbox (8.18947pt too wide) in paragraph at lines 12--12
- [][] []\OT1/cmr/m/n/10 M^^Sedias e Desvio padr~ao de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 
- []
-
-
 Overfull \hbox (8.18947pt too wide) in paragraph at lines 13--13
  [][] []\OT1/cmr/m/n/10 M^^Sedias e Desvio padr~ao de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 
  []
 
 
-Overfull \hbox (9.24504pt too wide) in paragraph at lines 16--16
- [][] []\OT1/cmr/m/n/10 M^^Sedias e Desvio padr~ao de tempos entre MySQL vs PostgresSQL, com chaves utilizando 
+Overfull \hbox (8.18947pt too wide) in paragraph at lines 14--14
+ [][] []\OT1/cmr/m/n/10 M^^Sedias e Desvio padr~ao de tempos entre MySQL vs PostgresSQL, sem chaves utilizando 
  []
 
 
 Overfull \hbox (9.24504pt too wide) in paragraph at lines 17--17
+ [][] []\OT1/cmr/m/n/10 M^^Sedias e Desvio padr~ao de tempos entre MySQL vs PostgresSQL, com chaves utilizando 
+ []
+
+
+Overfull \hbox (9.24504pt too wide) in paragraph at lines 18--18
  [][] []\OT1/cmr/m/n/10 M^^Sedias e Desvio padr~ao de tempos entre MySQL vs PostgresSQL, com chaves utilizando 
  []
 
@@ -386,34 +435,34 @@ Overfull \hbox (9.24504pt too wide) in paragraph at lines 17--17
 \openout4 = `report.lof'.
 
  (report.lot
-Overfull \hbox (3.94055pt too wide) in paragraph at lines 3--3
+Overfull \hbox (3.94055pt too wide) in paragraph at lines 5--5
  [][] []\OT1/cmr/m/n/10 Tempo de cria^^Xc~ao das chaves estrangeiras em segundos para cada motor de pesquisa.(FK) []  
  []
 
 
-Overfull \hbox (16.74507pt too wide) in paragraph at lines 8--8
+Overfull \hbox (16.74507pt too wide) in paragraph at lines 10--10
  [][] []\OT1/cmr/m/n/10 M^^Sedia e desvio padr~ao do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(1 
  []
 
 
-Overfull \hbox (16.74507pt too wide) in paragraph at lines 9--9
+Overfull \hbox (16.74507pt too wide) in paragraph at lines 11--11
  [][] []\OT1/cmr/m/n/10 M^^Sedia e desvio padr~ao do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(5 
  []
 
 
-Overfull \hbox (16.74507pt too wide) in paragraph at lines 14--14
+Overfull \hbox (16.74507pt too wide) in paragraph at lines 16--16
  [][] []\OT1/cmr/m/n/10 M^^Sedia e desvio padr~ao do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(1 
  []
 
 
-Overfull \hbox (16.74507pt too wide) in paragraph at lines 15--15
+Overfull \hbox (16.74507pt too wide) in paragraph at lines 17--17
  [][] []\OT1/cmr/m/n/10 M^^Sedia e desvio padr~ao do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(5 
  []
 
 [3
 
 ]
-Overfull \hbox (16.74507pt too wide) in paragraph at lines 18--18
+Overfull \hbox (16.74507pt too wide) in paragraph at lines 20--20
  [][] []\OT1/cmr/m/n/10 M^^Sedia e desvio padr~ao do tempo de pesquisa de cada query entre MySQL e PostgreSQL.(5 
  []
 
@@ -422,11 +471,6 @@ Overfull \hbox (16.74507pt too wide) in paragraph at lines 18--18
 \openout5 = `report.lot'.
 
  [4]
-Overfull \hbox (17.30174pt too wide) in paragraph at lines 51--52
-[]\OT1/cmr/m/n/10 No mundo contempor^aneo, onde os dados se tornaram um ativo extremamente valioso e omnipresente
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
@@ -466,8 +510,8 @@ Package pdftex.def Info: Graphs/tpchassignment.png  used on input line 68.
 [6
 
  <./Graphs/tpchassignment.png (PNG copy)>]
-Overfull \hbox (1.1072pt too wide) in paragraph at lines 78--79
-[]\OT1/cmr/m/n/10 Nesta se^^Xc~ao, vamos nos aprofundar nas especifica^^Xc~oes e configura^^Xc~oes do hardware do computador
+Overfull \hbox (6.6617pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/bx/n/14.4 Especifica^^Xc~oes do Computador e Configura^^Xc~oes dos motores
  []
 
 
@@ -475,53 +519,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
- []
-
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--156
-
- []
-
-[9
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+[8
+
+] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--191
 
  []
 
 [10
 
-] [11
+]
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+[11
 
 ] [12
 
@@ -541,764 +585,771 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
 ] [20
 
-] [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 725--726
+] [21
 
- []
-
-[23
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
+] [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
 
  []
 
 [24
 
-] [25
-
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 848--849
+Underfull \hbox (badness 10000) in paragraph at lines 800--801
 
  []
 
-<Graphs/ImportTime.png, id=95, 683.55376pt x 408.52625pt>
+[25
+
+] [26
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 883--884
+
+ []
+
+<Graphs/ImportTime.png, id=100, 683.55376pt x 408.52625pt>
 File: Graphs/ImportTime.png Graphic file (type png)
 <use Graphs/ImportTime.png>
-Package pdftex.def Info: Graphs/ImportTime.png  used on input line 856.
+Package pdftex.def Info: Graphs/ImportTime.png  used on input line 891.
 (pdftex.def)             Requested size: 430.00462pt x 256.99889pt.
 
-Overfull \hbox (17.74625pt too wide) in paragraph at lines 860--862
+Overfull \hbox (17.74625pt too wide) in paragraph at lines 895--897
 []\OT1/cmr/m/n/10 Analisando o gr^^Safico, o tempo de importa^^Xc~ao varia significativamente entre as tabelas, principalmente
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--862
+Underfull \hbox (badness 10000) in paragraph at lines 895--897
 
  []
 
-[26
+[27
 
  <./Graphs/ImportTime.png>]
-<Graphs/SizevsImport.png, id=100, 897.3525pt x 524.96124pt>
+<Graphs/SizevsImport.png, id=105, 897.3525pt x 524.96124pt>
 File: Graphs/SizevsImport.png Graphic file (type png)
 <use Graphs/SizevsImport.png>
-Package pdftex.def Info: Graphs/SizevsImport.png  used on input line 871.
+Package pdftex.def Info: Graphs/SizevsImport.png  used on input line 906.
 (pdftex.def)             Requested size: 430.00462pt x 251.55399pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 877--878
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--881
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 882--883
-
- []
-
-<Graphs/RowsvsImportTime.png, id=101, 665.48625pt x 389.455pt>
-File: Graphs/RowsvsImportTime.png Graphic file (type png)
-<use Graphs/RowsvsImportTime.png>
-Package pdftex.def Info: Graphs/RowsvsImportTime.png  used on input line 887.
-(pdftex.def)             Requested size: 430.00462pt x 251.65115pt.
-[27 <./Graphs/SizevsImport.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 892--893
-
- []
-
-
-Overfull \hbox (22.74606pt too wide) in paragraph at lines 903--905
-[]\OT1/cmr/m/n/10 As chaves prim^^Sarias e estrangeiras s~ao ferramentas essenciais para garantir a qualidade e confiabilidade
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 903--905
-
- []
-
-[28 <./Graphs/RowsvsImportTime.png>]
-Overfull \hbox (16.02208pt too wide) in paragraph at lines 906--907
-[]\OT1/cmr/m/n/10 Iremos analisar os resultados obtidos na sec^^Xc~ao \OT1/cmr/bx/n/10 6.2 Cria^^Xc~ao das chaves prim^^Sarias e estrangeiras
- []
-
-<Graphs/PKCreation.png, id=110, 819.06pt x 491.8375pt>
-File: Graphs/PKCreation.png Graphic file (type png)
-<use Graphs/PKCreation.png>
-Package pdftex.def Info: Graphs/PKCreation.png  used on input line 910.
-(pdftex.def)             Requested size: 430.00462pt x 258.21855pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 917--918
 
  []
 
-<Graphs/linesvspk.png, id=111, 711.65875pt x 452.69125pt>
+<Graphs/RowsvsImportTime.png, id=106, 665.48625pt x 389.455pt>
+File: Graphs/RowsvsImportTime.png Graphic file (type png)
+<use Graphs/RowsvsImportTime.png>
+Package pdftex.def Info: Graphs/RowsvsImportTime.png  used on input line 922.
+(pdftex.def)             Requested size: 430.00462pt x 251.65115pt.
+[28 <./Graphs/SizevsImport.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 927--928
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 938--940
+
+ []
+
+[29 <./Graphs/RowsvsImportTime.png>]
+Overfull \hbox (16.02208pt too wide) in paragraph at lines 941--942
+[]\OT1/cmr/m/n/10 Iremos analisar os resultados obtidos na sec^^Xc~ao \OT1/cmr/bx/n/10 6.2 Cria^^Xc~ao das chaves prim^^Sarias e estrangeiras
+ []
+
+<Graphs/PKCreation.png, id=115, 819.06pt x 491.8375pt>
+File: Graphs/PKCreation.png Graphic file (type png)
+<use Graphs/PKCreation.png>
+Package pdftex.def Info: Graphs/PKCreation.png  used on input line 945.
+(pdftex.def)             Requested size: 430.00462pt x 258.21855pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
+
+ []
+
+<Graphs/linesvspk.png, id=116, 711.65875pt x 452.69125pt>
 File: Graphs/linesvspk.png Graphic file (type png)
 <use Graphs/linesvspk.png>
-Package pdftex.def Info: Graphs/linesvspk.png  used on input line 925.
+Package pdftex.def Info: Graphs/linesvspk.png  used on input line 960.
 (pdftex.def)             Requested size: 430.00462pt x 273.52332pt.
-[29 <./Graphs/PKCreation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 930--931
+[30 <./Graphs/PKCreation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
+Underfull \hbox (badness 10000) in paragraph at lines 966--967
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 968--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--936
+Underfull \hbox (badness 10000) in paragraph at lines 970--971
 
  []
 
-[30 <./Graphs/linesvspk.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 937--938
+[31 <./Graphs/linesvspk.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
 
  []
 
-<Graphs/FKCreation.png, id=121, 683.55376pt x 410.53375pt>
+<Graphs/FKCreation.png, id=126, 683.55376pt x 410.53375pt>
 File: Graphs/FKCreation.png Graphic file (type png)
 <use Graphs/FKCreation.png>
-Package pdftex.def Info: Graphs/FKCreation.png  used on input line 942.
+Package pdftex.def Info: Graphs/FKCreation.png  used on input line 977.
 (pdftex.def)             Requested size: 430.00462pt x 258.26178pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 947--948
+Underfull \hbox (badness 10000) in paragraph at lines 982--983
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 949--950
+Underfull \hbox (badness 10000) in paragraph at lines 984--985
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--952
+Underfull \hbox (badness 10000) in paragraph at lines 986--987
 
  []
 
-[31 <./Graphs/FKCreation.png>]
-<Graphs/mysqlvspostgres_withoutkeys_onethread.png, id=126, 729.72626pt x 463.7325pt>
+[32 <./Graphs/FKCreation.png>]
+<Graphs/mysqlvspostgres_withoutkeys_onethread.png, id=131, 729.72626pt x 463.7325pt>
 File: Graphs/mysqlvspostgres_withoutkeys_onethread.png Graphic file (type png)
 <use Graphs/mysqlvspostgres_withoutkeys_onethread.png>
-Package pdftex.def Info: Graphs/mysqlvspostgres_withoutkeys_onethread.png  used on input line 966.
+Package pdftex.def Info: Graphs/mysqlvspostgres_withoutkeys_onethread.png  used on input line 1001.
 (pdftex.def)             Requested size: 430.00462pt x 273.26015pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
-
- []
-
-[32 <./Graphs/mysqlvspostgres_withoutkeys_onethread.png>]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 979.
+ [33 <./Graphs/mysqlvspostgres_withoutkeys_onethread.png>]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1014.
  (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 979.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1014.
 
-Underfull \hbox (badness 10000) in paragraph at lines 988--989
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1024
 
  []
 
 
-Overfull \hbox (1.77272pt too wide) in paragraph at lines 997--998
+Overfull \hbox (1.77272pt too wide) in paragraph at lines 1032--1033
 []\OT1/cmr/m/n/10 De uma forma geral, o PostgreSQL apresenta melhores resultados e mais eficientes principalmente
  []
 
-[33]
-<Graphs/mysqlvspostgres_withoutkeys_fivethreads.png, id=135, 728.7225pt x 463.7325pt>
+[34]
+<Graphs/mysqlvspostgres_withoutkeys_fivethreads.png, id=140, 728.7225pt x 463.7325pt>
 File: Graphs/mysqlvspostgres_withoutkeys_fivethreads.png Graphic file (type png)
 <use Graphs/mysqlvspostgres_withoutkeys_fivethreads.png>
-Package pdftex.def Info: Graphs/mysqlvspostgres_withoutkeys_fivethreads.png  used on input line 1013.
+Package pdftex.def Info: Graphs/mysqlvspostgres_withoutkeys_fivethreads.png  used on input line 1047.
 (pdftex.def)             Requested size: 430.00462pt x 273.63518pt.
- [34
+ [35
 
  <./Graphs/mysqlvspostgres_withoutkeys_fivethreads.png>]
-Overfull \hbox (10.13503pt too wide) in paragraph at lines 1048--1051
+Overfull \hbox (10.13503pt too wide) in paragraph at lines 1081--1084
 []\OT1/cmr/m/n/10 Filtra e junta tabelas menores primeiro (como na subconsulta2 para fornecedores com reclama^^Xc~oes).
  []
 
-[35]
-Overfull \hbox (17.88704pt too wide) in paragraph at lines 1069--1069
+
+Overfull \hbox (5.12944pt too wide) in paragraph at lines 1081--1084
+\OT1/cmr/m/n/10 resultados por diversas colunas (p[]brand, p[]type e p[]size) e depois os agrega usando count(DISTINCT
+ []
+
+[36]
+Overfull \hbox (17.88704pt too wide) in paragraph at lines 1102--1102
 []\OT1/cmr/bx/n/12 Compara^^Xc~ao da m^^Sedia do tempo de execu^^Xc~ao sem PK's e FK's utilizando
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1074
+Underfull \hbox (badness 10000) in paragraph at lines 1106--1107
 
  []
 
-<Graphs/mysql_withoutkeys_1vs5threads.png, id=143, 811.03pt x 454.69875pt>
+<Graphs/mysql_withoutkeys_1vs5threads.png, id=149, 811.03pt x 454.69875pt>
 File: Graphs/mysql_withoutkeys_1vs5threads.png Graphic file (type png)
 <use Graphs/mysql_withoutkeys_1vs5threads.png>
-Package pdftex.def Info: Graphs/mysql_withoutkeys_1vs5threads.png  used on input line 1079.
+Package pdftex.def Info: Graphs/mysql_withoutkeys_1vs5threads.png  used on input line 1112.
 (pdftex.def)             Requested size: 430.00462pt x 241.08632pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1088--1089
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
 
  []
 
-<Graphs/postgres_withoutkeys_1vs5.png, id=144, 774.895pt x 431.6125pt>
+<Graphs/postgres_withoutkeys_1vs5.png, id=150, 774.895pt x 431.6125pt>
 File: Graphs/postgres_withoutkeys_1vs5.png Graphic file (type png)
 <use Graphs/postgres_withoutkeys_1vs5.png>
-Package pdftex.def Info: Graphs/postgres_withoutkeys_1vs5.png  used on input line 1098.
+Package pdftex.def Info: Graphs/postgres_withoutkeys_1vs5.png  used on input line 1131.
 (pdftex.def)             Requested size: 430.00462pt x 239.51483pt.
-[36
+[37
 
  <./Graphs/mysql_withoutkeys_1vs5threads.png>]
-Overfull \hbox (21.16286pt too wide) in paragraph at lines 1109--1110
+Overfull \hbox (21.16286pt too wide) in paragraph at lines 1142--1143
 \OT1/cmr/m/n/10 em compara^^Xc~ao com o MySQL. Poderia ter melhor agendamento de threads, mecanismos de sincroniza^^Xc~ao
  []
 
-[37 <./Graphs/postgres_withoutkeys_1vs5.png>]
-<Graphs/mysqlvspostgresql_withkeys_onethread.png, id=154, 783.92876pt x 533.995pt>
+[38 <./Graphs/postgres_withoutkeys_1vs5.png>]
+<Graphs/mysqlvspostgresql_withkeys_onethread.png, id=159, 783.92876pt x 533.995pt>
 File: Graphs/mysqlvspostgresql_withkeys_onethread.png Graphic file (type png)
 <use Graphs/mysqlvspostgresql_withkeys_onethread.png>
-Package pdftex.def Info: Graphs/mysqlvspostgresql_withkeys_onethread.png  used on input line 1132.
+Package pdftex.def Info: Graphs/mysqlvspostgresql_withkeys_onethread.png  used on input line 1165.
 (pdftex.def)             Requested size: 430.00462pt x 292.91594pt.
- [38
+ [39
 
- <./Graphs/mysqlvspostgresql_withkeys_onethread.png>] [39]
-<Graphs/mysqlvspostgres_withkeys_fivethreads.png, id=162, 795.97375pt x 466.74374pt>
+ <./Graphs/mysqlvspostgresql_withkeys_onethread.png>] [40]
+<Graphs/mysqlvspostgres_withkeys_fivethreads.png, id=167, 795.97375pt x 466.74374pt>
 File: Graphs/mysqlvspostgres_withkeys_fivethreads.png Graphic file (type png)
 <use Graphs/mysqlvspostgres_withkeys_fivethreads.png>
-Package pdftex.def Info: Graphs/mysqlvspostgres_withkeys_fivethreads.png  used on input line 1166.
+Package pdftex.def Info: Graphs/mysqlvspostgres_withkeys_fivethreads.png  used on input line 1199.
 (pdftex.def)             Requested size: 430.00462pt x 252.14468pt.
 
-Overfull \hbox (13.77235pt too wide) in paragraph at lines 1175--1176
+Overfull \hbox (13.77235pt too wide) in paragraph at lines 1208--1209
 \OT1/cmr/m/n/10 PostgreSQL tem uma grande vantagem, visto que o tempo de execu^^Xc~ao total do mysql ^^Se \OT1/cmr/bx/n/10 576,2615614%
  []
 
-[40
+[41
 
  <./Graphs/mysqlvspostgres_withkeys_fivethreads.png>]
-Overfull \hbox (22.96207pt too wide) in paragraph at lines 1180--1180
+Overfull \hbox (22.96207pt too wide) in paragraph at lines 1213--1213
 \OT1/cmr/bx/n/12 utilizando 1 vs 5 thread numa base de dados de 25.(MySQL, PostgreSQL) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
 
  []
 
-<Graphs/mysql_withkeys_1vs5threads.png, id=167, 676.5275pt x 398.48875pt>
+<Graphs/mysql_withkeys_1vs5threads.png, id=172, 676.5275pt x 398.48875pt>
 File: Graphs/mysql_withkeys_1vs5threads.png Graphic file (type png)
 <use Graphs/mysql_withkeys_1vs5threads.png>
-Package pdftex.def Info: Graphs/mysql_withkeys_1vs5threads.png  used on input line 1190.
+Package pdftex.def Info: Graphs/mysql_withkeys_1vs5threads.png  used on input line 1223.
 (pdftex.def)             Requested size: 430.00462pt x 253.28683pt.
-<Graphs/postgres_withkeys_1vs5.png, id=168, 780.9175pt x 424.58624pt>
+<Graphs/postgres_withkeys_1vs5.png, id=173, 780.9175pt x 424.58624pt>
 File: Graphs/postgres_withkeys_1vs5.png Graphic file (type png)
 <use Graphs/postgres_withkeys_1vs5.png>
-Package pdftex.def Info: Graphs/postgres_withkeys_1vs5.png  used on input line 1204.
+Package pdftex.def Info: Graphs/postgres_withkeys_1vs5.png  used on input line 1237.
 (pdftex.def)             Requested size: 430.00462pt x 233.79526pt.
-[41
+[42
 
- <./Graphs/mysql_withkeys_1vs5threads.png>] [42 <./Graphs/postgres_withkeys_1vs5.png>]
-<Graphs/postgres1thread_withkeysvswithoutkeys.png, id=178, 790.955pt x 474.77374pt>
+ <./Graphs/mysql_withkeys_1vs5threads.png>] [43 <./Graphs/postgres_withkeys_1vs5.png>]
+<Graphs/postgres1thread_withkeysvswithoutkeys.png, id=183, 790.955pt x 474.77374pt>
 File: Graphs/postgres1thread_withkeysvswithoutkeys.png Graphic file (type png)
 <use Graphs/postgres1thread_withkeysvswithoutkeys.png>
-Package pdftex.def Info: Graphs/postgres1thread_withkeysvswithoutkeys.png  used on input line 1234.
+Package pdftex.def Info: Graphs/postgres1thread_withkeysvswithoutkeys.png  used on input line 1267.
 (pdftex.def)             Requested size: 430.00462pt x 258.11267pt.
 
-Overfull \hbox (8.21826pt too wide) in paragraph at lines 1244--1246
-\OT1/cmr/m/n/10 Isso indica acesso eficiente ^^Ra tabela de clientes aproveitando o ^^S^^Pndice de chave prim^^Saria (customer$[]$pkey).
+Overfull \hbox (11.81827pt too wide) in paragraph at lines 1277--1279
+\OT1/cmr/m/n/10 Isso indica acesso eficiente ^^Ra tabela de clientes aproveitando o ^^S^^Pndice de chave prim^^Saria (customer[]pkey).
  []
 
-[43
+[44
 
  <./Graphs/postgres1thread_withkeysvswithoutkeys.png>]
-<Graphs/postgres5threads_withkeysvswithoutkeys.png, id=183, 529.98pt x 325.215pt>
+<Graphs/postgres5threads_withkeysvswithoutkeys.png, id=188, 529.98pt x 325.215pt>
 File: Graphs/postgres5threads_withkeysvswithoutkeys.png Graphic file (type png)
 <use Graphs/postgres5threads_withkeysvswithoutkeys.png>
-Package pdftex.def Info: Graphs/postgres5threads_withkeysvswithoutkeys.png  used on input line 1260.
+Package pdftex.def Info: Graphs/postgres5threads_withkeysvswithoutkeys.png  used on input line 1293.
 (pdftex.def)             Requested size: 430.00462pt x 263.86932pt.
- [44 <./Graphs/postgres5threads_withkeysvswithoutkeys.png>]
-<Graphs/mysqlonethread_withkeysvswithoutkeys.png, id=188, 608.2725pt x 352.31625pt>
+ [45 <./Graphs/postgres5threads_withkeysvswithoutkeys.png>]
+<Graphs/mysqlonethread_withkeysvswithoutkeys.png, id=193, 608.2725pt x 352.31625pt>
 File: Graphs/mysqlonethread_withkeysvswithoutkeys.png Graphic file (type png)
 <use Graphs/mysqlonethread_withkeysvswithoutkeys.png>
-Package pdftex.def Info: Graphs/mysqlonethread_withkeysvswithoutkeys.png  used on input line 1280.
+Package pdftex.def Info: Graphs/mysqlonethread_withkeysvswithoutkeys.png  used on input line 1313.
 (pdftex.def)             Requested size: 430.00462pt x 249.06572pt.
 
-Overfull \hbox (7.13509pt too wide) in paragraph at lines 1288--1289
+Overfull \hbox (7.13509pt too wide) in paragraph at lines 1321--1322
 \OT1/cmr/m/n/10 enquanto no \OT1/cmr/bx/n/10 sem chaves \OT1/cmr/m/n/10 ^^Se acessada atrav^^Ses de uma varredura completa . Dependendo da distribui^^Xc~ao
  []
 
-[45
+[46
 
  <./Graphs/mysqlonethread_withkeysvswithoutkeys.png>]
-<Graphs/mysql5threads_withkeys_withoutkeys.png, id=193, 713.66624pt x 420.57124pt>
+<Graphs/mysql5threads_withkeys_withoutkeys.png, id=198, 713.66624pt x 420.57124pt>
 File: Graphs/mysql5threads_withkeys_withoutkeys.png Graphic file (type png)
 <use Graphs/mysql5threads_withkeys_withoutkeys.png>
-Package pdftex.def Info: Graphs/mysql5threads_withkeys_withoutkeys.png  used on input line 1300.
+Package pdftex.def Info: Graphs/mysql5threads_withkeys_withoutkeys.png  used on input line 1333.
 (pdftex.def)             Requested size: 430.00462pt x 253.40356pt.
- [46 <./Graphs/mysql5threads_withkeys_withoutkeys.png>]
-<Graphs/postgresql40gb.png, id=198, 647.41875pt x 413.545pt>
+ [47 <./Graphs/mysql5threads_withkeys_withoutkeys.png>]
+<Graphs/postgresql40gb.png, id=203, 647.41875pt x 413.545pt>
 File: Graphs/postgresql40gb.png Graphic file (type png)
 <use Graphs/postgresql40gb.png>
-Package pdftex.def Info: Graphs/postgresql40gb.png  used on input line 1315.
+Package pdftex.def Info: Graphs/postgresql40gb.png  used on input line 1348.
 (pdftex.def)             Requested size: 430.00462pt x 274.66953pt.
- [47
+ [48
 
  <./Graphs/postgresql40gb.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1326
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
 
  []
 
 (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
-Overfull \hbox (62.00038pt too wide) in paragraph at lines 1331--1332
+Overfull \hbox (62.00038pt too wide) in paragraph at lines 1364--1365
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1333.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1366.
 
-Overfull \hbox (62.00038pt too wide) in paragraph at lines 1336--1337
+Overfull \hbox (62.00038pt too wide) in paragraph at lines 1369--1370
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (122.00099pt too wide) in paragraph at lines 1337--1338
+Overfull \hbox (122.00099pt too wide) in paragraph at lines 1370--1371
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 1338--1339
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 1371--1372
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.99977pt too wide) in paragraph at lines 1339--1340
+Overfull \hbox (1.99977pt too wide) in paragraph at lines 1372--1373
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1340--1341
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1373--1374
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (92.00069pt too wide) in paragraph at lines 1341--1342
+Overfull \hbox (92.00069pt too wide) in paragraph at lines 1374--1375
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (92.00069pt too wide) in paragraph at lines 1342--1343
+Overfull \hbox (92.00069pt too wide) in paragraph at lines 1375--1376
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.00002pt too wide) in paragraph at lines 1343--1344
+Overfull \hbox (26.00002pt too wide) in paragraph at lines 1376--1377
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1345--1346
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1378--1379
 [][][][][][][][][][][][][][][][][][][][]
  []
 
 
-Overfull \hbox (62.00038pt too wide) in paragraph at lines 1346--1347
+Overfull \hbox (62.00038pt too wide) in paragraph at lines 1379--1380
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (44.0002pt too wide) in paragraph at lines 1347--1348
+Overfull \hbox (44.0002pt too wide) in paragraph at lines 1380--1381
 [][][][][][][][][][][][][][][][][][]
  []
 
 
-Overfull \hbox (92.00069pt too wide) in paragraph at lines 1348--1349
+Overfull \hbox (92.00069pt too wide) in paragraph at lines 1381--1382
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (44.0002pt too wide) in paragraph at lines 1349--1350
+Overfull \hbox (44.0002pt too wide) in paragraph at lines 1382--1383
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1351--1352
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1384--1385
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.9999pt too wide) in paragraph at lines 1352--1353
+Overfull \hbox (13.9999pt too wide) in paragraph at lines 1385--1386
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1354--1355
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1387--1388
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.00014pt too wide) in paragraph at lines 1357--1358
+Overfull \hbox (38.00014pt too wide) in paragraph at lines 1390--1391
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (146.00124pt too wide) in paragraph at lines 1359--1360
+Overfull \hbox (146.00124pt too wide) in paragraph at lines 1392--1393
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 1360--1361
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 1393--1394
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1362--1363
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1395--1396
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (122.00099pt too wide) in paragraph at lines 1363--1364
+Overfull \hbox (122.00099pt too wide) in paragraph at lines 1396--1397
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (116.00093pt too wide) in paragraph at lines 1364--1365
+Overfull \hbox (116.00093pt too wide) in paragraph at lines 1397--1398
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.00014pt too wide) in paragraph at lines 1365--1366
+Overfull \hbox (38.00014pt too wide) in paragraph at lines 1398--1399
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (44.0002pt too wide) in paragraph at lines 1367--1368
+Overfull \hbox (44.0002pt too wide) in paragraph at lines 1400--1401
 [][][][][][][][][][][][][][][][][][]
  []
 
-[48
+[49
 
 ]
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1368--1369
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1401--1402
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.9999pt too wide) in paragraph at lines 1369--1370
+Overfull \hbox (13.9999pt too wide) in paragraph at lines 1402--1403
 [][][][][][][][][][][][][][][][]
  []
 
 
-Overfull \hbox (110.00087pt too wide) in paragraph at lines 1370--1372
+Overfull \hbox (110.00087pt too wide) in paragraph at lines 1403--1405
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
 
  []
 
 
-Overfull \hbox (18.56812pt too wide) in paragraph at lines 1383--1384
-[]\OT1/cmr/m/n/10 Um filtro ^^Se aplicado na tabela \OT1/cmr/m/it/10 nation$[]$1 \OT1/cmr/m/n/10 para selecionar apenas as linhas onde o pa^^S^^Ps ^^Se MOZAMBIQUE. 
+Overfull \hbox (22.2481pt too wide) in paragraph at lines 1416--1417
+[]\OT1/cmr/m/n/10 Um filtro ^^Se aplicado na tabela \OT1/cmr/m/it/10 nation[]1 \OT1/cmr/m/n/10 para selecionar apenas as linhas onde o pa^^S^^Ps ^^Se MOZAMBIQUE. 
  []
 
 
-Overfull \hbox (7.99983pt too wide) in paragraph at lines 1399--1400
+Overfull \hbox (7.99983pt too wide) in paragraph at lines 1432--1433
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-[49]
-Overfull \hbox (56.00032pt too wide) in paragraph at lines 1410--1411
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1413--1414
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1414--1415
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (110.00087pt too wide) in paragraph at lines 1416--1417
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (68.00044pt too wide) in paragraph at lines 1417--1418
+[50]
+Overfull \hbox (56.00032pt too wide) in paragraph at lines 1443--1444
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.00002pt too wide) in paragraph at lines 1419--1420
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1446--1447
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1447--1448
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.00087pt too wide) in paragraph at lines 1449--1450
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (68.00044pt too wide) in paragraph at lines 1450--1451
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.00002pt too wide) in paragraph at lines 1452--1453
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1424--1425
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1457--1458
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.99983pt too wide) in paragraph at lines 1429--1430
+Overfull \hbox (7.99983pt too wide) in paragraph at lines 1462--1463
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 1434--1435
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 1467--1468
 [][][][][][][][][][] 
  []
 
 
-Overfull \hbox (68.00044pt too wide) in paragraph at lines 1437--1438
+Overfull \hbox (68.00044pt too wide) in paragraph at lines 1470--1471
 [][][][][][] 
  []
 
 
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 1438--1439
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 1471--1472
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 1439--1440
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 1472--1473
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1440--1441
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1473--1474
 [][][][][][][][] 
  []
 
 
-Overfull \hbox (92.00069pt too wide) in paragraph at lines 1442--1443
+Overfull \hbox (92.00069pt too wide) in paragraph at lines 1475--1476
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (74.0005pt too wide) in paragraph at lines 1443--1444
+Overfull \hbox (74.0005pt too wide) in paragraph at lines 1476--1477
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
-
- []
-
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 1477--1478
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1482
 
  []
 
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 1492--1493
+Overfull \hbox (2.75172pt too wide) in paragraph at lines 1502--1503
+[]\OT1/cmr/m/n/10 Realiza uma agrega^^Xc~ao parcial dos resultados agrupando-os por lineitem[]1.l[]orderkey e calculando
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1511
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1501.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1518
+
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1525--1526
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1534.
 (/Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1501.
- [52] [53] [54]
-Overfull \hbox (1.99977pt too wide) in paragraph at lines 1631--1632
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1534.
+ [53] [54] [55]
+Overfull \hbox (1.99977pt too wide) in paragraph at lines 1664--1665
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1668--1669
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
 
  []
 
-[55] [56] [57]
-Overfull \hbox (7.99983pt too wide) in paragraph at lines 1758--1759
+[56] [57] [58]
+Overfull \hbox (7.99983pt too wide) in paragraph at lines 1791--1792
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1806
 
  []
 
 
-Overfull \hbox (9.80165pt too wide) in paragraph at lines 1784--1785
+Overfull \hbox (9.80165pt too wide) in paragraph at lines 1817--1818
 []\OT1/cmr/m/n/10 Ap^^Sos isso, ocorre opera^^Xc~oes Nested loop, a consulta come^^Xca a aceder a tabela customer, examinando
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1793--1794
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1827
 
  []
 
 
-Overfull \hbox (9.9498pt too wide) in paragraph at lines 1797--1798
+Overfull \hbox (9.9498pt too wide) in paragraph at lines 1830--1831
 []\OT1/cmr/bx/n/10 Subconsultas \OT1/cmr/m/n/10 - Apresenta uma subconsulta anexada ^^Ra tabela SUPPLIER, mas essa subconsulta
  []
 
 
-Overfull \hbox (27.63272pt too wide) in paragraph at lines 1797--1798
+Overfull \hbox (27.63272pt too wide) in paragraph at lines 1830--1831
 \OT1/cmr/m/n/10 parece ser redundante, j^^Sa que as tabelas SUPPLIER e NATION est~ao sendo acessadas separadamente
  []
 
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 1801--1802
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 1834--1835
 
  []
 
 
-Overfull \hbox (3.69058pt too wide) in paragraph at lines 1808--1812
+Overfull \hbox (3.69058pt too wide) in paragraph at lines 1841--1845
 \OT1/cmr/m/n/10 beneficiar de otimiza^^Xc~ao para melhorar o desempenho, especialmente devido aos custos extremamente
  []
 
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 1819--1820
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1852--1853
 
  []
 
 
-Overfull \hbox (13.9999pt too wide) in paragraph at lines 1821--1822
+Overfull \hbox (13.9999pt too wide) in paragraph at lines 1854--1855
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.99977pt too wide) in paragraph at lines 1827--1828
+Overfull \hbox (1.99977pt too wide) in paragraph at lines 1860--1861
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (68.00044pt too wide) in paragraph at lines 1828--1829
+Overfull \hbox (68.00044pt too wide) in paragraph at lines 1861--1862
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1831--1832
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1864--1865
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1834--1835
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1867--1868
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.00002pt too wide) in paragraph at lines 1839--1840
+Overfull \hbox (26.00002pt too wide) in paragraph at lines 1872--1873
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1840--1841
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1873--1874
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.9999pt too wide) in paragraph at lines 1841--1842
+Overfull \hbox (13.9999pt too wide) in paragraph at lines 1874--1875
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (56.00032pt too wide) in paragraph at lines 1842--1843
+Overfull \hbox (56.00032pt too wide) in paragraph at lines 1875--1876
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.00002pt too wide) in paragraph at lines 1843--1844
+Overfull \hbox (26.00002pt too wide) in paragraph at lines 1876--1877
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1844--1845
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 1877--1878
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[60
+[61
 
 ]
-Overfull \hbox (0.44054pt too wide) in paragraph at lines 1866--1867
+Overfull \hbox (0.44054pt too wide) in paragraph at lines 1899--1900
 []\OT1/cmr/m/n/10 H^^Sa uma opera^^Xc~ao de classifica^^Xc~ao envolvida no processamento de dados da tabela de fornecedores.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1869--1870
+Underfull \hbox (badness 10000) in paragraph at lines 1902--1903
 
- []
-
-[61]
-Overfull \hbox (86.00063pt too wide) in paragraph at lines 1905--1906
-[][][][][][][][][][][][][][][][][][][][] 
  []
 
 [62]
-Overfull \hbox (50.00026pt too wide) in paragraph at lines 1975--1976
-[][][][][][][][][][][][][][] 
+Overfull \hbox (86.00063pt too wide) in paragraph at lines 1938--1939
+[][][][][][][][][][][][][][][][][][][][] 
  []
 
 [63]
-Overfull \hbox (26.00002pt too wide) in paragraph at lines 2009--2010
+Overfull \hbox (50.00026pt too wide) in paragraph at lines 2008--2009
+[][][][][][][][][][][][][][] 
+ []
+
+[64]
+Overfull \hbox (26.00002pt too wide) in paragraph at lines 2042--2043
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.99983pt too wide) in paragraph at lines 2016--2017
+Overfull \hbox (7.99983pt too wide) in paragraph at lines 2049--2050
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.99977pt too wide) in paragraph at lines 2019--2020
+Overfull \hbox (1.99977pt too wide) in paragraph at lines 2052--2053
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (62.00038pt too wide) in paragraph at lines 2020--2022
+Overfull \hbox (62.00038pt too wide) in paragraph at lines 2053--2055
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[64]
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 2062--2063
+[65]
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 2095--2096
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.99983pt too wide) in paragraph at lines 2064--2065
+Overfull \hbox (7.99983pt too wide) in paragraph at lines 2097--2098
 [][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.00056pt too wide) in paragraph at lines 2065--2066
+Overfull \hbox (80.00056pt too wide) in paragraph at lines 2098--2099
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2083--2084
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2117
 
- []
-
-[65]
-Overfull \hbox (13.96616pt too wide) in paragraph at lines 2096--2097
-[]\OT1/cmr/m/n/10 A subconsulta select4 agrega a soma da quantidade (L$[]$QUANTITY) de itens vendidos (LINEITEM). 
  []
 
 [66]
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2119
+Overfull \hbox (17.56616pt too wide) in paragraph at lines 2129--2130
+[]\OT1/cmr/m/n/10 A subconsulta select4 agrega a soma da quantidade (L[]QUANTITY) de itens vendidos (LINEITEM). 
+ []
+
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 2151--2152
 
  []
 
-[67
 
-] [68] (report.aux)
+Overfull \hbox (6.46729pt too wide) in paragraph at lines 2174--2175
+\OT1/cmr/m/n/10 emerge como uma escolha superior ao MySQL. A Arquitetura robusta, conjunto de recursos avan^^Xcados
+ []
+
+[68
+
+] [69] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1309,17 +1360,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6008 strings out of 476358
- 114979 string characters out of 5790756
+ 7599 strings out of 476358
+ 146218 string characters out of 5790756
  2001493 words of memory out of 5000000
- 28098 multiletter control sequences out of 15000+600000
- 561401 words of font info for 47 fonts, out of 8000000 for 9000
+ 29640 multiletter control sequences out of 15000+600000
+ 561710 words of font info for 48 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 65i,10n,79p,990b,1805s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (69 pages, 772121 bytes).
+ 65i,10n,79p,990b,1806s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx5.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (70 pages, 800830 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
+ 328 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

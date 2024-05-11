@@ -49,6 +49,19 @@ INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/listings.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/txtbabel.def
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-portuges/portuguese.ldf
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-portuges/portuguese.ldf
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-portuges/portuguese.ldf
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/pt/babel-portuguese.tex
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/pt/babel-portuguese.tex
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/pt/babel-portuguese.tex
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/locale/pt/babel-pt.ini
 INPUT ./report.aux
 INPUT ./report.aux
 INPUT report.aux
@@ -58,6 +71,20 @@ INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/grfext/grfext.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/grfext/grfext.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
@@ -95,6 +122,7 @@ INPUT ./Graphs/tpchassignment.png
 INPUT ./Graphs/tpchassignment.png
 INPUT ./Graphs/tpchassignment.png
 INPUT ./Graphs/tpchassignment.png
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx5.tfm
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
@@ -249,6 +277,8 @@ INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fon
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx5.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx5.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -257,6 +287,8 @@ INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fon
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /Users/brunosequeira/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb
